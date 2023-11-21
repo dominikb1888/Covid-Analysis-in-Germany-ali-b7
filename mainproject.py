@@ -33,12 +33,19 @@ folium.GeoJson(merged_data,
                                              aliases=['Region', 'Covid Cases'],
                                              localize=True),
                ).add_to(marker_cluster)
-
-# Add additional data as markers
+# adding data as markers
 for idx, row in merged_data.iterrows():
+    # Choose marker color based on Covid Cases
+    if row['Covid Cases'] < 1000:
+        marker_color = 'blue'  # Low cases
+    elif 1000 <= row['Covid Cases'] < 5000:
+        marker_color = 'green'  # Moderate cases
+    else:
+        marker_color = 'red'  # High cases
+
     folium.Marker(location=[row.geometry.centroid.y, row.geometry.centroid.x],
                   popup=f"<strong>{row['GEN']}</strong><br>Population: {row['Population']}<br>Vaccination Rate: {row['Vaccination Rate']}<br>Covid Cases: {row['Covid Cases']}<br>Total Deaths: {row['Total Deaths']}",
-                  icon=folium.Icon(color='blue'),
+                  icon=folium.Icon(color=marker_color),
                   ).add_to(marker_cluster)
 
 # Create a HeatMap layer using the location coordinates and intensity (e.g., COVID cases)
