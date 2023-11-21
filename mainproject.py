@@ -47,6 +47,21 @@ for idx, row in merged_data.iterrows():
                   popup=f"<strong>{row['GEN']}</strong><br>Population: {row['Population']}<br>Vaccination Rate: {row['Vaccination Rate']}<br>Covid Cases: {row['Covid Cases']}<br>Total Deaths: {row['Total Deaths']}",
                   icon=folium.Icon(color=marker_color),
                   ).add_to(marker_cluster)
+  # Add Legend
+legend_html = """
+     <div style="position: fixed; 
+                 bottom: 50px; left: 50px; width: 160px; height: 120px; 
+                 border:2px solid grey; z-index:9999; font-size:12px;
+                 background-color: white;
+                 ">
+     &nbsp; Legend <br>
+     &nbsp; Low Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:blue"></i><br>
+     &nbsp; Moderate Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:green"></i><br>
+     &nbsp; High Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:red"></i>
+      </div>
+     """
+
+m.get_root().html.add_child(folium.Element(legend_html))
 
 # Create a HeatMap layer using the location coordinates and intensity (e.g., COVID cases)
 heat_data = [[point.xy[1][0], point.xy[0][0], row['Covid Cases']] for idx, row in merged_data.iterrows() for point in [row.geometry.centroid]]
