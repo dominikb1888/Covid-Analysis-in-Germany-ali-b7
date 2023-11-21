@@ -50,14 +50,14 @@ for idx, row in merged_data.iterrows():
   # Add Legend
 legend_html = """
      <div style="position: fixed; 
-                 bottom: 50px; left: 50px; width: 160px; height: 120px; 
+                 bottom: 50px; left: 50px; width: 160px; height: 150px; 
                  border:2px solid grey; z-index:9999; font-size:12px;
                  background-color: white;
                  ">
-     &nbsp; Legend <br>
-     &nbsp; Low Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:blue"></i><br>
-     &nbsp; Moderate Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:green"></i><br>
-     &nbsp; High Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:red"></i>
+     &nbsp; <strong>Legend</strong> <br>
+     &nbsp; Low COVID Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:blue"></i> (< 10000)<br>
+     &nbsp; Moderate COVID Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:green"></i> (10000 - 500000)<br>
+     &nbsp; High COVID Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:red"></i> (> 500000)
       </div>
      """
 
