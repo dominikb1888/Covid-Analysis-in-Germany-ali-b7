@@ -1,7 +1,7 @@
 import pandas as pd
 import geopandas as gpd
 import folium
-from folium.plugins import MarkerCluster
+from folium.plugins import MarkerCluster, HeatMap
 
 # Load your GeoJSON data
 geojson_path = 'bundeslande.geojson'
@@ -10,7 +10,7 @@ gdf = gpd.read_file(geojson_path)
 del gdf['BEGINN']
 del gdf['WSK']
 
-csv_path = 'covid_de.csv'
+csv_path = 'covid_de1.csv'
 data = pd.read_csv(csv_path)
 
 
@@ -36,9 +36,9 @@ folium.GeoJson(merged_data,
 # adding data as markers
 for idx, row in merged_data.iterrows():
     # Choose marker color based on Covid Cases
-    if row['Covid Cases'] < 1000:
+    if row['Covid Cases'] < 50000:
         marker_color = 'blue'  # Low cases
-    elif 1000 <= row['Covid Cases'] < 5000:
+    elif 100000 <= row['Covid Cases'] < 500000:
         marker_color = 'green'  # Moderate cases
     else:
         marker_color = 'red'  # High cases
@@ -47,20 +47,25 @@ for idx, row in merged_data.iterrows():
                   popup=f"<strong>{row['GEN']}</strong><br>Population: {row['Population']}<br>Vaccination Rate: {row['Vaccination Rate']}<br>Covid Cases: {row['Covid Cases']}<br>Total Deaths: {row['Total Deaths']}",
                   icon=folium.Icon(color=marker_color),
                   ).add_to(marker_cluster)
-  # Add Legend
-legend_html = """
+  # Add Legend 
+    legend_html = """
      <div style="position: fixed; 
                  bottom: 50px; left: 50px; width: 160px; height: 150px; 
                  border:2px solid grey; z-index:9999; font-size:12px;
                  background-color: white;
                  ">
      &nbsp; <strong>Legend</strong> <br>
-     &nbsp; Low COVID Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:blue"></i> (< 10000)<br>
-     &nbsp; Moderate COVID Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:green"></i> (10000 - 500000)<br>
-     &nbsp; High COVID Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:red"></i> (> 500000)
+     &nbsp; Low COVID Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:blue"></i> (< 50,000)<br>
+     &nbsp; Moderate COVID Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:green"></i> (100,000 - 500,000)<br>
+     &nbsp; High COVID Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:red"></i> (> 500,000)
       </div>
      """
 
+# Include Font Awesome CSS in the head
+font_awesome_link = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">'
+m.get_root().html.header.add_child(folium.Element(font_awesome_link))     
+
+# add legend
 m.get_root().html.add_child(folium.Element(legend_html))
 
 # Create a HeatMap layer using the location coordinates and intensity (e.g., COVID cases)
