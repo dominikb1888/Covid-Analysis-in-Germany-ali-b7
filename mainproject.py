@@ -18,6 +18,32 @@ data = pd.read_csv(csv_path)
 # Merge GeoJSON data with CSV data on the common column
 merged_data = gdf.merge(data, left_on='GEN', right_on='Bundesland')
 
+# Function to update GeoJSON layer based on the filter
+def update_map(cases_threshold):
+    filtered_data = merged_data[merged_data['Covid Cases'] >= cases_threshold]
+    
+    # Remove previous Choropleth layer
+    for layer in m._children.values():
+        if isinstance(layer, folium.Choropleth):
+            m.remove_layer(layer)
+    
+    # Add a new Choropleth layer with the filtered data
+    folium.Choropleth(geo_data=filtered_data,
+                      name='Filtered Covid Data',
+                      data=filtered_data,
+                      columns=['Bundesland', 'Covid Cases'],
+                      key_on='feature.properties.Bundesland',
+                      fill_color='YlOrRd',
+                      fill_opacity=0.7,
+                      line_opacity=0.2,
+                      legend_name='Covid Cases',
+                      highlight=True,
+                     ).add_to(m)
+
+# Create an interactive slider for filtering COVID cases
+cases_slider = widgets.FloatSlider(value=0, min=0, max=500000, step=10000, description='Min COVID Cases:')
+interactive(update_map, cases_threshold=cases_slider)
+
 
 # Create a folium map centered around the mean latitude and longitude of the GeoJSON data
 map_center = [merged_data.geometry.centroid.y.mean(), merged_data.geometry.centroid.x.mean()]
