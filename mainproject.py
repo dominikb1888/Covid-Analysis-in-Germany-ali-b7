@@ -114,33 +114,39 @@ gradient = {
 }
 def add_vaccination_markers(vaccination_rate_threshold):
     # Remove previous CircleMarker layer for vaccination rates
-    for layer in m._children.values():
-        if isinstance(layer, folium.map.Marker) and layer.get_name() == 'Vaccination Markers':
-            m.remove_layer(layer)
+    for layer in vaccination_markers._children.values():
+        vaccination_markers.get_root().remove(layer)
 
     # Convert 'Vaccination Rate' to numeric type
-    merged_data['Vaccination Rate'] = pd.to_numeric(merged_data['Vaccination Rate'], errors='coerce')
+    merged_data['Vaccination Rate'] = pd.to_numeric(merged_data['Vaccination Rate'].str.rstrip('%'), errors='coerce')
 
     # Add new CircleMarker layer with the filtered vaccination rate data
     for idx, row in merged_data.iterrows():
         if pd.notna(row['Vaccination Rate']):
             print(f"Vaccination Rate: {row['Vaccination Rate']}")
-            if row['Vaccination Rate'] > vaccination_rate_threshold:  # Adjusted condition
+            if row['Vaccination Rate'] >= vaccination_rate_threshold:
                 # Adjust circle size and color based on the vaccination rate
                 radius = 10 + row['Vaccination Rate'] / 10
                 color = 'red' if row['Vaccination Rate'] < 50 else 'orange' if row['Vaccination Rate'] < 80 else 'green'
-                
+
                 folium.CircleMarker(location=[row.geometry.centroid.y, row.geometry.centroid.x],
                                     radius=radius,
                                     color=color,
                                     fill=True,
                                     fill_color=color,
                                     fill_opacity=0.7,
-                                    popup=f"<strong>{row['GEN']}</strong><br>Vaccination Rate: {row['Vaccination Rate']}",
-                                    ).add_to(vaccination Rate)
+                                    popup=f"<strong>{row['GEN']}</strong><br>Vaccination Rate: {row['Vaccination Rate']}%",
+                                    ).add_to(vaccination_markers)
 
-# Add Layer Control to toggle layers
-folium.LayerControl().add_to(m)
+# Set a fixed threshold for vaccination rate (adjust as needed)
+vaccination_rate_threshold = 10
+
+# Call the function to add CircleMarker layer
+add_vaccination_markers(vaccination_rate_threshold)
+
+# Add the FeatureGroup to the map
+vaccination_markers.add_to(m)
+
 
 # Save the map as an HTML file
 m.save('de_covidmapfinal_filtered.html')
