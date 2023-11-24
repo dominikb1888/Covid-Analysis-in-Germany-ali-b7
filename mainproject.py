@@ -90,7 +90,7 @@ for idx, row in merged_data.iterrows():
                  border:2px solid grey; z-index:9999; font-size:12px;
                  background-color: white;
                  ">
-     &nbsp; <strong>Legend</strong> <br>
+     &nbsp; <strong>no. of Cases</strong> <br>
      &nbsp; Low COVID Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:blue"></i> (< 50,000)<br>
      &nbsp; Moderate COVID Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:green"></i> (100,000 - 500,000)<br>
      &nbsp; High COVID Cases &nbsp; <i class="fa fa-map-marker fa-1x" style="color:red"></i> (> 500,000)
