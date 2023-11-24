@@ -103,6 +103,17 @@ m.get_root().html.add_child(folium.Element(legend_html))
 heat_data = [[point.xy[1][0], point.xy[0][0], row['Covid Cases']] for idx, row in merged_data.iterrows() for point in [row.geometry.centroid]]
 HeatMap(heat_data, name='Heatmap', radius=25, blur=20, gradient={0.3: '#FFD700', 0.5: '#FF4500', 1: '#8B0000'}).add_to(m)
 
+gradient = {
+    0.1: '#ffffcc',  # Light yellow
+    0.3: '#fdcc8a',  # Light orange
+    0.5: '#fc8d59',  # Orange
+    0.65: '#d7301f',  # Darker orange/red (for populations below 5 million)
+    #0.8: '#d7301f',   # Same dark shade (for populations between 5 million and 9 million)
+    0.9: '#d7301f',   # Same dark shade (for populations between 5 million and 9 million)
+    1.0: '#7f0000'    # Maximum dark shade (for populations above 10 million)
+}
+
+
 # Add Layer Control to toggle layers
 folium.LayerControl().add_to(m)
 
