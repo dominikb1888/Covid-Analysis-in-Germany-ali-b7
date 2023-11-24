@@ -70,10 +70,10 @@ display(widget)
 # adding data as markers
 for idx, row in merged_data.iterrows():
     # Choose marker color based on Covid Cases
-    if row['Covid Cases'] < 50000:
-        marker_color = 'blue'  # Low cases
-    elif 100000 <= row['Covid Cases'] < 500000:
-        marker_color = 'green'  # Moderate cases
+    if row['Covid Cases'] < 200000:
+        marker_color = 'green'  # Low cases
+    elif 200000 <= row['Covid Cases'] < 900000:
+        marker_color = 'blue'  # Moderate cases
     else:
         marker_color = 'red'  # High cases
 
