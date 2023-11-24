@@ -101,7 +101,7 @@ m.get_root().html.add_child(folium.Element(legend_html))
 
 # Create a HeatMap layer using the location coordinates and intensity (e.g., COVID cases)
 heat_data = [[point.xy[1][0], point.xy[0][0], row['Covid Cases']] for idx, row in merged_data.iterrows() for point in [row.geometry.centroid]]
-HeatMap(heat_data, name='Heatmap', radius=25, blur=20, gradient={0.4: '#FFD700', 0.65: '#FF4500', 1: '#8B0000'}).add_to(m)
+HeatMap(heat_data, name='Heatmap', radius=25, blur=20, gradient={0.3: '#FFD700', 0.5: '#FF4500', 1: '#8B0000'}).add_to(m)
 
 # Add Layer Control to toggle layers
 folium.LayerControl().add_to(m)
