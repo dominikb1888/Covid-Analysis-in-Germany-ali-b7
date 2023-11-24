@@ -128,7 +128,7 @@ def add_vaccination_markers(vaccination_rate_threshold):
             if row['Vaccination Rate'] > vaccination_rate_threshold:  # Adjusted condition
                 # Adjust circle size and color based on the vaccination rate
                 radius = 10 + row['Vaccination Rate'] / 10
-                color = 'green' if row['Vaccination Rate'] < 50 else 'orange' if row['Vaccination Rate'] < 80 else 'red'
+                color = 'red' if row['Vaccination Rate'] < 50 else 'orange' if row['Vaccination Rate'] < 80 else 'green'
                 
                 folium.CircleMarker(location=[row.geometry.centroid.y, row.geometry.centroid.x],
                                     radius=radius,
@@ -137,7 +137,7 @@ def add_vaccination_markers(vaccination_rate_threshold):
                                     fill_color=color,
                                     fill_opacity=0.7,
                                     popup=f"<strong>{row['GEN']}</strong><br>Vaccination Rate: {row['Vaccination Rate']}",
-                                    ).add_to(m)
+                                    ).add_to(vaccination Rate)
 
 # Add Layer Control to toggle layers
 folium.LayerControl().add_to(m)
