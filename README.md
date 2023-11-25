@@ -16,4 +16,4 @@ Experts in the field can leverage the data to discern connections between vaccin
 Download the file "de_covidmapfinal.html" and open it.
 
 ## Notes
-This project is still a work in progress. In the near future, I am considering scaling it to include data from West Europe too.
+This project is still a work in progress. 
