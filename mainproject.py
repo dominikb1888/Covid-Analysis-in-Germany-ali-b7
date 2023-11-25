@@ -147,6 +147,25 @@ add_vaccination_markers(vaccination_rate_threshold)
 # Add the FeatureGroup to the map
 vaccination_markers.add_to(m)
 
+def on_region_click(e):
+    # Extract information about the clicked region
+    region_name = e['properties']['Bundesland']
+    
+    # Zoom to the clicked region
+    region_geometry = merged_data[merged_data['Bundesland'] == region_name].geometry.values[0]
+    m.fit_bounds(region_geometry.bounds)
+
+# Add click event listener to GeoJSON layer
+folium.GeoJson(merged_data,
+               name='Covid Data',
+               tooltip=folium.GeoJsonTooltip(fields=['Bundesland', 'Covid Cases'],
+                                             aliases=['Region', 'Covid Cases'],
+                                             localize=True),
+               ).add_to(marker_cluster).add_child(folium.ClickForMarker(popup='Click me!').add_child(folium.LatLngPopup())).add_child(folium.ClickForMarker(popup='Waypoint')).add_child(folium.ClickForMarker(popup=None)).add_child(folium.ClickForMarker(icon=folium.Icon(color='red')).add_child(folium.LatLngPopup()))
+m.add_child(folium.ClickForMarker(popup='Waypoint'))
+m.add_child(folium.ClickForMarker(popup='Waypoint'))
+m.save('output_map.html')
+
 
 # Save the map as an HTML file
 m.save('de_covidmapfinal_filtered.html')
