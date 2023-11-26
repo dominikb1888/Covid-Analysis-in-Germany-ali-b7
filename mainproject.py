@@ -147,6 +147,60 @@ add_vaccination_markers(vaccination_rate_threshold)
 # Add the FeatureGroup to the map
 vaccination_markers.add_to(m)
 
+# Function to update map based on the selected layer
+def update_layer(change):
+    selected_layer = change['new']
+    
+    for layer in m._children.values():
+        if isinstance(layer, folium.GeoJson) and layer.get_name() != selected_layer:
+            m.remove_layer(layer)
+    
+    if selected_layer == 'Covid Cases':
+        # Add GeoJSON layer with covid data and tooltips
+        folium.GeoJson(merged_data,
+                       name='Covid Data',
+                       tooltip=folium.GeoJsonTooltip(fields=['Bundesland', 'Covid Cases'],
+                                                     aliases=['Region', 'Covid Cases'],
+                                                     localize=True),
+                       ).add_to(marker_cluster)
+    elif selected_layer == 'Deaths':
+        # Add a new Choropleth layer with the filtered data
+        folium.Choropleth(geo_data=merged_data,
+                          name='Deaths',
+                          data=merged_data,
+                          columns=['Bundesland', 'Total Deaths'],
+                          key_on='feature.properties.Bundesland',
+                          fill_color='YlOrRd',
+                          fill_opacity=0.7,
+                          line_opacity=0.2,
+                          legend_name='Deaths',
+                          highlight=True,
+                         ).add_to(m)
+    elif selected_layer == 'Population Density':
+        # Add a HeatMap layer using the location coordinates and intensity (e.g., COVID cases)
+        heat_data = [[point.xy[1][0], point.xy[0][0], row['Population']] for idx, row in merged_data.iterrows() for point in [row.geometry.centroid]]
+        gradient = {0.1: '#ffffcc', 0.3: '#fdcc8a', 0.5: '#fc8d59', 0.65: '#d7301f', 0.9: '#d7301f', 1.0: '#7f0000'}
+        HeatMap(heat_data, name='Population Density', radius=35, blur=15, gradient=gradient).add_to(m)
+    elif selected_layer == 'Vaccination Rate':
+        # Call the function to add CircleMarker layer
+        add_vaccination_markers(vaccination_rate_threshold)
+
+# Create toggle buttons HTML
+toggle_html = """
+<div style="position: fixed; top: 30px; left: 10px; z-index: 1000; background-color: white; padding: 10px; border: 2px solid #ccc; border-radius: 5px;">
+  <input type="radio" id="covid-cases" name="layer" value="Covid Cases" checked>
+  <label for="covid-cases">Covid Cases</label>
+
+  <input type="radio" id="deaths" name="layer" value="Deaths">
+  <label for="deaths">Deaths</label>
+
+  <input type="radio" id="population-density" name="layer" value="Population Density">
+  <label for="population-density">Population Density</label>
+
+  <input type="radio" id="vaccination-rate" name="layer" value="Vaccination Rate">
+  <label for="vaccination-rate">Vaccination Rate</label>
+</div>
+"""
 
 
 # Save the map as an HTML file
