@@ -201,7 +201,23 @@ toggle_html = """
   <label for="vaccination-rate">Vaccination Rate</label>
 </div>
 """
+# Define the HTML content for your popup
+popup_html = """
+    <h1>Welcome to my interactive map!</h1>
+    <p>Explore the data using the stack on the right to control filters.</p>
+"""
 
+# Create an HTML iframe for the popup
+popup_iframe = branca.element.IFrame(html=popup_html, width=300, height=150)
+
+# Create a Folium Popup with the iframe
+popup = folium.Popup(popup_iframe, max_width=300)
+
+# Choose the location where you want the popup to appear
+popup_location = [52, 13]  # Replace with actual coordinates
+
+# Create a Marker with the Popup and add it to your map (m)
+folium.Marker(location=popup_location, popup=popup).add_to(m)
 
 # Save the map as an HTML file
 m.save('de_covidmapfinal_filtered.html')
