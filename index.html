@@ -33,6 +33,11 @@
             d['Covid Cases'] = +d['Covid Cases']; // Convert to numerical value
         });
 
+         // Sort the data by 'Covid Cases' in ascending order
+        data.sort(function(a, b) {
+            return a['Covid Cases'] - b['Covid Cases'];
+        });
+
         // Set dimensions and margins of the graph
         var margin = {top: 20, right: 20, bottom: 100, left: 80}, // Increased bottom margin
             width = 1000 - margin.left - margin.right,
