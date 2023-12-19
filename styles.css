@@ -20,6 +20,13 @@ body {
     width: 100vw; /* Use full viewport width */
 }
 
+/* Style for the main section of page */
+    .main-section {
+        text-align: center; /* Center align the content horizontally */
+        padding: 20px; /* Add some padding for spacing */
+        background-color: lightgreen; /* Set the background color to light green */
+    }
+
 /* Style for the left section (bar charts) */
 .left-section {
     flex: 2; /* Adjust the width as needed */
