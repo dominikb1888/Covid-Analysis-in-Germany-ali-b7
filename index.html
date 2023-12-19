@@ -102,6 +102,13 @@
 
         yAxis.selectAll("text")
             .style("text-anchor", "end");
+        
+        svg.append("text")
+            .attr("transform", "translate(100,0)")
+            .attr("x", 50)
+            .attr("y", 50)
+            .attr("font-size", "24px")
+            .text("Covid-19 cases in Germany 2020-2022")
 
         // Add the title on the left side
         svg.append("text")
