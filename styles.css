@@ -49,8 +49,9 @@ iframe {
 }
 
 .bar {
-    fill: steelblue;
+    fill: darkgreen;
 }
+
 .axis text {
     font: 10px sans-serif;
 }
