@@ -22,9 +22,9 @@ body {
 
 /* Style for the main section of page */
     .main-section {
-        text-align: center; /* Center align the content horizontally */
-        padding: 20px; /* Add some padding for spacing */
-        background-color: lightgreen; /* Set the background color to light green */
+        text-align: center; 
+        padding: 20px;
+        background-color: lightgreen;
     }
 
 /* Style for the left section (bar charts) */
