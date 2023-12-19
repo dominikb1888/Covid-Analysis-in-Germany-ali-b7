@@ -15,6 +15,17 @@
     <p>This app provides interactive visualizations of the results of the COVID-19 pandemic in Germany.</p>
 
 </div>
+
+    <!-- Dropdown Menu for Selecting Graph -->
+<div class="graph-selector">
+    <label for="graphSelect">Select a Graph:</label>
+    <select id="graphSelect" onchange="showGraph()">
+        <option value="none">Select Graph</option>
+        <option value="barGraph">COVID-19 Cases Bar Graph</option>
+        <!-- Add more graph options as needed -->
+    </select>
+</div>
+
 <div class="right-section">
     <p>For more details, click on a federal state marker.</p>
     <iframe class="myIframe" id="myIframe" src="de_covidmap.html"></iframe>
