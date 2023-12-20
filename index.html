@@ -123,47 +123,44 @@
 
     });
 
-    function createBubbleChart() {
+   function createBubbleChart() {
         // Load the data from the CSV file
         d3.csv("covid_de1.csv").then(function(data) {
             // Parse data
             data.forEach(function(d) {
-                d.Population = +d.Population; // Convert to numerical value
-                d['Total Deaths'] = +d['Total Deaths']; // Convert to numerical value
+                d.Population = +d.Population;
+                d['Total Deaths'] = +d['Total Deaths'];
             });
 
-            // Define SVG dimensions and margins
             var svgWidth = 1000, svgHeight = 600;
             var margin = { top: 50, right: 50, bottom: 50, left: 50 };
             var width = svgWidth - margin.left - margin.right;
             var height = svgHeight - margin.top - margin.bottom;
 
-            // Remove any previous SVG elements
             d3.select('#bubbleChart').selectAll("*").remove();
 
-            // Create SVG container
             var svg = d3.select('#bubbleChart')
                 .attr('width', svgWidth)
                 .attr('height', svgHeight)
                 .append('g')
                 .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-            // Create a scale for the bubble sizes
             var radiusScale = d3.scaleSqrt()
-                .domain([0, d3.max(data, function(d) { return d['Total Deaths']; })])
-                .range([0, 50]); // Adjust the range based on desired bubble sizes
+                .domain([0, d3.max(data, function(d) { return d.Population; })])
+                .range([0, 50]);
 
-            // Create the bubbles
+            var colorScale = d3.scaleSequential()
+                .domain([0, d3.max(data, function(d) { return d['Total Deaths']; })])
+                .interpolator(d3.interpolateReds);
+
             svg.selectAll('.bubble')
                 .data(data)
                 .enter().append('circle')
                 .attr('class', 'bubble')
-                .attr('cx', function(d, i) { return 100 + i * 80; }) // Adjust for proper positioning
+                .attr('cx', function(d, i) { return (width / data.length) * i; })
                 .attr('cy', height / 2)
-                .attr('r', function(d) { return radiusScale(d['Total Deaths']); })
-                .style('fill', 'blue'); // You can add a color scale based on another data property if desired
-
-            // Add labels or other elements as needed
+                .attr('r', function(d) { return radiusScale(d.Population); })
+                .style('fill', function(d) { return colorScale(d['Total Deaths']); });
         });
     }
 </script>
