@@ -1,0 +1,8 @@
+fastapi~=0.105.0
+uvicorn==0.24.0.post1
+SQLAlchemy==2.0.23
+pandas==2.1.3
+geopandas==0.14.1
+fastapi==0.105.0
+folium==0.15.1
+docker==7.0.0
