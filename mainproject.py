@@ -10,7 +10,7 @@ gdf = gpd.read_file(geojson_path)
 del gdf['BEGINN']
 del gdf['WSK']
 
-csv_path = 'covid_de1.csv'
+csv_path = 'german_states.csv'
 data = pd.read_csv(csv_path)
 
 # Merge GeoJSON data with CSV data on the common column
