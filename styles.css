@@ -1,10 +1,5 @@
 /* Apply flex layout to the body */
-body {
-    display: flex;
-    margin: 0; /* Remove default margin to avoid extra space around the body */
-    font-family: Arial, sans-serif;
-}
-
+/*
 .tooltip {
     position: absolute;
     background-color: #e80c0c;
@@ -13,6 +8,7 @@ body {
     border-radius: 5px;
     pointer-events: none;
 }
+*/
 
 /* Style for the left and right sections */
 .container {
@@ -22,36 +18,18 @@ body {
 
 /* Style for the main section of page */
     .main-section {
-        text-align: center; 
+        text-align: center;
         padding: 20px;
-        background-color: lightgreen;
+        background-color: lightblue;
     }
 
-/* Style for the left section (bar charts) */
-.left-section {
-    flex: 2; /* Adjust the width as needed */
-    padding: 20px;
-    background-color: #f0f0f0; /* Light gray background */
-}
-
-/* Style for the right section (iframe) */
-.right-section {
-    flex: 1; /* Adjust the width as needed */
-    padding: 20px;
-    background-color: #e0e0e0; /* Slightly darker gray background */
-}
-
-/* Style for the iframe */
-iframe {
-    width: 100%;
-    height: 100%; /* Use full height of the container */
-    border: none;
+h1 {
+    text-align: center;
 }
 
 .bar {
     fill: darkgreen;
 }
-
 .axis text {
     font: 12px sans-serif;
 }
@@ -63,4 +41,110 @@ iframe {
 }
 .x.axis path {
     display: none;
+}
+
+
+/* Apply flex layout to the body */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0; /* Remove default margin to avoid extra space around the body */
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the left and right sections */
+.container {
+    display: flex;
+    flex: 1; /* Allow both sections to grow and take available space */
+    width: 100vw; /* Use full viewport width */
+}
+
+.left-section {
+    flex: 1; /* Adjust the width as needed */
+    box-sizing: border-box; /* Include padding and border in the total width/height */
+    padding: 20px; /* Add padding to the left section */
+    background-color: #f0f0f0; /* Light gray background */
+    position: relative; /* Ensure relative positioning */
+    z-index: 2; /* Set a higher z-index to bring the bar graph in front */
+}
+
+/* Style for the right section (myIframe) */
+.right-section {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.myIframe {
+    width: 100%;
+    height: 60vh; /* Adjust the maximum height as needed */
+    border: none;
+    position: absolute; /* Ensure absolute positioning */
+    top: 0; /* Align the top of the iframe to the top of the container */
+    left: 0;
+    z-index: 1; /* Set a lower z-index for the iframe */
+    margin-top: 200px;
+}
+
+.map-text {
+    text-align: center;
+    font-family: sans-serif;
+    flex: 1;
+
+}
+
+.fullscreen-button {
+    position: relative;
+    text-align: left;
+    z-index: 10; /* Higher z-index to make it accessible */
+    margin-top: 5px; /* Add some space above the button */
+}
+
+#dropdown-menu {
+    margin-top: 50px; /* Add space to the top */
+    margin-bottom: 50px; /* Add space to the bottom */
+    width: 50%;
+}
+
+#graphSelect {
+    margin-top: 50px; /* Add space to the top */
+    width: 50%;
+    position: relative; /* Ensure relative positioning */
+    z-index: 2; /* Set a higher z-index for the dropdown menu */
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    pointer-events: none;
+    display: none;
+}
+
+.tooltip2 {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 6px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.highlighted {
+    fill: #ff5733; /* Change the fill color to highlight */
+}
+
+#barChart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
