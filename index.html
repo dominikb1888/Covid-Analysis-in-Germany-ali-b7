@@ -32,23 +32,20 @@
     <button onclick="toggleFullscreen()">Toggle Fullscreen</button>
 </div>
     
-<!-- Bar Graph -->
-<svg width="1000" height="600"></svg> <!-- Increased the height of the SVG -->
-<!-- Bubble Chart -->
-<svg id="bubbleChart" width="1000" height="600" style="display: none;"></svg>
-<script>
-    // Load the data from the CSV file
-    d3.csv("covid_de1.csv").then(function(data) {
-
+// Load the data from the CSV file
+    d3.csv("german_states.csv").then(function(data) {
         // Parse data
         data.forEach(function(d) {
             d['Covid Cases'] = +d['Covid Cases']; // Convert to numerical value
+            d['Total Deaths'] = +d['Total Deaths']; // Convert to numerical value
+            d['Population'] = +d['Population']; // Convert to numerical value, assuming Population field is clean
         });
 
-         // Sort the data by 'Covid Cases' in ascending order
+        // Sort the data by 'Covid Cases' in ascending order
         data.sort(function(a, b) {
             return a['Covid Cases'] - b['Covid Cases'];
         });
+
 
         // Set dimensions and margins of the graph
         var margin = {top: 20, right: 20, bottom: 100, left: 80}, // Increased bottom margin
@@ -63,7 +60,7 @@
             .range([height, 0]);
 
         // Append the svg object to the body of the page
-        var svg = d3.select("svg")
+        var svg = d3.select("#barGraph")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
@@ -82,7 +79,11 @@
             .attr("x", function(d) { return x(d.Bundesland); })
             .attr("width", x.bandwidth())
             .attr("y", function(d) { return y(d['Covid Cases']); })
-            .attr("height", function(d) { return height - y(d['Covid Cases']); });
+            .attr("height", 0) // Start with height 0
+            .transition() // Start a transition
+            .duration(800) // Duration of the transition in milliseconds
+            .attr("height", function(d) { return height - y(d['Covid Cases']); }); // Transition to the actual height
+
 
         // Add the x Axis
         var xAxis = svg.append("g")
@@ -103,7 +104,7 @@
 
         yAxis.selectAll("text")
             .style("text-anchor", "end");
-        
+        // Chart title
         svg.append("text")
             .attr("transform", "translate(100,0)")
             .attr("x", 50)
@@ -121,7 +122,23 @@
             .style("text-anchor", "middle")
             .text("Number of Cases");
 
-    });
+        // Add a hover event listener to highlight bars on hover
+        svg.selectAll(".bar")
+            .on("mouseover", function(d) {
+                d3.select(this)
+                    .classed("highlighted", true); // Apply the 'highlighted' class
+            })
+            .on("mouseout", function(d) {
+                d3.select(this)
+                    .classed("highlighted", false); // Remove the 'highlighted' class
+            });
+
+// Add a click event listener to toggle highlighting on click
+        svg.selectAll(".bar")
+            .on("click", function(d) {
+                d3.select(this)
+                    .classed("highlighted", !d3.select(this).classed("highlighted")); // Toggle the 'highlighted' class
+            });
 
    function createBubbleChart() {
         // Load the data from the CSV file
