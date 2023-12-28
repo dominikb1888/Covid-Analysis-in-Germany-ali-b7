@@ -140,6 +140,35 @@
                     .classed("highlighted", !d3.select(this).classed("highlighted")); // Toggle the 'highlighted' class
             });
 
+    // Scatter Plot Code
+        // Set the dimensions and margins of the graph
+        var scatterMargin = {top: 60, right: 30, bottom: 60, left: 80}, // Adjusted margins
+            scatterWidth = 1000 - scatterMargin.left - scatterMargin.right,
+            scatterHeight = 600 - scatterMargin.top - scatterMargin.bottom;
+
+        // Append the svg object to the body of the page
+        var scatterSvg = d3.select("#scatterPlot")
+            .attr("width", scatterWidth + scatterMargin.left + scatterMargin.right)
+            .attr("height", scatterHeight + scatterMargin.top + scatterMargin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + scatterMargin.left + "," + scatterMargin.top + ")");
+
+        // Add X axis
+        var xScatter = d3.scaleLinear()
+            .domain([0, d3.max(data, function(d) { return d['Covid Cases']; })])
+            .range([0, scatterWidth]);
+        var xAxisGroup = scatterSvg.append("g")
+            .attr("transform", "translate(0," + scatterHeight + ")")
+            .call(d3.axisBottom(xScatter));
+
+        // X Axis title
+        scatterSvg.append("text")
+            .attr("class", "axis-title")
+            .attr("text-anchor", "middle")
+            .attr("x", scatterWidth / 2)
+            .attr("y", scatterHeight + scatterMargin.bottom - 10) // Adjust this to position the title correctly
+            .text("COVID Cases");
+
    function createBubbleChart() {
         // Load the data from the CSV file
         d3.csv("covid_de1.csv").then(function(data) {
