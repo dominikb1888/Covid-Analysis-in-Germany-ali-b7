@@ -7,6 +7,12 @@ This project aims to conduct a comprehensive analysis of the impact of the Covid
 ## Informatics Students:
 This project is particularly valuable for informatics students who are eager to understand the effects of COVID-19 in Germany and seek inspiration for innovative data visualization methods. It serves as both an educational tool and a practical example of how complex data can be effectively visualized.
 
+### Why It's Ideal for Informatics Students:
+**In-Depth Data Analysis**: Provides a comprehensive view of COVID-19 data, offering a rich dataset for analysis and study.
+**Diverse Visualization Techniques**: Showcases a range of visualization methods using Python, HTML, and d3.js, offering inspiration and practical examples for your own projects.
+**Interactive Learning Experience**: Engage with interactive elements, such as maps and graphs, to see how user interaction can enhance data comprehension.
+**Real-World Application**: Understand how informatics skills can be applied in real-world scenarios, particularly in public health and epidemiology.
+
 ## Project link
 Download the file "de_covidmapfinal.html" and open it.
 
