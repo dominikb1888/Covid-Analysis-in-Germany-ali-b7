@@ -1,38 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>COVID-19 Cases Bar Graph</title>
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </head>
 <body>
-<div id="tooltip" class="tooltip" style="opacity: 0; position: absolute;"></div>
+<div class="b-example-divider"></div>
 
+<!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+        <a class="navbar-brand" href="index.html">Data Vis</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="map.html">Map of Germany</a></li>
+                <li class="nav-item"><a class="nav-link" href="city_map.html">German Cities</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Header-->
+<header class="bg-dark py-2">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+                <div class="text-center my-5">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Welcome to our Covid Data Analysis Application</h1>
+                    <p class="lead text-white-50 mb-4">This web app provides interactive visualizations of the results of the COVID-19 pandemic in Germany.</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#graphSelect">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
-<div class="left-section">
-    <h2>Welcome to Covid Data Analysis Application</h2>
-    <p>This app provides interactive visualizations of the results of the COVID-19 pandemic in Germany.</p>
+<div id="tooltip" class="tooltip" style="opacity: 0; position: absolute; pointer-events: none;"></div>
+<div id="tooltip2" class="tooltip2" style="opacity: 0; position: absolute; pointer-events: none;"></div>
 
-</div>
-
-    <!-- Dropdown Menu for Selecting Graph -->
-<div class="graph-selector">
+<!-- Dropdown Menu for Selecting Graph -->
+<div>
     <label for="graphSelect">Select a Graph:</label>
     <select id="graphSelect" onchange="showGraph()">
         <option value="none">Select Graph</option>
         <option value="barGraph">COVID-19 Cases Bar Graph</option>
+        <option value="scatterPlot">COVID-19 Cases vs. Deaths Scatter Plot</option>
+        <option value="state_timedata">Covid Data per Year</option>
+        <option value="vacrateState">Vaccination Rates Chart</option>
         <!-- Add more graph options as needed -->
     </select>
 </div>
 
-<div class="right-section">
-    <p>For more details, click on a federal state marker.</p>
-    <iframe class="myIframe" id="myIframe" src="de_covidmap.html"></iframe>
-    <button onclick="toggleFullscreen()">Toggle Fullscreen</button>
+
+<!-- Color Picker for Bar Chart (initially hidden) -->
+<div id="colorPickerContainer" style="display: none;">
+    <label for="barColorPicker">Choose Bar Color:</label>
+    <input type="color" id="barColorPicker" name="barColor" value="#ff0000">
 </div>
-    
-// Load the data from the CSV file
+
+<!-- Container for sorting buttons (initially hidden) -->
+<div id="sortingButtons" style="display: none;">
+    <button id="sortAscendingBtn" class="btn btn-primary" onclick="sortBars('ascending')">Sort Ascending</button>
+    <button id="sortDescendingBtn" class="btn btn-primary" onclick="sortBars('descending')">Sort Descending</button>
+</div>
+
+
+<!-- Slider for dynamic updating (initially hidden) -->
+<div id="sliderContainer" style="display: none;">
+    <label for="casesSlider">Filter by Covid Cases:</label>
+    <input type="range" id="casesSlider" min="10000" max="2700000" value="10000">
+    <span id="sliderValue">10000</span>
+</div>
+
+
+<!-- Centering the graph with a flex container -->
+<div style="display: flex; justify-content: center;">
+    <!-- Bar Graph -->
+    <svg id="barGraph" width="1000" height="600" style="display: none;"></svg>
+    <!-- Scatter Plot -->
+    <svg id="scatterPlot" width="1000" height="600" style="display: none;"><!-- X Axis title for Scatter Plot -->
+        <text class="axis-title" text-anchor="middle" x="500" y="640">COVID Cases</text>
+        <!-- Y Axis title for Scatter Plot -->
+        <text class="axis-title" x="-250" y="10" text-anchor="middle" transform="rotate(-90)">Total Deaths</text>
+    </svg>
+
+</div>
+
+<script>
+
+    // Load the data from the CSV file
     d3.csv("german_states.csv").then(function(data) {
         // Parse data
         data.forEach(function(d) {
@@ -78,11 +141,36 @@
             .attr("class", "bar")
             .attr("x", function(d) { return x(d.Bundesland); })
             .attr("width", x.bandwidth())
+            // Start with the bars at the bottom of the chart
+            .attr("y", height)
+            .attr("height", 0)
+            .on("mouseover", function(event, d) {
+                d3.select(this)
+                    .transition()
+                    .duration(300)
+                    .style("fill", "orange");
+                // Display tooltip
+                var tooltip = d3.select("#tooltip");
+                tooltip.style("opacity", 1)
+                    .html("Population: " + d.Population.toLocaleString())
+                    .style("left", (event.pageX) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function(event, d) {
+                d3.select(this)
+                    .transition()
+                    .duration(300)
+                    .style("fill", "green");
+                // Hide tooltip
+                var tooltip = d3.select("#tooltip");
+                tooltip.style("opacity", 0);
+            })
+            // Animate the bars
+            .transition()
+            .duration(8000)
             .attr("y", function(d) { return y(d['Covid Cases']); })
-            .attr("height", 0) // Start with height 0
-            .transition() // Start a transition
-            .duration(800) // Duration of the transition in milliseconds
-            .attr("height", function(d) { return height - y(d['Covid Cases']); }); // Transition to the actual height
+            .attr("height", function(d) { return height - y(d['Covid Cases']); }); // Added closing parenthesis and curly brace
+
 
 
         // Add the x Axis
@@ -122,26 +210,46 @@
             .style("text-anchor", "middle")
             .text("Number of Cases");
 
-        // Add a hover event listener to highlight bars on hover
-        svg.selectAll(".bar")
-            .on("mouseover", function(d) {
-                d3.select(this)
-                    .classed("highlighted", true); // Apply the 'highlighted' class
-            })
-            .on("mouseout", function(d) {
-                d3.select(this)
-                    .classed("highlighted", false); // Remove the 'highlighted' class
-            });
 
-// Add a click event listener to toggle highlighting on click
-        svg.selectAll(".bar")
-            .on("click", function(d) {
-                d3.select(this)
-                    .classed("highlighted", !d3.select(this).classed("highlighted")); // Toggle the 'highlighted' class
-            });
+        // Add the sortBars function inside the d3.csv callback
+        function sortBars(order) {
+            // Retrieve the current data bound to the bars
+            var barsData = svg.selectAll(".bar").data();
 
-    // Scatter Plot Code
-        // Set the dimensions and margins of the graph
+            // Sort the data based on the order parameter
+            if(order === 'ascending') {
+                barsData.sort((a, b) => a['Covid Cases'] - b['Covid Cases']);
+            } else if(order === 'descending') {
+                barsData.sort((a, b) => b['Covid Cases'] - a['Covid Cases']);
+            }
+
+            // Update the x-scale domain with new order
+            x.domain(barsData.map(d => d.Bundesland));
+
+            // Select and update all bars
+            svg.selectAll(".bar")
+                .data(barsData, function(d) { return d.Bundesland; }) // Use the key function for object constancy
+                .transition()
+                .duration(1000)
+                .attr("x", d => x(d.Bundesland)) // Update the x position of the bar based on the new order
+                .attr("width", x.bandwidth()); // Update the width if necessary
+
+            // Update x-axis
+            xAxis.transition()
+                .duration(1000)
+                .call(d3.axisBottom(x));
+
+            // Rotate the axis labels if needed
+            xAxis.selectAll("text")
+                .style("text-anchor", "end")
+                .attr("dx", "-.8em")
+                .attr("dy", ".15em")
+                .attr("transform", "rotate(-45)");
+        }
+
+
+        // SCATTER PLOT Code
+
         var scatterMargin = {top: 60, right: 30, bottom: 60, left: 80}, // Adjusted margins
             scatterWidth = 1000 - scatterMargin.left - scatterMargin.right,
             scatterHeight = 600 - scatterMargin.top - scatterMargin.bottom;
@@ -169,46 +277,228 @@
             .attr("y", scatterHeight + scatterMargin.bottom - 10) // Adjust this to position the title correctly
             .text("COVID Cases");
 
-   function createBubbleChart() {
-        // Load the data from the CSV file
-        d3.csv("covid_de1.csv").then(function(data) {
-            // Parse data
-            data.forEach(function(d) {
-                d.Population = +d.Population;
-                d['Total Deaths'] = +d['Total Deaths'];
+        // Add Y axis
+        var yScatter = d3.scaleLinear()
+            .domain([0, d3.max(data, function(d) { return d['Total Deaths']; })])
+            .range([scatterHeight, 0]);
+        var yAxisGroup = scatterSvg.append("g")
+            .call(d3.axisLeft(yScatter));
+
+        // Y Axis title
+        yAxisGroup.append("text")
+            .attr("class", "axis-title")
+            .attr("transform", "rotate(-90)")
+            .attr("y", -60) // Adjust the position
+            .attr("x", -scatterHeight / 2)
+            .attr("text-anchor", "middle")
+            .text("Total Deaths");
+
+
+        // Add a scale for circle radius based on population
+        var radiusScale = d3.scaleSqrt()
+            .domain([0, d3.max(data, function(d) { return d.Population; })])
+            .range([3, 25]); // Range of circle radius sizes
+
+        // Define a color scale
+        var colorScale = d3.scaleOrdinal(d3.schemeCategory10); // This is an example using a built-in D3 color scheme
+
+        // Add dots for scatter plot
+        scatterSvg.append('g')
+            .selectAll("dot")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("cx", 0) // Start from the left edge of the SVG
+            .attr("cy", function(d) { return yScatter(d['Total Deaths']); })
+            .attr("r", function(d) { return radiusScale(d.Population); })
+            .style("fill", function(d) { return colorScale(d.Bundesland); })
+            .on("mouseover", (event, d) => {
+                var tooltip2 = d3.select("#tooltip2");
+                tooltip2.style("opacity", 1)
+                    .html("State: " + d.Bundesland + "<br>Population: " + d.Population.toLocaleString())
+                    .style("left", (event.pageX) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", (event, d) => {
+                var tooltip2 = d3.select("#tooltip2");
+                tooltip2.style("opacity", 0);
+            })
+            .transition() // Start a transition
+            .delay(function(d, i) { return i * 3; }) // Delay for each dot
+            .duration(8000) // Duration of animation in milliseconds
+            .attr("cx", function(d) { return xScatter(d['Covid Cases']); }); // Animate to final x-coordinate
+
+        // Function to update the scatter plot
+        function updateScatterPlot(maxCases) {
+            // Filter the data
+            var filteredData = data.filter(function(d) {
+                return d['Covid Cases'] <= maxCases;
             });
 
-            var svgWidth = 1000, svgHeight = 600;
-            var margin = { top: 50, right: 50, bottom: 50, left: 50 };
-            var width = svgWidth - margin.left - margin.right;
-            var height = svgHeight - margin.top - margin.bottom;
+            // Update the scatter plot
+            var dots = scatterSvg.selectAll("circle")
+                .data(filteredData, function(d) { return d.Bundesland; });
 
-            d3.select('#bubbleChart').selectAll("*").remove();
+            // Enter new dots and update existing dots
+            dots.enter().append("circle")
+                .merge(dots) // Merge enter and update selections
+                .attr("cx", function(d) { return xScatter(d['Covid Cases']); })
+                .attr("cy", function(d) { return yScatter(d['Total Deaths']); })
+                .attr("r", function(d) { return radiusScale(d.Population); })
+                .style("fill", function(d) { return colorScale(d.Bundesland); })
+                .transition()
+                .duration(7000)
+                .attr("cx", function(d) { return xScatter(d['Covid Cases']); })
+                // Reapply the mouseover and mouseout event listeners
+                .on("mouseover", (event, d) => {
+                    var tooltip2 = d3.select("#tooltip2");
+                    tooltip2.style("opacity", 1)
+                        .html("State: " + d.Bundesland + "<br>Population: " + d.Population.toLocaleString())
+                        .style("left", (event.pageX) + "px")
+                        .style("top", (event.pageY - 28) + "px");
+                })
+                .on("mouseout", (event, d) => {
+                    var tooltip2 = d3.select("#tooltip2");
+                    tooltip2.style("opacity", 0);
+                });
 
-            var svg = d3.select('#bubbleChart')
-                .attr('width', svgWidth)
-                .attr('height', svgHeight)
-                .append('g')
-                .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+            // Remove old dots
+            dots.exit().transition().duration(4000).attr("r", 0).remove();
+        }
 
-            var radiusScale = d3.scaleSqrt()
-                .domain([0, d3.max(data, function(d) { return d.Population; })])
-                .range([0, 50]);
-
-            var colorScale = d3.scaleSequential()
-                .domain([0, d3.max(data, function(d) { return d['Total Deaths']; })])
-                .interpolator(d3.interpolateReds);
-
-            svg.selectAll('.bubble')
-                .data(data)
-                .enter().append('circle')
-                .attr('class', 'bubble')
-                .attr('cx', function(d, i) { return (width / data.length) * i; })
-                .attr('cy', height / 2)
-                .attr('r', function(d) { return radiusScale(d.Population); })
-                .style('fill', function(d) { return colorScale(d['Total Deaths']); });
+        // Event listener for the slider
+        document.getElementById('casesSlider').addEventListener('input', function() {
+            var value = +this.value;
+            document.getElementById('sliderValue').textContent = value; // Update the display
+            updateScatterPlot(value);
         });
+
+        d3.select("#sortAscendingBtn").on("click", function() {
+            sortBars('ascending');
+        });
+
+        d3.select("#sortDescendingBtn").on("click", function() {
+            sortBars('descending');
+        });
+
+    });
+
+
+    // Function to display the selected graph
+    function showGraph() {
+        var selectedGraph = document.getElementById('graphSelect').value;
+        var barGraph = document.getElementById('barGraph');
+        var scatterPlot = document.getElementById('scatterPlot');
+        var sliderContainer = document.getElementById('sliderContainer');
+        var sortingButtons = document.getElementById('sortingButtons');
+        var colorPickerContainer = document.getElementById('colorPickerContainer');
+
+
+
+        // Hide all graphs, slider, sorting buttons, color picker,
+        barGraph.style.display = 'none';
+        scatterPlot.style.display = 'none';
+        sliderContainer.style.display = 'none';
+        sortingButtons.style.display = 'none';
+        colorPickerContainer.style.display = 'none';
+
+
+
+        // Show the selected graph and corresponding controls
+        if (selectedGraph === 'barGraph') {
+            barGraph.style.display = 'block';
+            sortingButtons.style.display = 'block';
+            colorPickerContainer.style.display = 'block';
+
+
+        } else if (selectedGraph === 'scatterPlot') {
+            scatterPlot.style.display = 'block';
+            sliderContainer.style.display = 'block';
+        } else if (selectedGraph === 'vacrateState') {
+            window.location.href = 'vacrate_states.html'; // redirect to vacrate_states.html
+        } else if (selectedGraph === 'state_timedata') {
+        window.location.href = 'state_timedata.html'; // Redirect to timedata.html
     }
+
+    // Call the function to display the graph based on the dropdown selection
+    document.addEventListener('DOMContentLoaded', showGraph);
+
+    // Bar color picker event listener
+    document.getElementById('barColorPicker').addEventListener('input', function() {
+        var newColor = this.value;
+        d3.select("#barGraph").selectAll('.bar')
+            .transition()
+            .duration(500) // Transition duration
+            .style('fill', newColor);
+    })};
 </script>
+<!-- Contact section-->
+<section class="bg-light py-5">
+    <div class="container px-5 my-5 px-5">
+        <div class="text-center mb-5">
+            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+            <h2 class="fw-bolder">Get in touch</h2>
+            <p class="lead mb-0">We'd love to hear from you</p>
+        </div>
+        <div class="row gx-5 justify-content-center">
+            <div class="col-lg-6">
+
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <!-- Name input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                        <label for="name">Full name</label>
+                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                    </div>
+                    <!-- Email address input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                        <label for="email">Email address</label>
+                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                    </div>
+                    <!-- Phone number input-->
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                        <label for="phone">Phone number</label>
+                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                    </div>
+                    <!-- Message input-->
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                        <label for="message">Message</label>
+                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                    </div>
+
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                            To activate this form, sign up at
+                            <br />
+                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                        </div>
+                    </div>
+
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <!-- Submit Button-->
+                    <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer-->
+<footer class="py-5 bg-dark">
+    <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+</footer>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<!-- * *                               SB Forms JS                               * *-->
+<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 </html>
