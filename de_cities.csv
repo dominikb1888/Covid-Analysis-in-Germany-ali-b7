@@ -1,0 +1,60 @@
+﻿city,state_name,population,vaccination rate,covid_cases,deaths
+Berlin,Berlin,3473101,67.80%,1150345,350000
+Stuttgart,Baden-Württemberg,2787724,76%,1050746,330420
+Munich,Bavaria,2606021,70%,900530,305438
+Hamburg,Hamburg,2484800,80.80%,1093489,300420
+Cologne,North Rhine-Westphalia,1083498,77.70%,400300,120500
+Frankfurt,Hesse,764104,83.80%,300670,103410
+Düsseldorf,North Rhine-Westphalia,645923,83.40%,250865,80400
+Leipzig,Saxony,615081,76.40%,240897,75680
+Dortmund,North Rhine-Westphalia,587696,81.60%,236780,72687
+Essen,North Rhine-Westphalia,582415,63.30%,218950,64000
+Bremen,Bremen,566573,80.90%,162970,30500
+Dresden,Saxony,561922,36.80%,300897,55430
+Hannover,Lower Saxony,542668,27.50%,230200,14791
+Nuremberg,Bavaria,515543,18.90%,150000,46457
+Duisburg,North Rhine-Westphalia,495885,83.40%,190670,32001
+Bochum,North Rhine-Westphalia,364454,71.90%,160785,25095
+Wuppertal,North Rhine-Westphalia,355004,52.01%,180743,36286
+Bielefeld,North Rhine-Westphalia,334002,50%,173500,34894
+Bonn,North Rhine-Westphalia,331885,48%,165420,23484
+Münster,North Rhine-Westphalia,317713,60.80%,100345,28071
+Mannheim,Baden-Württemberg,311831,77.70%,110785,16017
+Karlsruhe,Baden-Württemberg,308436,43.80%,160142,10149
+Augsburg,Bavaria,296478,83.40%,73500,28219
+Wiesbaden,Hesse,278950,66.40%,65420,41903
+Mönchengladbach,North Rhine-Westphalia,261001,81.60%,40345,37652
+Gelsenkirchen,North Rhine-Westphalia,260126,33.30%,80500,13021
+Aachen,North Rhine-Westphalia,249070,80.90%,23500,44514
+Braunschweig,Lower Saxony,248823,96.80%,15420,12847
+Chemnitz,Saxony,248042,27.50%,52745,33835
+Kiel,Schleswig-Holstein,246601,43.05%,22570,46183
+Halle,Saxony-Anhalt,238061,33.30%,33578,32254
+Magdeburg,Saxony-Anhalt,236188,30.90%,32470,39408
+Freiburg im Breisgau,Baden-Württemberg,231848,46.80%,29540,13829
+Krefeld,North Rhine-Westphalia,227050,57.50%,26810,30988
+Mainz,Rhineland-Palatinate,217556,73.05%,15000,13520
+Lübeck,Schleswig-Holstein,216277,43.05%,22890,11359
+Erfurt,Thuringia,213835,33.30%,24646,29231
+Oberhausen,North Rhine-Westphalia,209566,30.90%,40568,25403
+Rostock,Mecklenburg-Western Pomerania,209061,46.80%,31950,13567
+Kassel,Hesse,201048,83.40%,45000,15806
+Hagen,North Rhine-Westphalia,188713,66.40%,23000,5500
+Potsdam,Brandenburg,183154,81.60%,18000,3460
+Saarbrücken,Saarland,179634,33.30%,64500,23000
+Hamm,North Rhine-Westphalia,179238,80.90%,20200,2500
+Ludwigshafen,Rhineland-Palatinate,172557,76.80%,33000,13700
+Mülheim,North Rhine-Westphalia,170921,43.05%,43000,9740
+Oldenburg,Lower Saxony,170389,33.30%,24000,15800
+Osnabrück,Lower Saxony,165034,30.90%,30000,18345
+Leverkusen,North Rhine-Westphalia,163851,46.80%,25780,17430
+Darmstadt,Hesse,159631,33.30%,32470,18829
+Solingen,North Rhine-Westphalia,159360,30.90%,26810,35988
+Heidelberg,Baden-WÃ¼rttemberg,159245,43.05%,33578,18520
+Herne,North Rhine-Westphalia,156621,80.90%,22570,16359
+Neuss,North Rhine-Westphalia,153796,46.80%,18000,34231
+Regensburg,Bavaria,153542,33.30%,52745,30403
+Paderborn,North Rhine-Westphalia,152531,76.80%,40568,18567
+Ingolstadt,Bavaria,138016,46.80%,31950,20806
+Fürth,Bavaria,129122,81.60%,23000,10500
+Würzburg,Bavaria,127880,30.90%,24646,8460
