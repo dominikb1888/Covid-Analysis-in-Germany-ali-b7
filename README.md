@@ -19,7 +19,7 @@ This project is particularly valuable for informatics students who are eager to 
 **Real-World Application**: Understand how informatics skills can be applied in real-world scenarios, particularly in public health and epidemiology.  
 
 ## Project link
-Download the file "de_covidmapfinal.html" and open it.
+Download the file "de_covidmap.html" and open it.
 
 ## Notes
 This project is still a work in progress. 
