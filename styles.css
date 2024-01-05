@@ -20,7 +20,7 @@
     .main-section {
         text-align: center;
         padding: 20px;
-        background-color: lightblue;
+        background-color: lightgray;
     }
 
 h1 {
@@ -117,12 +117,17 @@ body {
 
 .tooltip {
     position: absolute;
-    background-color: #ffffff;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 6px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
     pointer-events: none;
-    display: none;
+    opacity: 0;
+    z-index: 10;
 }
 
 .tooltip2 {
@@ -137,6 +142,7 @@ body {
     border-radius: 8px;
     pointer-events: none;
     opacity: 0;
+    z-index: 10;
 }
 
 .highlighted {
@@ -147,4 +153,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+p.unique {
+    text-align: center;
+    font-family: sans-serif;
 }
