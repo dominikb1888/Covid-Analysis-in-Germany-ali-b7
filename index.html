@@ -14,7 +14,7 @@
 <!-- Responsive navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container px-5">
-        <a class="navbar-brand" href="index.html">Data Vis</a>
+        <a class="navbar-brand" href="index.html">Covid Data</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -80,6 +80,15 @@
 </div>
 
 
+<div id="stateFilterContainer" style="display: none;">
+    <label for="stateFilter">Filter by State:</label>
+    <select id="stateFilter">
+        <option value="all">All States</option>
+        <!-- Options will be populated dynamically -->
+    </select>
+</div>
+
+
 <!-- Centering the graph with a flex container -->
 <div style="display: flex; justify-content: center;">
     <!-- Bar Graph -->
@@ -92,6 +101,10 @@
     </svg>
 
 </div>
+
+<div id="info-box" style="display: none; position: absolute; border: 1px solid black; padding: 10px; background-color: white;">
+</div>
+
 
 <script>
 
@@ -247,9 +260,25 @@
                 .attr("transform", "rotate(-45)");
         }
 
+        // Populate state filter dropdown
+        var stateFilter = d3.select("#stateFilter");
+        var states = Array.from(new Set(data.map(d => d.Bundesland)));
+        states.forEach(state => {
+            stateFilter.append("option").text(state).attr("value", state);
+        });
+
+        // Define a function to filter and update the scatter plot
+        function filterAndUpdateScatterPlot(selectedState) {
+            var filteredData = selectedState === 'all' ? data : data.filter(d => d.Bundesland === selectedState);
+            updateScatterPlot(filteredData);
+        }
+
+        // Listen for changes on the state filter dropdown
+        document.getElementById('stateFilter').addEventListener('change', function() {
+            filterAndUpdateScatterPlot(this.value);
+        });
 
         // SCATTER PLOT Code
-
         var scatterMargin = {top: 60, right: 30, bottom: 60, left: 80}, // Adjusted margins
             scatterWidth = 1000 - scatterMargin.left - scatterMargin.right,
             scatterHeight = 600 - scatterMargin.top - scatterMargin.bottom;
@@ -315,7 +344,7 @@
             .on("mouseover", (event, d) => {
                 var tooltip2 = d3.select("#tooltip2");
                 tooltip2.style("opacity", 1)
-                    .html("State: " + d.Bundesland + "<br>Population: " + d.Population.toLocaleString())
+                    .html("State: " + d.Bundesland + "<br>Total Deaths: " + d['Total Deaths'].toLocaleString())
                     .style("left", (event.pageX) + "px")
                     .style("top", (event.pageY - 28) + "px");
             })
@@ -326,7 +355,21 @@
             .transition() // Start a transition
             .delay(function(d, i) { return i * 3; }) // Delay for each dot
             .duration(8000) // Duration of animation in milliseconds
-            .attr("cx", function(d) { return xScatter(d['Covid Cases']); }); // Animate to final x-coordinate
+            .attr("cx", function(d) { return xScatter(d['Covid Cases']); })
+            .on("click", function(event, d) {
+            var infoBox = d3.select("#info-box");
+            infoBox.style("display", "block")
+                .html("State: " + d.Bundesland + "<br>Population: " + d.Population.toLocaleString() + "<br>Total Deaths: " + d['Total Deaths'].toLocaleString() + "<br>Covid Cases: " + d['Covid Cases'].toLocaleString())
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY + 10) + "px");
+        });
+
+        // Update the style for the dots (highlighting highest death rates)
+        var deathRateThreshold = d3.max(data, function(d) { return d['Total Deaths']; }) * 0.9; // Example: 90% of max death rate
+        scatterSvg.selectAll("circle")
+            .style("fill", function(d) {
+                return d['Total Deaths'] >= deathRateThreshold ? "red" : colorScale(d.Bundesland);
+            });
 
         // Function to update the scatter plot
         function updateScatterPlot(maxCases) {
@@ -417,85 +460,21 @@
         } else if (selectedGraph === 'vacrateState') {
             window.location.href = 'vacrate_states.html'; // redirect to vacrate_states.html
         } else if (selectedGraph === 'state_timedata') {
-        window.location.href = 'state_timedata.html'; // Redirect to timedata.html
-    }
+            window.location.href = 'state_timedata.html'; // Redirect to timedata.html
+        }
 
-    // Call the function to display the graph based on the dropdown selection
-    document.addEventListener('DOMContentLoaded', showGraph);
+        // Call the function to display the graph based on the dropdown selection
+        document.addEventListener('DOMContentLoaded', showGraph);
 
-    // Bar color picker event listener
-    document.getElementById('barColorPicker').addEventListener('input', function() {
-        var newColor = this.value;
-        d3.select("#barGraph").selectAll('.bar')
-            .transition()
-            .duration(500) // Transition duration
-            .style('fill', newColor);
-    })};
+        // Bar color picker event listener
+        document.getElementById('barColorPicker').addEventListener('input', function() {
+            var newColor = this.value;
+            d3.select("#barGraph").selectAll('.bar')
+                .transition()
+                .duration(500) // Transition duration
+                .style('fill', newColor);
+        })};
 </script>
-<!-- Contact section-->
-<section class="bg-light py-5">
-    <div class="container px-5 my-5 px-5">
-        <div class="text-center mb-5">
-            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
-            <h2 class="fw-bolder">Get in touch</h2>
-            <p class="lead mb-0">We'd love to hear from you</p>
-        </div>
-        <div class="row gx-5 justify-content-center">
-            <div class="col-lg-6">
 
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <!-- Name input-->
-                    <div class="form-floating mb-3">
-                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                        <label for="name">Full name</label>
-                        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                    </div>
-                    <!-- Email address input-->
-                    <div class="form-floating mb-3">
-                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                        <label for="email">Email address</label>
-                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                    </div>
-                    <!-- Phone number input-->
-                    <div class="form-floating mb-3">
-                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                        <label for="phone">Phone number</label>
-                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                    </div>
-                    <!-- Message input-->
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                        <label for="message">Message</label>
-                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                    </div>
-
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
-                    </div>
-
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                    <!-- Submit Button-->
-                    <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Footer-->
-<footer class="py-5 bg-dark">
-    <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="js/scripts.js"></script>
-
-<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
 </html>
