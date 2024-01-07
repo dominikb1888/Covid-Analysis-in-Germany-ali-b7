@@ -32,7 +32,7 @@
             <div class="col-lg-6">
                 <div class="text-center my-5">
                     <h1 class="display-5 fw-bolder text-white mb-2">Welcome to our Covid Data Analysis Application</h1>
-                    <p class="lead text-white-50 mb-4">This web app provides interactive visualizations of the results of the COVID-19 pandemic in Germany.</p>
+                    <p class="lead text-white-50 mb-4">This web app provides interactive visualizations of the results of the COVID pandemic in Germany.</p>
                     <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
                         <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#graphSelect">Get Started</a>
                     </div>
@@ -45,13 +45,18 @@
 <div id="tooltip" class="tooltip" style="opacity: 0; position: absolute; pointer-events: none;"></div>
 <div id="tooltip2" class="tooltip2" style="opacity: 0; position: absolute; pointer-events: none;"></div>
 
+
+<div>
+    <p class="unique1">The following graphs visualize data on a state level</p>
+    <p class="unique1">Choose any graph to view & interact with from the dropdown below</p>
+</div>
 <!-- Dropdown Menu for Selecting Graph -->
 <div>
     <label for="graphSelect">Select a Graph:</label>
     <select id="graphSelect" onchange="showGraph()">
         <option value="none">Select Graph</option>
-        <option value="barGraph">COVID-19 Cases Bar Graph</option>
-        <option value="scatterPlot">COVID-19 Cases vs. Deaths Scatter Plot</option>
+        <option value="barGraph">COVID Cases Bar Graph</option>
+        <option value="scatterPlot">COVID Deaths Scatter Plot</option>
         <option value="state_timedata">Covid Data per Year</option>
         <option value="vacrateState">Vaccination Rates Chart</option>
         <!-- Add more graph options as needed -->
@@ -67,25 +72,13 @@
 
 <!-- Container for sorting buttons (initially hidden) -->
 <div id="sortingButtons" style="display: none;">
-    <button id="sortAscendingBtn" class="btn btn-primary" onclick="sortBars('ascending')">Sort Ascending</button>
-    <button id="sortDescendingBtn" class="btn btn-primary" onclick="sortBars('descending')">Sort Descending</button>
+    <button id="sortAscendingBtn" class="btn btn-primary">Sort Ascending</button>
+    <button id="sortDescendingBtn" class="btn btn-primary">Sort Descending</button>
+
 </div>
 
-
-<!-- Slider for dynamic updating (initially hidden) -->
-<div id="sliderContainer" style="display: none;">
-    <label for="casesSlider">Filter by Covid Cases:</label>
-    <input type="range" id="casesSlider" min="10000" max="2700000" value="10000">
-    <span id="sliderValue">10000</span>
-</div>
-
-
-<div id="stateFilterContainer" style="display: none;">
-    <label for="stateFilter">Filter by State:</label>
-    <select id="stateFilter">
-        <option value="all">All States</option>
-        <!-- Options will be populated dynamically -->
-    </select>
+<div id="infoBox" style="display: none; position: absolute; padding: 10px; background-color: white; border: 1px solid #ddd; border-radius: 5px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);">
+    <!-- Info will be displayed here -->
 </div>
 
 
@@ -165,7 +158,7 @@
                 // Display tooltip
                 var tooltip = d3.select("#tooltip");
                 tooltip.style("opacity", 1)
-                    .html("Population: " + d.Population.toLocaleString())
+                    .html("Covid Cases: " + d['Covid Cases'].toLocaleString() + "<br> Population: " + d.Population.toLocaleString())
                     .style("left", (event.pageX) + "px")
                     .style("top", (event.pageY - 28) + "px");
             })
@@ -183,7 +176,6 @@
             .duration(8000)
             .attr("y", function(d) { return y(d['Covid Cases']); })
             .attr("height", function(d) { return height - y(d['Covid Cases']); }); // Added closing parenthesis and curly brace
-
 
 
         // Add the x Axis
@@ -223,60 +215,48 @@
             .style("text-anchor", "middle")
             .text("Number of Cases");
 
-
         // Add the sortBars function inside the d3.csv callback
+        // Function to sort and update the bars
         function sortBars(order) {
-            // Retrieve the current data bound to the bars
-            var barsData = svg.selectAll(".bar").data();
-
-            // Sort the data based on the order parameter
-            if(order === 'ascending') {
-                barsData.sort((a, b) => a['Covid Cases'] - b['Covid Cases']);
-            } else if(order === 'descending') {
-                barsData.sort((a, b) => b['Covid Cases'] - a['Covid Cases']);
+            // Sort the data
+            if (order === 'ascending') {
+                data.sort((a, b) => a['Covid Cases'] - b['Covid Cases']);
+            } else if (order === 'descending') {
+                data.sort((a, b) => b['Covid Cases'] - a['Covid Cases']);
             }
 
             // Update the x-scale domain with new order
-            x.domain(barsData.map(d => d.Bundesland));
+            x.domain(data.map(d => d.Bundesland));
 
             // Select and update all bars
             svg.selectAll(".bar")
-                .data(barsData, function(d) { return d.Bundesland; }) // Use the key function for object constancy
+                .data(data, d => d.Bundesland) // Key function for object constancy
                 .transition()
                 .duration(1000)
-                .attr("x", d => x(d.Bundesland)) // Update the x position of the bar based on the new order
-                .attr("width", x.bandwidth()); // Update the width if necessary
+                .attr("x", d => x(d.Bundesland)); // Update the x position based on new order
 
-            // Update x-axis
-            xAxis.transition()
+            // Update x-axis to reflect the new order
+            svg.select(".x.axis")
+                .transition()
                 .duration(1000)
-                .call(d3.axisBottom(x));
-
-            // Rotate the axis labels if needed
-            xAxis.selectAll("text")
+                .call(d3.axisBottom(x))
+                .selectAll("text")
                 .style("text-anchor", "end")
                 .attr("dx", "-.8em")
                 .attr("dy", ".15em")
                 .attr("transform", "rotate(-45)");
+
         }
 
-        // Populate state filter dropdown
-        var stateFilter = d3.select("#stateFilter");
-        var states = Array.from(new Set(data.map(d => d.Bundesland)));
-        states.forEach(state => {
-            stateFilter.append("option").text(state).attr("value", state);
+        // Attach event listeners to sort buttons
+        d3.select("#sortAscendingBtn").on("click", function() {
+            sortBars('ascending');
         });
 
-        // Define a function to filter and update the scatter plot
-        function filterAndUpdateScatterPlot(selectedState) {
-            var filteredData = selectedState === 'all' ? data : data.filter(d => d.Bundesland === selectedState);
-            updateScatterPlot(filteredData);
-        }
-
-        // Listen for changes on the state filter dropdown
-        document.getElementById('stateFilter').addEventListener('change', function() {
-            filterAndUpdateScatterPlot(this.value);
+        d3.select("#sortDescendingBtn").on("click", function() {
+            sortBars('descending');
         });
+
 
         // SCATTER PLOT Code
         var scatterMargin = {top: 60, right: 30, bottom: 60, left: 80}, // Adjusted margins
@@ -357,6 +337,7 @@
             .duration(8000) // Duration of animation in milliseconds
             .attr("cx", function(d) { return xScatter(d['Covid Cases']); })
             .on("click", function(event, d) {
+                showInfoBox(d3.pointer(event, this), d);
             var infoBox = d3.select("#info-box");
             infoBox.style("display", "block")
                 .html("State: " + d.Bundesland + "<br>Population: " + d.Population.toLocaleString() + "<br>Total Deaths: " + d['Total Deaths'].toLocaleString() + "<br>Covid Cases: " + d['Covid Cases'].toLocaleString())
@@ -409,43 +390,41 @@
             dots.exit().transition().duration(4000).attr("r", 0).remove();
         }
 
-        // Event listener for the slider
-        document.getElementById('casesSlider').addEventListener('input', function() {
-            var value = +this.value;
-            document.getElementById('sliderValue').textContent = value; // Update the display
-            updateScatterPlot(value);
-        });
+        function showInfoBox(coords, data) {
+            var infoBox = d3.select("#infoBox");
 
-        d3.select("#sortAscendingBtn").on("click", function() {
-            sortBars('ascending');
-        });
+            // Clear previous content
+            infoBox.html("");
 
-        d3.select("#sortDescendingBtn").on("click", function() {
-            sortBars('descending');
-        });
+            // Populate with new data
+            infoBox.append("h3").text("Details for " + data.Bundesland);
+            infoBox.append("p").text("Population: " + data.Population.toLocaleString());
+            infoBox.append("p").text("Covid Cases: " + data['Covid Cases'].toLocaleString());
+
+            // Position and display the info box
+            infoBox.style("display", "block")
+                .style("left", (coords[0] + 10) + "px")
+                .style("top", (coords[1] + 10) + "px");
+        }
+
 
     });
-
 
     // Function to display the selected graph
     function showGraph() {
         var selectedGraph = document.getElementById('graphSelect').value;
         var barGraph = document.getElementById('barGraph');
         var scatterPlot = document.getElementById('scatterPlot');
-        var sliderContainer = document.getElementById('sliderContainer');
         var sortingButtons = document.getElementById('sortingButtons');
         var colorPickerContainer = document.getElementById('colorPickerContainer');
-
-
+        var infoBox = document.getElementById('infoBox'); // Get the infoBox element
 
         // Hide all graphs, slider, sorting buttons, color picker,
         barGraph.style.display = 'none';
         scatterPlot.style.display = 'none';
-        sliderContainer.style.display = 'none';
         sortingButtons.style.display = 'none';
         colorPickerContainer.style.display = 'none';
-
-
+        infoBox.style.display = 'none';
 
         // Show the selected graph and corresponding controls
         if (selectedGraph === 'barGraph') {
@@ -456,7 +435,7 @@
 
         } else if (selectedGraph === 'scatterPlot') {
             scatterPlot.style.display = 'block';
-            sliderContainer.style.display = 'block';
+            infoBox.style.display = 'block';
         } else if (selectedGraph === 'vacrateState') {
             window.location.href = 'vacrate_states.html'; // redirect to vacrate_states.html
         } else if (selectedGraph === 'state_timedata') {
@@ -474,7 +453,7 @@
                 .duration(500) // Transition duration
                 .style('fill', newColor);
         })};
-</script>
 
+</script>
 </body>
 </html>
