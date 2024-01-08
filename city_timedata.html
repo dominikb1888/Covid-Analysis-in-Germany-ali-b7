@@ -150,7 +150,7 @@
 
     // Update function with sorting logic
     function update(selectedVar, sortAscending = undefined) {
-        d3.csv("city_timedata.csv", function(d){
+        d3.csv("cities_data.csv", function(d){
             return { city: d.city, value: +d[selectedVar] };
         }).then(function(data) {
             if (sortAscending !== undefined) {
@@ -206,7 +206,7 @@
         const list = d3.select("#comparison-list");
         list.html("");
         selectedCities.forEach(city => {
-            list.append("li").text(`City: ${city.city}, COVID Cases: ${city.value}`);
+            list.append("li").text(`City: ${city.city}, COVID Cases: ${city.value.toLocaleString()}`);
         });
     }
 
