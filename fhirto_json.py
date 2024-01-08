@@ -35,12 +35,19 @@ for resource in data["entry"]:
 
     # Repeat similar blocks for other data points like Vaccination Rate, Population, etc.
 
+# Check if 'Bundesland' key exists
+    if 'Bundesland' in entry:
+        subject_reference = f"Location/{entry['Bundesland'].lower().replace(' ', '-')}"
+    else:
+        # Handle the case where 'Bundesland' is not present
+        subject_reference = "Location/unknown"
+
     # Create the observation resource for each entry
     observation = Observation(
         status="final",
         category=[{"coding": [{"system": "http://terminology.hl7.org/CodeSystem/observation-category", "code": "survey"}]}],
         code={"coding": [{"system": "http://loinc.org", "code": "HealthData"}], "text": "Health Statistics"},
-        subject={"reference": f"Location/{entry['Bundesland'].lower().replace(' ', '-')}"},
+        subject={"reference": subject_reference},
         component=components_list
     )
 
