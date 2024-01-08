@@ -1,0 +1,1306 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Baden-Wurttemberg",
+        "CovidCases": 1932619,
+        "VaccinationRate": "67.80%",
+        "Population": 11280275,
+        "TotalDeaths": 1700600,
+        "CovidCases2020": 800000,
+        "CovidCases2021": 600000,
+        "CovidCases2022": 530000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Bayern",
+        "CovidCases": 2427148,
+        "VaccinationRate": "76%",
+        "Population": 13370400,
+        "TotalDeaths": 1578600,
+        "CovidCases2020": 1300000,
+        "CovidCases2021": 700000,
+        "CovidCases2022": 427000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Berlin",
+        "CovidCases": 1226440,
+        "VaccinationRate": "70%",
+        "Population": 3755251,
+        "TotalDeaths": 485800,
+        "CovidCases2020": 400000,
+        "CovidCases2021": 300000,
+        "CovidCases2022": 200000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Brandenburg",
+        "CovidCases": 513380,
+        "VaccinationRate": "57.80%",
+        "Population": 2575135,
+        "TotalDeaths": 125000,
+        "CovidCases2020": 230000,
+        "CovidCases2021": 140000,
+        "CovidCases2022": 150000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Bremen",
+        "CovidCases": 100150,
+        "VaccinationRate": "77.70%",
+        "Population": 671489,
+        "TotalDeaths": 22055,
+        "CovidCases2020": 60000,
+        "CovidCases2021": 30000,
+        "CovidCases2022": 15000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Hamburg",
+        "CovidCases": 605510,
+        "VaccinationRate": "83.80%",
+        "Population": 1787408,
+        "TotalDeaths": 345000,
+        "CovidCases2020": 350000,
+        "CovidCases2021": 280000,
+        "CovidCases2022": 130000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Hessen",
+        "CovidCases": 1818678,
+        "VaccinationRate": "63.40%",
+        "Population": 6176172,
+        "TotalDeaths": 473005,
+        "CovidCases2020": 250000,
+        "CovidCases2021": 280000,
+        "CovidCases2022": 150000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Mecklenburg-Vorpommern",
+        "CovidCases": 180000,
+        "VaccinationRate": "76.40%",
+        "Population": 1612362,
+        "TotalDeaths": 150560,
+        "CovidCases2020": 750000,
+        "CovidCases2021": 600000,
+        "CovidCases2022": 500000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Niedersachsen",
+        "CovidCases": 2515300,
+        "VaccinationRate": "81.60%",
+        "Population": 7926599,
+        "TotalDeaths": 400683,
+        "CovidCases2020": 1200000,
+        "CovidCases2021": 900000,
+        "CovidCases2022": 470000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Nordrhein-Westfalen",
+        "CovidCases": 2936800,
+        "VaccinationRate": "63.30%",
+        "Population": 17865516,
+        "TotalDeaths": 1470200,
+        "CovidCases2020": 1700000,
+        "CovidCases2021": 800000,
+        "CovidCases2022": 350000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Rheinland-Pfalz",
+        "CovidCases": 1595600,
+        "VaccinationRate": "90.90%",
+        "Population": 4052803,
+        "TotalDeaths": 378000,
+        "CovidCases2020": 330000,
+        "CovidCases2021": 285000,
+        "CovidCases2022": 124000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Saarland",
+        "CovidCases": 217800,
+        "VaccinationRate": "36.80%",
+        "Population": 995597,
+        "TotalDeaths": 78000,
+        "CovidCases2020": 112000,
+        "CovidCases2021": 75000,
+        "CovidCases2022": 40000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Sachsen",
+        "CovidCases": 1356500,
+        "VaccinationRate": "27.50%",
+        "Population": 4084851,
+        "TotalDeaths": 450000,
+        "CovidCases2020": 420000,
+        "CovidCases2021": 310000,
+        "CovidCases2022": 220000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Sachsen-Anhalt",
+        "CovidCases": 536070,
+        "VaccinationRate": "18.90%",
+        "Population": 2245470,
+        "TotalDeaths": 110600,
+        "CovidCases2020": 295000,
+        "CovidCases2021": 120000,
+        "CovidCases2022": 75000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Schleswig-Holstein",
+        "CovidCases": 968800,
+        "VaccinationRate": "83.40%",
+        "Population": 2858714,
+        "TotalDeaths": 300000,
+        "CovidCases2020": 550000,
+        "CovidCases2021": 320000,
+        "CovidCases2022": 120000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "StateData",
+        "Bundesland": "Thuringen",
+        "CovidCases": 635700,
+        "VaccinationRate": "71.90%",
+        "Population": 2170714,
+        "TotalDeaths": 152000,
+        "CovidCases2020": 250000,
+        "CovidCases2021": 190000,
+        "CovidCases2022": 130000
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Berlin",
+        "StateName": "Berlin",
+        "Population": 3473101.0,
+        "VaccinationRate": "67.80%",
+        "CovidCases": 1150345.0,
+        "Deaths": 350000.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Stuttgart",
+        "StateName": "Baden-W\u00c3\u00bcrttemberg",
+        "Population": 2787724.0,
+        "VaccinationRate": "76%",
+        "CovidCases": 1050746.0,
+        "Deaths": 330420.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Munich",
+        "StateName": "Bavaria",
+        "Population": 2606021.0,
+        "VaccinationRate": "70%",
+        "CovidCases": 900530.0,
+        "Deaths": 305438.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Hamburg",
+        "StateName": "Hamburg",
+        "Population": 2484800.0,
+        "VaccinationRate": "80.80%",
+        "CovidCases": 1093489.0,
+        "Deaths": 300420.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Cologne",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 1083498.0,
+        "VaccinationRate": "77.70%",
+        "CovidCases": 400300.0,
+        "Deaths": 120500.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Frankfurt",
+        "StateName": "Hesse",
+        "Population": 764104.0,
+        "VaccinationRate": "83.80%",
+        "CovidCases": 300670.0,
+        "Deaths": 103410.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Dusseldorf",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 645923.0,
+        "VaccinationRate": "83.40%",
+        "CovidCases": 250865.0,
+        "Deaths": 80400.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Leipzig",
+        "StateName": "Saxony",
+        "Population": 615081.0,
+        "VaccinationRate": "76.40%",
+        "CovidCases": 240897.0,
+        "Deaths": 75680.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Dortmund",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 587696.0,
+        "VaccinationRate": "81.60%",
+        "CovidCases": 236780.0,
+        "Deaths": 72687.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Essen",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 582415.0,
+        "VaccinationRate": "63.30%",
+        "CovidCases": 218950.0,
+        "Deaths": 64000.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Bremen",
+        "StateName": "Bremen",
+        "Population": 566573.0,
+        "VaccinationRate": "80.90%",
+        "CovidCases": 162970.0,
+        "Deaths": 30500.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Dresden",
+        "StateName": "Saxony",
+        "Population": 561922.0,
+        "VaccinationRate": "36.80%",
+        "CovidCases": 300897.0,
+        "Deaths": 55430.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Hannover",
+        "StateName": "Lower Saxony",
+        "Population": 542668.0,
+        "VaccinationRate": "27.50%",
+        "CovidCases": 230200.0,
+        "Deaths": 14791.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Nuremberg",
+        "StateName": "Bavaria",
+        "Population": 515543.0,
+        "VaccinationRate": "18.90%",
+        "CovidCases": 150000.0,
+        "Deaths": 46457.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Duisburg",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 495885.0,
+        "VaccinationRate": "83.40%",
+        "CovidCases": 190670.0,
+        "Deaths": 32001.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Bochum",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 364454.0,
+        "VaccinationRate": "71.90%",
+        "CovidCases": 160785.0,
+        "Deaths": 25095.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Wuppertal",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 355004.0,
+        "VaccinationRate": "52.01%",
+        "CovidCases": 180743.0,
+        "Deaths": 36286.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Bielefeld",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 334002.0,
+        "VaccinationRate": "50%",
+        "CovidCases": 173500.0,
+        "Deaths": 34894.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Bonn",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 331885.0,
+        "VaccinationRate": "48%",
+        "CovidCases": 165420.0,
+        "Deaths": 23484.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Munster",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 317713.0,
+        "VaccinationRate": "60.80%",
+        "CovidCases": 100345.0,
+        "Deaths": 28071.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Mannheim",
+        "StateName": "Baden-W\u00c3\u00bcrttemberg",
+        "Population": 311831.0,
+        "VaccinationRate": "77.70%",
+        "CovidCases": 110785.0,
+        "Deaths": 16017.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Karlsruhe",
+        "StateName": "Baden-W\u00c3\u00bcrttemberg",
+        "Population": 308436.0,
+        "VaccinationRate": "43.80%",
+        "CovidCases": 160142.0,
+        "Deaths": 10149.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Augsburg",
+        "StateName": "Bavaria",
+        "Population": 296478.0,
+        "VaccinationRate": "83.40%",
+        "CovidCases": 73500.0,
+        "Deaths": 28219.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Wiesbaden",
+        "StateName": "Hesse",
+        "Population": 278950.0,
+        "VaccinationRate": "66.40%",
+        "CovidCases": 65420.0,
+        "Deaths": 41903.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Munchengladbach",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 261001.0,
+        "VaccinationRate": "81.60%",
+        "CovidCases": 40345.0,
+        "Deaths": 37652.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Gelsenkirchen",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 260126.0,
+        "VaccinationRate": "33.30%",
+        "CovidCases": 80500.0,
+        "Deaths": 13021.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Aachen",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 249070.0,
+        "VaccinationRate": "80.90%",
+        "CovidCases": 23500.0,
+        "Deaths": 44514.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Braunschweig",
+        "StateName": "Lower Saxony",
+        "Population": 248823.0,
+        "VaccinationRate": "96.80%",
+        "CovidCases": 15420.0,
+        "Deaths": 12847.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Chemnitz",
+        "StateName": "Saxony",
+        "Population": 248042.0,
+        "VaccinationRate": "27.50%",
+        "CovidCases": 52745.0,
+        "Deaths": 33835.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Kiel",
+        "StateName": "Schleswig-Holstein",
+        "Population": 246601.0,
+        "VaccinationRate": "43.05%",
+        "CovidCases": 22570.0,
+        "Deaths": 46183.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Halle",
+        "StateName": "Saxony-Anhalt",
+        "Population": 238061.0,
+        "VaccinationRate": "33.30%",
+        "CovidCases": 33578.0,
+        "Deaths": 32254.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Magdeburg",
+        "StateName": "Saxony-Anhalt",
+        "Population": 236188.0,
+        "VaccinationRate": "30.90%",
+        "CovidCases": 32470.0,
+        "Deaths": 39408.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Freiburg im Breisgau",
+        "StateName": "Baden-W\u00c3\u00bcrttemberg",
+        "Population": 231848.0,
+        "VaccinationRate": "46.80%",
+        "CovidCases": 29540.0,
+        "Deaths": 13829.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Krefeld",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 227050.0,
+        "VaccinationRate": "57.50%",
+        "CovidCases": 26810.0,
+        "Deaths": 30988.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Mainz",
+        "StateName": "Rhineland-Palatinate",
+        "Population": 217556.0,
+        "VaccinationRate": "73.05%",
+        "CovidCases": 15000.0,
+        "Deaths": 13520.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Lubeck",
+        "StateName": "Schleswig-Holstein",
+        "Population": 216277.0,
+        "VaccinationRate": "43.05%",
+        "CovidCases": 22890.0,
+        "Deaths": 11359.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Erfurt",
+        "StateName": "Thuringia",
+        "Population": 213835.0,
+        "VaccinationRate": "33.30%",
+        "CovidCases": 24646.0,
+        "Deaths": 29231.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Oberhausen",
+        "StateName": "North Rhine-Westphalia",
+        "Population": 209566.0,
+        "VaccinationRate": "30.90%",
+        "CovidCases": 40568.0,
+        "Deaths": 25403.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Rostock",
+        "StateName": "Mecklenburg-Western Pomerania",
+        "Population": 209061.0,
+        "VaccinationRate": "46.80%",
+        "CovidCases": 31950.0,
+        "Deaths": 13567.0,
+        "CovidCases2020": NaN,
+        "CovidCases2021": NaN,
+        "CovidCases2022": NaN
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Berlin",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 500000.0,
+        "CovidCases2021": 410500.0,
+        "CovidCases2022": 250000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Stuttgart",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 470000.0,
+        "CovidCases2021": 320000.0,
+        "CovidCases2022": 250000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Munich",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 350000.0,
+        "CovidCases2021": 240000.0,
+        "CovidCases2022": 310000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Hamburg",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 480000.0,
+        "CovidCases2021": 350000.0,
+        "CovidCases2022": 250000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Cologne",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 200000.0,
+        "CovidCases2021": 120000.0,
+        "CovidCases2022": 80000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Frankfurt",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 160000.0,
+        "CovidCases2021": 100000.0,
+        "CovidCases2022": 41000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Dusseldorf",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 150000.0,
+        "CovidCases2021": 70000.0,
+        "CovidCases2022": 30000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Leipzig",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 130000.0,
+        "CovidCases2021": 65000.0,
+        "CovidCases2022": 40000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Dortmund",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 120000.0,
+        "CovidCases2021": 80000.0,
+        "CovidCases2022": 36000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Essen",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 118000.0,
+        "CovidCases2021": 90000.0,
+        "CovidCases2022": 20000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Bremen",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 90000.0,
+        "CovidCases2021": 40000.0,
+        "CovidCases2022": 25000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Dresden",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 135000.0,
+        "CovidCases2021": 85000.0,
+        "CovidCases2022": 60000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Hannover",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 110000.0,
+        "CovidCases2021": 70000.0,
+        "CovidCases2022": 50000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Nuremberg",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 70000.0,
+        "CovidCases2021": 50000.0,
+        "CovidCases2022": 40000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Duisburg",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 90000.0,
+        "CovidCases2021": 60000.0,
+        "CovidCases2022": 43000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Bochum",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 87000.0,
+        "CovidCases2021": 50000.0,
+        "CovidCases2022": 30000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Wuppertal",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 85000.0,
+        "CovidCases2021": 70000.0,
+        "CovidCases2022": 40000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Bielefeld",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 80000.0,
+        "CovidCases2021": 55000.0,
+        "CovidCases2022": 33000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Bonn",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 85000.0,
+        "CovidCases2021": 60000.0,
+        "CovidCases2022": 25000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Munster",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 45000.0,
+        "CovidCases2021": 35000.0,
+        "CovidCases2022": 20000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Mannheim",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 50000.0,
+        "CovidCases2021": 40000.0,
+        "CovidCases2022": 27000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Karlsruhe",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 80000.0,
+        "CovidCases2021": 55000.0,
+        "CovidCases2022": 28000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Augsburg",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 38000.0,
+        "CovidCases2021": 25000.0,
+        "CovidCases2022": 13000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Wiesbaden",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 30000.0,
+        "CovidCases2021": 20000.0,
+        "CovidCases2022": 15000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Munchengladbach",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 21000.0,
+        "CovidCases2021": 12000.0,
+        "CovidCases2022": 7000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Gelsenkirchen",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 40000.0,
+        "CovidCases2021": 27000.0,
+        "CovidCases2022": 15000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Aachen",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 12000.0,
+        "CovidCases2021": 8000.0,
+        "CovidCases2022": 3000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Braunschweig",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 10000.0,
+        "CovidCases2021": 4000.0,
+        "CovidCases2022": 1500.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Chemnitz",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 27000.0,
+        "CovidCases2021": 15000.0,
+        "CovidCases2022": 10000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Kiel",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 11000.0,
+        "CovidCases2021": 10000.0,
+        "CovidCases2022": 2800.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Halle",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 15000.0,
+        "CovidCases2021": 7000.0,
+        "CovidCases2022": 9000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Magdeburg",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 13500.0,
+        "CovidCases2021": 6000.0,
+        "CovidCases2022": 8400.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Freiburg im Breisgau",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 11000.0,
+        "CovidCases2021": 5000.0,
+        "CovidCases2022": 8000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Krefeld",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 13000.0,
+        "CovidCases2021": 7000.0,
+        "CovidCases2022": 6500.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Mainz",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 7000.0,
+        "CovidCases2021": 5000.0,
+        "CovidCases2022": 3000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Lubeck",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 11000.0,
+        "CovidCases2021": 8000.0,
+        "CovidCases2022": 5000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Erfurt",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 12000.0,
+        "CovidCases2021": 9000.0,
+        "CovidCases2022": 5500.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Oberhausen",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 23000.0,
+        "CovidCases2021": 13000.0,
+        "CovidCases2022": 9000.0
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "CityData",
+        "City": "Rostock",
+        "StateName": NaN,
+        "Population": NaN,
+        "VaccinationRate": NaN,
+        "CovidCases": NaN,
+        "Deaths": NaN,
+        "CovidCases2020": 20000.0,
+        "CovidCases2021": 11000.0,
+        "CovidCases2022": 8000.0
+      }
+    }
+  ]
+}
