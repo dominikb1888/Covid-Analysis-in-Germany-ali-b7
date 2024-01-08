@@ -1,4 +1,5 @@
 import json
+import math
 from decimal import Decimal
 
 from fhir.resources.observation import Observation
@@ -32,11 +33,13 @@ for resource in data["entry"]:
     components_list = []
 
     # Add components based on the CSV data structure
-    # Example for Covid Cases, adjust according to actual data structure
-    if "CovidCases" in entry:
+    covid_cases = entry.get("CovidCases")
+
+    # Check if CovidCases is a finite number
+    if isinstance(covid_cases, (int, float)) and not math.isnan(covid_cases):
         components_list.append({
             "code": {"coding": [{"system": "http://loinc.org", "code": "CovidCases"}], "text": "COVID-19 Cases"},
-            "valueQuantity": Quantity(value=entry["CovidCases"], unit="cases", system="http://unitsofmeasure.org", code="{cases}")
+            "valueQuantity": Quantity(value=covid_cases, unit="cases", system="http://unitsofmeasure.org", code="{cases}")
         })
 
      # Process Vaccination Rate

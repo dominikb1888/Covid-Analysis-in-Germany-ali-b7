@@ -1,0 +1,5162 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/baden-wurttemberg"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 1932619.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.6779999999999999,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 11280275.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 1700600.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/bayern"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 2427148.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.76,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 13370400.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 1578600.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/berlin"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 1226440.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.7,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 3755251.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 485800.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/brandenburg"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 513380.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.578,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 2575135.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 125000.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/bremen"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 100150.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.777,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 671489.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 22055.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/hamburg"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 605510.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.838,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 1787408.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 345000.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/hessen"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 1818678.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.634,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 6176172.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 473005.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/mecklenburg-vorpommern"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 180000.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.764,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 1612362.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 150560.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/niedersachsen"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 2515300.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.816,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 7926599.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 400683.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/nordrhein-westfalen"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 2936800.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.633,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 17865516.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 1470200.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/rheinland-pfalz"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 1595600.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.909,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 4052803.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 378000.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/saarland"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 217800.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.368,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 995597.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 78000.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/sachsen"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 1356500.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.275,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 4084851.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 450000.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/sachsen-anhalt"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 536070.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.18899999999999997,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 2245470.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 110600.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/schleswig-holstein"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 968800.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.8340000000000001,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 2858714.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 300000.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/thuringen"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 635700.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.7190000000000001,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "Population"
+                }
+              ],
+              "text": "Population"
+            },
+            "valueQuantity": {
+              "value": 2170714.0,
+              "unit": "individuals",
+              "system": "http://unitsofmeasure.org",
+              "code": "{individuals}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "TotalDeaths"
+                }
+              ],
+              "text": "Total Deaths"
+            },
+            "valueQuantity": {
+              "value": 152000.0,
+              "unit": "deaths",
+              "system": "http://unitsofmeasure.org",
+              "code": "{deaths}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/berlin"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 1150345.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.6779999999999999,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/stuttgart"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 1050746.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.76,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/munich"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 900530.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.7,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/hamburg"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 1093489.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.8079999999999999,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/cologne"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 400300.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.777,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/frankfurt"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 300670.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.838,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/dusseldorf"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 250865.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.8340000000000001,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/leipzig"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 240897.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.764,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/dortmund"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 236780.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.816,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/essen"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 218950.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.633,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/bremen"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 162970.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.809,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/dresden"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 300897.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.368,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/hannover"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 230200.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.275,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/nuremberg"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 150000.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.18899999999999997,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/duisburg"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 190670.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.8340000000000001,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/bochum"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 160785.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.7190000000000001,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/wuppertal"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 180743.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.5201,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/bielefeld"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 173500.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.5,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/bonn"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 165420.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.48,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/munster"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 100345.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.608,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/mannheim"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 110785.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.777,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/karlsruhe"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 160142.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.43799999999999994,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/augsburg"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 73500.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.8340000000000001,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/wiesbaden"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 65420.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.664,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/munchengladbach"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 40345.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.816,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/gelsenkirchen"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 80500.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.33299999999999996,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/aachen"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 23500.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.809,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/braunschweig"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 15420.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.968,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/chemnitz"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 52745.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.275,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/kiel"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 22570.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.4305,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/halle"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 33578.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.33299999999999996,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/magdeburg"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 32470.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.309,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/freiburg-im-breisgau"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 29540.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.46799999999999997,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/krefeld"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 26810.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.575,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/mainz"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 15000.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.7304999999999999,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/lubeck"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 22890.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.4305,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/erfurt"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 24646.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.33299999999999996,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/oberhausen"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 40568.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.309,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/rostock"
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "CovidCases"
+                }
+              ],
+              "text": "COVID-19 Cases"
+            },
+            "valueQuantity": {
+              "value": 31950.0,
+              "unit": "cases",
+              "system": "http://unitsofmeasure.org",
+              "code": "{cases}"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "VaccinationRate"
+                }
+              ],
+              "text": "Vaccination Rate"
+            },
+            "valueQuantity": {
+              "value": 0.46799999999999997,
+              "unit": "%",
+              "system": "http://unitsofmeasure.org",
+              "code": "{percent}"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/berlin"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/stuttgart"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/munich"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/hamburg"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/cologne"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/frankfurt"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/dusseldorf"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/leipzig"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/dortmund"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/essen"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/bremen"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/dresden"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/hannover"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/nuremberg"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/duisburg"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/bochum"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/wuppertal"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/bielefeld"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/bonn"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/munster"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/mannheim"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/karlsruhe"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/augsburg"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/wiesbaden"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/munchengladbach"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/gelsenkirchen"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/aachen"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/braunschweig"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/chemnitz"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/kiel"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/halle"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/magdeburg"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/freiburg-im-breisgau"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/krefeld"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/mainz"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/lubeck"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/erfurt"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/oberhausen"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "survey"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "HealthData"
+            }
+          ],
+          "text": "Health Statistics"
+        },
+        "subject": {
+          "reference": "Location/rostock"
+        }
+      }
+    }
+  ]
+}
