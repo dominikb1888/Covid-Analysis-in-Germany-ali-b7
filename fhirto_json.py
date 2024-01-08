@@ -33,14 +33,34 @@ for resource in data["entry"]:
             "valueQuantity": Quantity(value=entry["CovidCases"], unit="cases", system="http://unitsofmeasure.org", code="{cases}")
         })
 
+     # Process Vaccination Rate
+    if "VaccinationRate" in entry:
+        vaccination_rate = convert_percentage_to_decimal(entry["VaccinationRate"])
+        if vaccination_rate is not None:
+            components_list.append({
+                "code": {"coding": [{"system": "http://loinc.org", "code": "VaccinationRate"}], "text": "Vaccination Rate"},
+                "valueQuantity": Quantity(value=vaccination_rate, unit="%", system="http://unitsofmeasure.org", code="{percent}")
+            })
+
+    # Process Population
+    if "Population" in entry and isinstance(entry["Population"], int):
+        components_list.append({
+            "code": {"coding": [{"system": "http://loinc.org", "code": "Population"}], "text": "Population"},
+            "valueQuantity": Quantity(value=entry["Population"], unit="individuals", system="http://unitsofmeasure.org", code="{individuals}")
+        })
+
+    # Process Total Deaths
+    if "TotalDeaths" in entry and isinstance(entry["TotalDeaths"], int):
+        components_list.append({
+            "code": {"coding": [{"system": "http://loinc.org", "code": "TotalDeaths"}], "text": "Total Deaths"},
+            "valueQuantity": Quantity(value=entry["TotalDeaths"], unit="deaths", system="http://unitsofmeasure.org", code="{deaths}")
+        })
+
     # Repeat similar blocks for other data points like Vaccination Rate, Population, etc.
 
-# Check if 'Bundesland' key exists
-    if 'Bundesland' in entry:
-        subject_reference = f"Location/{entry['Bundesland'].lower().replace(' ', '-')}"
-    else:
-        # Handle the case where 'Bundesland' is not present
-        subject_reference = "Location/unknown"
+# Check if 'Bundesland' or 'City' key exists
+    location_key = 'Bundesland' if 'Bundesland' in entry else 'City'
+    subject_reference = f"Location/{entry[location_key].lower().replace(' ', '-')}" if location_key in entry else "Location/unknown"
 
     # Create the observation resource for each entry
     observation = Observation(
