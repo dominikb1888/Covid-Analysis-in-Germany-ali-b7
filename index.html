@@ -98,7 +98,7 @@
 <script>
 
     // Load the data from the CSV file
-    d3.csv("german_states.csv").then(function(data) {
+    d3.csv("states_data.csv").then(function(data) {
         // Parse data
         data.forEach(function(d) {
             d['Covid Cases'] = +d['Covid Cases']; // Convert to numerical value
