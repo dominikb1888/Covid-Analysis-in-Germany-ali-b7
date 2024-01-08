@@ -1,15 +1,3 @@
-/* Apply flex layout to the body */
-/*
-.tooltip {
-    position: absolute;
-    background-color: #e80c0c;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    pointer-events: none;
-}
-*/
-
 /* Style for the left and right sections */
 .container {
     display: flex;
