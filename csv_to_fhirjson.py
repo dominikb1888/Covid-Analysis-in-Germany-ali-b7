@@ -29,3 +29,34 @@ for _, entry in states_df.iterrows():
         "CovidCases2022": entry["covid_cases_2022"]
     }
     fhir_resources.append(resource)
+
+# Add CityData resources
+for _, entry in cities_df.iterrows():
+    resource = {
+        "resourceType": "CityData",
+        "City": entry["city"],
+        "StateName": entry["state_name"],
+        "Population": entry["population"],
+        "VaccinationRate": entry["vaccination rate"],
+        "CovidCases": entry["covid_cases"],
+        "Deaths": entry["deaths"],
+        "CovidCases2020": entry["covid_cases_2020"],
+        "CovidCases2021": entry["covid_cases_2021"],
+        "CovidCases2022": entry["covid_cases_2022"]
+    }
+    fhir_resources.append(resource)
+
+# Create a FHIR Bundle
+fhir_bundle = {
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [{"resource": res} for res in fhir_resources]
+}
+
+# Convert to JSON
+json_data = json.dumps(fhir_bundle, indent=2)
+
+# Write JSON data to a file
+with open("merged_fhir_data.json", "w", encoding="utf-8") as json_file:
+    json_file.write(json_data)
+
