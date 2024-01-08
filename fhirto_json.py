@@ -9,6 +9,12 @@ class DecimalEncoder(json.JSONEncoder):
         if isinstance(obj, Decimal):
             return float(obj)
         return super(DecimalEncoder, self).default(obj)
+    
+def convert_percentage_to_decimal(percentage_string):
+    try:
+        return float(percentage_string.strip('%')) / 100
+    except (ValueError, AttributeError):
+        return None
 
 # Load the FHIR data from the previous step
 with open("merged_fhir_data.json") as json_data:

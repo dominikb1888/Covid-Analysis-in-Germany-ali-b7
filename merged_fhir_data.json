@@ -228,7 +228,7 @@
       "resource": {
         "resourceType": "CityData",
         "City": "Stuttgart",
-        "StateName": "Baden-W\u00c3\u00bcrttemberg",
+        "StateName": "Baden-Wurttemberg",
         "Population": 2787724.0,
         "VaccinationRate": "76%",
         "CovidCases": 1050746.0,
@@ -494,7 +494,7 @@
       "resource": {
         "resourceType": "CityData",
         "City": "Mannheim",
-        "StateName": "Baden-W\u00c3\u00bcrttemberg",
+        "StateName": "Baden-Wurttemberg",
         "Population": 311831.0,
         "VaccinationRate": "77.70%",
         "CovidCases": 110785.0,
@@ -508,7 +508,7 @@
       "resource": {
         "resourceType": "CityData",
         "City": "Karlsruhe",
-        "StateName": "Baden-W\u00c3\u00bcrttemberg",
+        "StateName": "Baden-Wurttemberg",
         "Population": 308436.0,
         "VaccinationRate": "43.80%",
         "CovidCases": 160142.0,
@@ -662,7 +662,7 @@
       "resource": {
         "resourceType": "CityData",
         "City": "Freiburg im Breisgau",
-        "StateName": "Baden-W\u00c3\u00bcrttemberg",
+        "StateName": "Baden-Wurttemberg",
         "Population": 231848.0,
         "VaccinationRate": "46.80%",
         "CovidCases": 29540.0,
