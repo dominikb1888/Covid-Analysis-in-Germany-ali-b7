@@ -143,14 +143,14 @@
         list.html(""); // Clear existing list
 
         selectedBundeslands.forEach(bundesland => {
-            list.append("li").text(`State: ${bundesland.bundesland}, COVID Cases: ${bundesland.value}`);
+            list.append("li").text(`State: ${bundesland.bundesland}, COVID Cases: ${bundesland.value.toLocaleString()}`);
         });
     }
     function sortData(data, ascending=true) {
         return data.sort((a, b) => ascending ? a.value - b.value : b.value - a.value);
     }
     function update(selectedVar, sortAscending) {
-        d3.csv("states_timedata.csv", function(d){
+        d3.csv("states_data.csv", function(d){
             return { bundesland: d.bundesland, value: +d[selectedVar] };
         }).then(function(data) {
             if (sortAscending !== undefined) {
