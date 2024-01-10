@@ -9,8 +9,8 @@ This project aims to conduct a comprehensive analysis of the impact of the Covid
 **City-Specific Insights**: Explore data for the 60 most populated cities in Germany, understanding the local impact of the pandemic.  
 
 # Key User Groups
-## Informatics Students:
-This project is particularly valuable for informatics students who are eager to understand the effects of COVID-19 in Germany and seek inspiration for innovative data visualization methods. It serves as both an educational tool and a practical example of how complex data can be effectively visualized.
+## Public Health researchers:
+Public health researcher involved in analyzing and making decisions related to COVID-19 data in Germany.
 
 ### Why It's Ideal for Informatics Students:
 **In-Depth Data Analysis**: Provides a comprehensive view of COVID-19 data, offering a rich dataset for analysis and study.  
