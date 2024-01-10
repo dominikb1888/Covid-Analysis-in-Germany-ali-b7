@@ -12,14 +12,20 @@ This project aims to conduct a comprehensive analysis of the impact of the Covid
 ## Public Health researchers:
 Public health researcher involved in analyzing and making decisions related to COVID-19 data in Germany.
 
-### Why It's Ideal for Informatics Students:
+## Goals and Interests:
+
+To understand the impact of COVID-19 on different regions in Germany.
+To analyze the correlation between COVID-19 cases, population data, and death rates.
+To assess the effectiveness of healthcare systems in managing the pandemic.
+Interested in visual representations of data, especially maps and graphs.
+Seeking insights that can inform public health policies and strategies in response to future pandemics.
+
+### Why It's Ideal for Public Health researchers:
 **In-Depth Data Analysis**: Provides a comprehensive view of COVID-19 data, offering a rich dataset for analysis and study.  
 **Diverse Visualization Techniques**: Showcases a range of visualization methods using Python, HTML, and d3.js, offering inspiration and practical examples for your own projects.  
 **Interactive Learning Experience**: Engage with interactive elements, such as maps and graphs, to see how user interaction can enhance data comprehension.  
 **Real-World Application**: Understand how informatics skills can be applied in real-world scenarios, particularly in public health and epidemiology.  
 
-## Project link
-Download the file "de_covidmap.html" and open it.
 
 ## Notes
 This project is still a work in progress. 
