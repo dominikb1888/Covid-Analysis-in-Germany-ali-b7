@@ -28,7 +28,8 @@ The primary goal of this project is to empower public health researchers with a 
 ## Usage:
 Guidance on how to start the project using the Uvicorn server.
 
-# To start the Uvicorn server, run the following command in the project d
+# To start the Uvicorn server, run the following command in main.py:
+uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 
 ## Notes
 This project is still a work in progress. 
