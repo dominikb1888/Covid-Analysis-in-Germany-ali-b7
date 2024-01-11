@@ -15,6 +15,15 @@ Public health researcher involved in analyzing and making decisions related to C
 ## Objective:
 The primary goal of this project is to empower public health policy makers and researchers with a comprehensive tool for understanding and analyzing the spread and impact of COVID-19 in Germany. By providing access to regional and city-specific data, the tool aids in the development, adjustment, and assessment of effective public health policies and strategies.
 
+## Functionality:
+**Data Comparison**: Enables users to efficiently compare COVID-19 data across different regions and cities within Germany. This comparative analysis is vital for identifying patterns, hotspots, and anomalies in virus transmission.
+**Impact Assessment**: Assists in evaluating the effectiveness of health measures and interventions by analyzing data trends over time.
+
+## Real-World Application:
+**Resource Allocation for Policy Makers**: A health policy maker can utilize the interactive map feature to compare infection rates and death tolls across various states or cities. This information is crucial in identifying regions that require additional resources or adjustments in policy measures.
+
+**Research and Planning**: Researchers can leverage city-specific insights to investigate correlations between variables such as population density and virus spread. Such analysis is important for future urban planning and healthcare resource management.
+
 ## Goals and Interests:
 
 To understand the impact of COVID-19 on different regions in Germany.
