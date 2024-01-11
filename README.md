@@ -6,14 +6,13 @@ This project aims to conduct a comprehensive analysis of the impact of the Covid
 ## Features
 **Interactive German Map**: Navigate through a detailed map of Germany to view COVID-19 statistics by region.  
 **State-Level Data Visualization**: Explore various graphs showing the impact of COVID-19 in each German state.  
-**City-Specific Insights**: Explore data for the 60 most populated cities in Germany, understanding the local impact of the pandemic.  
+**City-Specific Insights**: Explore data for the 40 most populated cities in Germany, understanding the local impact of the pandemic.  
 
-# Key User Groups
+## Key User Groups
 ## Public Health researchers:
-Public health researcher involved in analyzing and making decisions related to COVID-19 data in Germany.
 
 ## Objective:
-The primary goal of this project is to empower public health policy makers and researchers with a comprehensive tool for understanding and analyzing the spread and impact of COVID-19 in Germany. By providing access to regional and city-specific data, the tool aids in the development, adjustment, and assessment of effective public health policies and strategies.
+The primary goal of this project is to empower public health researchers with a comprehensive tool for understanding and analyzing the spread and impact of COVID-19 in Germany. By providing access to regional and city-specific data, the tool aids in the development, adjustment, and assessment of effective public health policies and strategies. Additionally, by identifying trends and correlations, researchers can strategically plan and implement public health interventions.
 
 ## Functionality:
 **Data Comparison**: Enables users to efficiently compare COVID-19 data across different regions and cities within Germany. This comparative analysis is vital for identifying patterns, hotspots, and anomalies in virus transmission.
@@ -21,22 +20,11 @@ The primary goal of this project is to empower public health policy makers and r
 
 ## Real-World Application:
 **Resource Allocation for Policy Makers**: A health policy maker can utilize the interactive map feature to compare infection rates and death tolls across various states or cities. This information is crucial in identifying regions that require additional resources or adjustments in policy measures.
-
 **Research and Planning**: Researchers can leverage city-specific insights to investigate correlations between variables such as population density and virus spread. Such analysis is important for future urban planning and healthcare resource management.
 
-## Goals and Interests:
-
-To understand the impact of COVID-19 on different regions in Germany.
-To analyze the correlation between COVID-19 cases, population data, and death rates.
-To assess the effectiveness of healthcare systems in managing the pandemic.
-Interested in visual representations of data, especially maps and graphs.
-Seeking insights that can inform public health policies and strategies in response to future pandemics.
-
-### Why It's Ideal for Public Health researchers:
-**In-Depth Data Analysis**: Provides a comprehensive view of COVID-19 data, offering a rich dataset for analysis and study.  
-**Diverse Visualization Techniques**: Showcases a range of visualization methods using Python, HTML, and d3.js, offering inspiration and practical examples for your own projects.  
-**Interactive Learning Experience**: Engage with interactive elements, such as maps and graphs, to see how user interaction can enhance data comprehension.  
-**Real-World Application**: Understand how informatics skills can be applied in real-world scenarios, particularly in public health and epidemiology.  
+## User Benefit:
+**Informed Decision Making**: The tool provides a user-friendly interface for accessing and interpreting complex data, leading to more informed and timely decision-making processes.
+**Strategic Planning**: Public health researchers can strategically plan and implement public health interventions by identifying trends and correlations.
 
 
 ## Notes
