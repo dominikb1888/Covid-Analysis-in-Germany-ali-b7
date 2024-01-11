@@ -8,7 +8,7 @@ This project aims to conduct a comprehensive analysis of the impact of the Covid
 **State-Level Data Visualization**: Explore various graphs showing the impact of COVID-19 in each German state.  
 **City-Specific Insights**: Explore data for the 40 most populated cities in Germany, understanding the local impact of the pandemic.  
 
-## Key User Groups: Public Health researchers:
+## Key User Groups: Public Health researchers
 
 ## Objective:
 The primary goal of this project is to empower public health researchers with a comprehensive tool for understanding and analyzing the spread and impact of COVID-19 in Germany. By providing access to regional and city-specific data, the tool aids in the development, adjustment, and assessment of effective public health policies and strategies. Additionally, by identifying trends and correlations, researchers can strategically plan and implement public health interventions.
@@ -25,6 +25,10 @@ The primary goal of this project is to empower public health researchers with a 
 **Informed Decision Making**: The tool provides a user-friendly interface for accessing and interpreting complex data, leading to more informed and timely decision-making processes.  
 **Strategic Planning**: Public health researchers can strategically plan and implement public health interventions by identifying trends and correlations.  
 
+## Usage:
+Guidance on how to start the project using the Uvicorn server.
+
+# To start the Uvicorn server, run the following command in the project d
 
 ## Notes
 This project is still a work in progress. 
