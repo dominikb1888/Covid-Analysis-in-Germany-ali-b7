@@ -12,6 +12,9 @@ This project aims to conduct a comprehensive analysis of the impact of the Covid
 ## Public Health researchers:
 Public health researcher involved in analyzing and making decisions related to COVID-19 data in Germany.
 
+## Objective:
+The primary goal of this project is to empower public health policy makers and researchers with a comprehensive tool for understanding and analyzing the spread and impact of COVID-19 in Germany. By providing access to regional and city-specific data, the tool aids in the development, adjustment, and assessment of effective public health policies and strategies.
+
 ## Goals and Interests:
 
 To understand the impact of COVID-19 on different regions in Germany.
