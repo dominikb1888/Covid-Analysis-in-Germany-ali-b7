@@ -26,9 +26,7 @@ The primary goal of this project is to empower public health researchers with a 
 **Strategic Planning**: Public health researchers can strategically plan and implement public health interventions by identifying trends and correlations.  
 
 ## Usage:
-Guidance on how to start the project using the Uvicorn server.
-
-# To start the Uvicorn server, run the following command in main.py:
+To start the Uvicorn server, run the following command in the terminal in main.py:
 uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 
 ## Notes
