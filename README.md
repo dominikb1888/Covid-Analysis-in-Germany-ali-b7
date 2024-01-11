@@ -18,12 +18,12 @@ The primary goal of this project is to empower public health researchers with a 
 **Impact Assessment**: Assists in evaluating the effectiveness of health measures and interventions by analyzing data trends over time.
 
 ## Real-World Application:
-**Resource Allocation for Policy Makers**: A health policy maker can utilize the interactive map feature to compare infection rates and death tolls across various states or cities. This information is crucial in identifying regions that require additional resources or adjustments in policy measures. 
-**Research and Planning**: Researchers can leverage city-specific insights to investigate correlations between variables such as population density and virus spread. Such analysis is important for future urban planning and healthcare resource management. 
+**Resource Allocation for Policy Makers**: A health policy maker can utilize the interactive map feature to compare infection rates and death tolls across various states or cities. This information is crucial in identifying regions that require additional resources or adjustments in policy measures.  
+**Research and Planning**: Researchers can leverage city-specific insights to investigate correlations between variables such as population density and virus spread. Such analysis is important for future urban planning and healthcare resource management.  
 
 ## User Benefit:
-**Informed Decision Making**: The tool provides a user-friendly interface for accessing and interpreting complex data, leading to more informed and timely decision-making processes. 
-**Strategic Planning**: Public health researchers can strategically plan and implement public health interventions by identifying trends and correlations. 
+**Informed Decision Making**: The tool provides a user-friendly interface for accessing and interpreting complex data, leading to more informed and timely decision-making processes.  
+**Strategic Planning**: Public health researchers can strategically plan and implement public health interventions by identifying trends and correlations.  
 
 
 ## Notes
