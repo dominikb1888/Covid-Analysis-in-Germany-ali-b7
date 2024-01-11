@@ -14,8 +14,8 @@ This project aims to conduct a comprehensive analysis of the impact of the Covid
 The primary goal of this project is to empower public health researchers with a comprehensive tool for understanding and analyzing the spread and impact of COVID-19 in Germany. By providing access to regional and city-specific data, the tool aids in the development, adjustment, and assessment of effective public health policies and strategies. Additionally, by identifying trends and correlations, researchers can strategically plan and implement public health interventions.
 
 ## Functionality:
-**Data Comparison**: Enables users to efficiently compare COVID-19 data across different regions and cities within Germany. This comparative analysis is vital for identifying patterns, hotspots, and anomalies in virus transmission.
-**Impact Assessment**: Assists in evaluating the effectiveness of health measures and interventions by analyzing data trends over time.
+**Data Comparison**: Enables users to efficiently compare COVID-19 data across different regions and cities within Germany. This comparative analysis is vital for identifying patterns, hotspots, and anomalies in virus transmission.  
+**Impact Assessment**: Assists in evaluating the effectiveness of health measures and interventions by analyzing data trends over time.  
 
 ## Real-World Application:
 **Resource Allocation for Policy Makers**: A health policy maker can utilize the interactive map feature to compare infection rates and death tolls across various states or cities. This information is crucial in identifying regions that require additional resources or adjustments in policy measures.  
