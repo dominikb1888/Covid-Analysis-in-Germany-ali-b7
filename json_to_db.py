@@ -7,53 +7,48 @@ def create_table(cursor):
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS covid_data(
             id INTEGER PRIMARY KEY,
-            location TEXT,
+            city TEXT,
             population INT,
             covid_cases INT,
+            covid_cases_2020 INT,
+            covid_cases_2021 INT,
+            covid_cases_2022 INT,
             vaccination_rate DECIMAL,
-            total_deaths INT
+            deaths INT
         );
     ''')
 
-def insert_data(cursor, location, covid_cases, vaccination_rate, population, total_deaths):
+def insert_data(cursor, city, population, covid_cases, covid_cases_2020, covid_cases_2021, covid_cases_2022, vaccination_rate, deaths):
     cursor.execute('''
-        INSERT INTO covid_data (location, population, covid_cases, vaccination_rate, total_deaths)
-        VALUES (?, ?, ?, ?, ?);
-    ''', (location, population, covid_cases, vaccination_rate, total_deaths))
+        INSERT INTO covid_data (city, population, covid_cases, covid_cases_2020, covid_cases_2021, covid_cases_2022, vaccination_rate, deaths)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+    ''', (city, population, covid_cases, covid_cases_2020, covid_cases_2021, covid_cases_2022, vaccination_rate, deaths))
 
 def main():
-    database_file = 'covid_data.db'
+    database_file = 'test2.db'
     connection = sqlite3.connect(database_file)
     cursor = connection.cursor()
 
     create_table(cursor)
 
-    filename = pathlib.Path("health_data_fhir.json")
+    filename = pathlib.Path("test1.json")
     with open(filename, 'r') as file:
         data = json.load(file)
         for entry in data["entry"]:
             resource = entry["resource"]
-            location = resource["subject"]["reference"].split("/")[1]
 
-            # Initialize variables
-            covid_cases = vaccination_rate = population = total_deaths = None
+            # Extract data from the resource
+            city = resource["City"]
+            population = int(resource["Population"])
+            covid_cases = int(resource["CovidCases"])
+            covid_cases_2020 = int(resource["CovidCases2020"])
+            covid_cases_2021 = int(resource["CovidCases2021"])
+            covid_cases_2022 = int(resource["CovidCases2022"])
+            # Convert vaccination rate from percentage string to decimal
+            vaccination_rate = float(resource["VaccinationRate"].rstrip('%')) / 100
+            deaths = int(resource["Deaths"])
 
-            # Check if 'component' key exists in the resource
-            if "component" in resource:
-                for component in resource["component"]:
-                    code = component["code"]["coding"][0]["code"]
-                    value = component["valueQuantity"]["value"]
-
-                    if code == "CovidCases":
-                        covid_cases = int(value)
-                    elif code == "VaccinationRate":
-                        vaccination_rate = float(value)
-                    elif code == "Population":
-                        population = int(value)
-                    elif code == "TotalDeaths":
-                        total_deaths = int(value)
-
-                insert_data(cursor, location, covid_cases, vaccination_rate, population, total_deaths)
+            insert_data(cursor, city, population, covid_cases, covid_cases_2020, covid_cases_2021, covid_cases_2022, vaccination_rate, deaths)
 
     connection.commit()
     connection.close()
