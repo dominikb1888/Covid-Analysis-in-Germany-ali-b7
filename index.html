@@ -4,7 +4,7 @@
     <title>COVID-19 Cases Bar Graph</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
@@ -20,8 +20,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="map.html">Map of Germany</a></li>
-                <li class="nav-item"><a class="nav-link" href="city_map.html">German States</a></li>
+                <li class="nav-item"><a class="nav-link" href="../map.html">Map of Germany</a></li>
+                <li class="nav-item"><a class="nav-link" href="../city_map.html">German States</a></li>
             </ul>
         </div>
     </div>
@@ -83,176 +83,210 @@
 <svg id="scatterPlot" width="1000" height="600" style="display: none;"></svg>
 
 <script>
-
     // Function to create the bubble chart
     function createBubbleChart() {
-        // Load the data from the CSV file
-        d3.csv("cities_data.csv").then(function(data) {
-            // Parse data
-            data.forEach(function(d) {
-                d.population = +d.population; // Ensure population is a number
-                d.deaths = +d.deaths; // Ensure deaths is a number
-            });
-
-            var svgWidth = 1000, svgHeight = 600;
-            var margin = { top: 50, right: 50, bottom: 50, left: 50 };
-            var width = svgWidth - margin.left - margin.right;
-            var height = svgHeight - margin.top - margin.bottom;
-
-            var svg = d3.select('#bubbleChart')
-                .attr('width', svgWidth)
-                .attr('height', svgHeight);
-
-            var chartArea = svg.append('g')
-                .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
-
-            // Create scale for bubble size
-            var radiusScale = d3.scaleSqrt()
-                .domain([0, d3.max(data, function(d) { return d.population; })])
-                .range([0, 50]);
-
-            // Force simulation
-            var simulation = d3.forceSimulation(data)
-                .force("charge", d3.forceManyBody().strength(5))
-                .force("center", d3.forceCenter(width / 2, height / 2))
-                .force("collision", d3.forceCollide().radius(function(d) {
-                    return radiusScale(d.population);
-                }))
-                .on("tick", ticked);
-
-            function ticked() {
-                bubbles
-                    .attr("cx", function(d) { return d.x; })
-                    .attr("cy", function(d) { return d.y; });
-            }
-
-            // Create bubbles
-            var bubbles = chartArea.selectAll('.bubble')
-                .data(data)
-                .enter().append('circle')
-                .attr('class', 'bubble')
-                .attr('r', function(d) { return radiusScale(d.population); }) // Set initial radius
-                .style('fill', function(d) { return d3.interpolateRainbow(Math.random()); }) // Random color
-                .style('opacity', 0.7);
-
-// Hover effect to increase size and change opacity
-            bubbles.on('mouseenter', function (event, d) {
-                d3.select(this)
-                    .transition()
-                    .duration(300) // Duration of the grow/shrink animation
-                    .attr('r', radiusScale(d.population) * 1.2) // Increase size by 20%
-                    .style('opacity', 1); // Increase opacity
-
-                // Show tooltip
-                d3.select('#tooltip')
-                    .style('opacity', 1)
-                    .html('<b>Population: </b>' + d.population.toLocaleString())
-                    .style('left', (event.pageX + 10) + 'px')
-                    .style('top', (event.pageY - 28) + 'px');
+        fetch('/data')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
             })
-                .on('mouseleave', function (event, d) {
-                    d3.select(this)
-                        .transition()
-                        .duration(500) // Duration of the grow/shrink animation
-                        .attr('r', radiusScale(d.population)) // Return to original size
-                        .style('opacity', 0.7); // Return to original opacity
+            .then(data => {
+                if (Array.isArray(data)) {
+                    // Initialize SVG and scales
+                    var svgWidth = 1000, svgHeight = 600;
+                    var margin = { top: 50, right: 50, bottom: 50, left: 50 };
+                    var width = svgWidth - margin.left - margin.right;
+                    var height = svgHeight - margin.top - margin.bottom;
 
-                    // Hide tooltip
-                    d3.select('#tooltip').style('opacity', 0);
-                });
+                    var svg = d3.select('#bubbleChart')
+                        .attr('width', svgWidth)
+                        .attr('height', svgHeight);
 
-            bubbles.on('click', function(event, d) {
-                document.getElementById('infoBox').style.display = 'block';
-                document.getElementById('infoText').innerHTML =
-                    'City: ' + d.city.toLocaleString() + '<br>' +
-                    'Deaths: ' + d['deaths'].toLocaleString();
+                    var chartArea = svg.append('g')
+                        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+                    // Create scale for bubble size
+                    var radiusScale = d3.scaleSqrt()
+                        .domain([0, d3.max(data, function(d) { return d.population; })])
+                        .range([0, 50]);
+
+                    // Force simulation
+                    var simulation = d3.forceSimulation(data)
+                        .force("charge", d3.forceManyBody().strength(5))
+                        .force("center", d3.forceCenter(width / 2, height / 2))
+                        .force("collision", d3.forceCollide().radius(function(d) {
+                            return radiusScale(d.population);
+                        }))
+                        .on("tick", ticked);
+
+                    function ticked() {
+                        bubbles
+                            .attr("cx", function(d) { return d.x; })
+                            .attr("cy", function(d) { return d.y; });
+                    }
+
+                    // Create bubbles
+                    var bubbles = chartArea.selectAll('.bubble')
+                        .data(data)
+                        .enter().append('circle')
+                        .attr('class', 'bubble')
+                        .attr('r', function(d) { return radiusScale(d.population); }) // Set initial radius
+                        .style('fill', function(d) { return d3.interpolateRainbow(Math.random()); }) // Random color
+                        .style('opacity', 0.7);
+
+                    // Hover effect to increase size and change opacity
+                    bubbles.on('mouseenter', function (event, d) {
+                        d3.select(this)
+                            .transition()
+                            .duration(300) // Duration of the grow/shrink animation
+                            .attr('r', radiusScale(d.population) * 1.2) // Increase size by 20%
+                            .style('opacity', 1); // Increase opacity
+
+                        // Show tooltip
+                        d3.select('#tooltip')
+                            .style('opacity', 1)
+                            .html('<b>Population: </b>' + d.population.toLocaleString())
+                            .style('left', (event.pageX + 10) + 'px')
+                            .style('top', (event.pageY - 28) + 'px');
+                    })
+                        .on('mouseleave', function (event, d) {
+                            d3.select(this)
+                                .transition()
+                                .duration(500) // Duration of the grow/shrink animation
+                                .attr('r', radiusScale(d.population)) // Return to original size
+                                .style('opacity', 0.7); // Return to original opacity
+
+                            // Hide tooltip
+                            d3.select('#tooltip').style('opacity', 0);
+                        });
+
+                    bubbles.on('click', function(event, d) {
+                        document.getElementById('infoBox').style.display = 'block';
+                        document.getElementById('infoText').innerHTML =
+                            'City: ' + d.city.toLocaleString() + '<br>' +
+                            'Deaths: ' + d['deaths'].toLocaleString();
+                    });
+
+                    svg.append("text")
+                        .attr("x", (svgWidth / 2))
+                        .attr("y", margin.top / 2)
+                        .attr("text-anchor", "middle")
+                        .style("font-size", "20px")
+                        .style("text-decoration", "underline")
+                        .text("COVID-19 Deaths across German Cities");
+                } else {
+                    console.error('Data is not an array:', data);
+                }
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+                // Handle the error appropriately
             });
-
-            svg.append("text")
-                .attr("x", (svgWidth / 2))
-                .attr("y", margin.top / 2)
-                .attr("text-anchor", "middle")
-                .style("font-size", "20px")
-                .style("text-decoration", "underline")
-                .text("COVID-19 Deaths across German Cities");
-        });
-
     }
 
     // Function to create the scatter plot
     function createScatterPlot() {
-        d3.csv("cities_data.csv").then(function(data) {
-            data.forEach(function(d) {
-                d.population = +d.population;
-                d.covid_cases = +d.covid_cases;
+        fetch('/data')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (Array.isArray(data)) {
+                    console.log('Data received:', data);
+
+                    data.forEach(function (d) {
+                        d.population = +d.population;
+                        d.covid_cases = +d.covid_cases;
+                        d.cityAbbreviation = d.city.substring(0, 2); // Abbreviate city name
+                    });
+
+                    // Initialize SVG and scales
+                    var svgWidth = 1000, svgHeight = 600;
+                    var margin = { top: 20, right: 20, bottom: 60, left: 70 };
+                    var width = svgWidth - margin.left - margin.right;
+                    var height = svgHeight - margin.top - margin.bottom;
+
+                    var svg = d3.select("#scatterPlot")
+                        .attr("width", svgWidth)
+                        .attr("height", svgHeight)
+                        .append("g")
+                        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                    // Create an ordinal scale for x-axis using abbreviated city names
+                    var x = d3.scaleBand()
+                        .domain(data.map(function (d) { return d.cityAbbreviation; }))
+                        .range([0, width])
+                        .padding(0.1);
+
+                    svg.append("g")
+                        .attr("class", "myXaxis")
+                        .attr("transform", "translate(0," + height + ")")
+                        .call(d3.axisBottom(x).tickSize(0)); // Remove x-axis ticks
+
+                    var y = d3.scaleLinear()
+                        .domain([0, d3.max(data, function (d) { return d.covid_cases; })])
+                        .range([height, 0]);
+
+                    // Add y-axis
+                    svg.append("g")
+                        .attr("class", "myYaxis")
+                        .call(d3.axisLeft(y));
+
+                    // Color scale - you can choose a different scale if you prefer
+                    var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+
+                    // Add dots with animation
+                    // Add dots with animation
+                    var points = svg.selectAll("dot")
+                        .data(data)
+                        .enter()
+                        .append("circle")
+                        .attr("cx", -100) // Initial x-coordinate to the left
+                        .attr("cy", function (d) { return y(d.covid_cases); })
+                        .attr("r", 15)
+                        .style("fill", function (d, i) { return colorScale(i); })
+                        .transition()
+                        .duration(3000)
+                        .attr("cx", function (d) { return x(d.cityAbbreviation); }); // Transition to final x-coordinate
+
+                    points.on("mouseenter", function (d) {
+                        d3.select(this) // Select the current circle
+                            .transition()
+                            .duration(2000)
+                            .attr("r", 18); // Increase circle size on hover
+
+                        d3.select("#tooltip")
+                            .style("opacity", 1)
+                            .html("City: " + d.city + "<br>Population: " + d.population.toLocaleString() + "<br>COVID-19 Cases: " + d.covid_cases.toLocaleString())
+                            .style("left", (d3.event.pageX + 10) + "px")
+                            .style("top", (d3.event.pageY - 28) + "px");
+                    })
+                        .on("mouseleave", function (d) {
+                            d3.select(this) // Select the current circle
+                                .transition()
+                                .duration(200)
+                                .attr("r", 15); // Restore circle size on mouseleave
+
+                            d3.select("#tooltip").style("opacity", 0);
+                        });
+
+
+                } else {
+                    console.error('Data is not an array:', data);
+                }
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+                // Handle the error appropriately
             });
-
-            var svgWidth = 1000, svgHeight = 600;
-            var margin = { top: 20, right: 20, bottom: 60, left: 70 };
-            var width = svgWidth - margin.left - margin.right;
-            var height = svgHeight - margin.top - margin.bottom;
-
-            var svg = d3.select("#scatterPlot")
-                .attr("width", svgWidth)
-                .attr("height", svgHeight)
-                .append("g")
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-
-            // Initial X axis
-            var x = d3.scaleLinear()
-                .domain([0, 0]) // Starting domain
-                .range([0, width]);
-            var xAxis = svg.append("g")
-                .attr("class", "myXaxis")
-                .attr("transform", "translate(0," + height + ")")
-                .call(d3.axisBottom(x))
-                .attr("opacity", "0");
-
-            // Y axis
-            var y = d3.scaleLinear()
-                .domain([0, d3.max(data, function(d) { return d.covid_cases; })])
-                .range([height, 0]);
-            svg.append("g").call(d3.axisLeft(y));
-
-            // Add dots
-            var points = svg.append('g')
-                .selectAll("dot")
-                .data(data)
-                .enter()
-                .append("circle")
-                .attr("cx", function (d) { return x(d.population); })
-                .attr("cy", function (d) { return y(d.covid_cases); })
-                .attr("r", 5)
-                .style("fill", "#69b3a2");
-
-            // New X axis
-            x.domain([0, d3.max(data, function(d) { return d.population; })]);
-            svg.select(".myXaxis")
-                .transition()
-                .duration(2000)
-                .attr("opacity", "1")
-                .call(d3.axisBottom(x));
-
-            points.transition()
-                .delay(function(d, i) { return i * 3; })
-                .duration(2000)
-                .attr("cx", function (d) { return x(d.population); })
-                .attr("cy", function (d) { return y(d.covid_cases); });
-
-            points.on("mouseenter", function(event, d) {
-                d3.select("#tooltip")
-                    .style("opacity", 1)
-                    .html("City: " + d.city + "<br>Population: " + d.population.toLocaleString() + "<br>COVID-19 Cases: " + d.covid_cases.toLocaleString())
-                    .style("left", (event.pageX + 10) + "px")
-                    .style("top", (event.pageY - 28) + "px");
-            }).on("mouseleave", function() {
-                d3.select("#tooltip").style("opacity", 0);
-            });
-
-
-        });
     }
+
+
 
     // Function to show the selected graph
     function showGraph() {
@@ -299,13 +333,13 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="map.html">Map of Germany</a></li>
-                        <li><a href="city_map.html">German Cities</a></li>
+                        <li><a href="../map.html">Map of Germany</a></li>
+                        <li><a href="../city_map.html">German Cities</a></li>
                     </ul>
                 </div>
                 <div class="col-md-6 item text">
                     <h3>Company Name</h3>
-                    <p> This is a project for the course Innovation and Complexity management.<br>Ali Badran<br>ali.badran@stud.th-deg.de</p>
+                    <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
                 </div>
             </div>
         </div></footer>
