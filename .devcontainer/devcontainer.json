@@ -4,10 +4,10 @@
         "dockerfile": "../Dockerfile",
         "context": ".."
     },
-    "forwardPorts": [8000],
+    "forwardPorts": [8080],
     "settings": { 
         "terminal.integrated.shell.linux": "/bin/bash"
     },
     "extensions": ["ms-python.python"],
-    "postStartCommand": "uvicorn main:app --host 127.0.0.1 --port 8000 --reload"
+    "postStartCommand": "uvicorn main:app --host 127.0.0.1 --port 8080 --reload"
 }
