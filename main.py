@@ -39,10 +39,6 @@ def read_items():
     conn.close()
     return [dict(item) for item in items]
 
-@app.get("/test")
-def test():
-    return {"message": "Test successful"}
-
 
 if __name__ == "__main__":
     import uvicorn
