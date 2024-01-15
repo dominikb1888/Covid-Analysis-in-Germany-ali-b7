@@ -9,5 +9,5 @@
         "terminal.integrated.shell.linux": "/bin/bash"
     },
     "extensions": ["ms-python.python"],
-    "postStartCommand": "echo 'Container is ready!'"
+    "postStartCommand": "uvicorn main:app --host 127.0.0.1 --port 8000 --reload"
 }
