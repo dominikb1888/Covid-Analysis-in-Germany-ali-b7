@@ -15,7 +15,7 @@ app.add_middleware(
 )
 
 def get_db_connection():
-    conn = sqlite3.connect('test2.db')  # Adjust the path to your database file if necessary
+    conn = sqlite3.connect('covid_data.db')  # Adjust the path to your database file if necessary
     conn.row_factory = sqlite3.Row
     return conn
 
