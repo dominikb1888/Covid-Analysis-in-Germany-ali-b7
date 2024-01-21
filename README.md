@@ -43,11 +43,10 @@ git clone [https://github.com/ali-b7/Covid-Analysis-in-Germany.git]
 Navigate to the cloned directory.
 
 **Install Dependencies**:
-
-
 In the terminal run [pip install -r requirements.txt].  
-**Starting the Application**:
 
+
+**Starting the Application**:
 In the terminal run [uvicorn main:app --host 127.0.0.1 --port 8080 --reload'].  
 The application will be available on http://localhost:8080 or the specified port.
 
