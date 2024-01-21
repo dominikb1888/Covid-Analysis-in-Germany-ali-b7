@@ -39,7 +39,7 @@ Click on 'Open in Browser' next to port 8080. This will open a new browser tab o
 **Local Setup**: If you prefer to run the application locally, follow these steps.
 
 Clone the Repository:
-git clone [https://github.com/ali-b7/Covid-Analysis-in-Germany.git]
+git clone [https://github.com/ali-b7/Covid-Analysis-in-Germany.git]  
 Navigate to the cloned directory.
 
 **Install Dependencies**:
@@ -48,7 +48,7 @@ Navigate to the cloned directory.
 In the terminal run [pip install -r requirements.txt].  
 **Starting the Application**:
 
-In the terminal run [uvicorn main:app --host 127.0.0.1 --port 8080 --reload'].
+In the terminal run [uvicorn main:app --host 127.0.0.1 --port 8080 --reload'].  
 The application will be available on http://localhost:8080 or the specified port.
 
 ## Notes
