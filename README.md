@@ -5,7 +5,7 @@ This project aims to conduct a comprehensive analysis of the impact of the Covid
 
 ## Features
 
-**Interactive German Map**: Navigate through a detailed map of Germany to view COVID-19 statistics by region.  
+**Interactive German Map**: Navigate through an interactive, detailed map of Germany to view COVID-19 statistics by region. The map offers the ability to remove/add layers to better focus on specific data.
 <img src="Images/germanymap.png" width="300" height="200" alt="Interactive German Map">
 
 **City-Specific Insights**: Explore data for the 40 most populated cities in Germany, understanding the local impact of the pandemic.   
