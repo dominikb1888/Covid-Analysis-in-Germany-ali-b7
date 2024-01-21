@@ -5,6 +5,7 @@ This project aims to conduct a comprehensive analysis of the impact of the Covid
 
 ## Features
 **Interactive German Map**: Navigate through a detailed map of Germany to view COVID-19 statistics by region.  
+![Interactive German Map](url-to-your-image)
 **State-Level Data Visualization**: Explore various graphs showing the impact of COVID-19 in each German state.  
 **City-Specific Insights**: Explore data for the 40 most populated cities in Germany, understanding the local impact of the pandemic.  
 
@@ -30,11 +31,13 @@ The primary goal of this project is to empower public health researchers with a 
 **Automatic Setup**:
 
 Once it is open in GitHub Codespaces, the development container will automatically set up the environment for you. 
-**Accessing the Application**:
 
+
+**Accessing the Application**:
 Once the Codespace environment is ready and the application starts, go to the 'Ports' panel in GitHub Codespaces.
 Find the port 8080 (which the application uses) listed there.
 Click on 'Open in Browser' next to port 8080. This will open a new browser tab or window with the application running.
+
 
 **Local Setup**: If you prefer to run the application locally, follow these steps.
 
