@@ -4,12 +4,16 @@
 This project aims to conduct a comprehensive analysis of the impact of the Covid-19 pandemic on Germany. Utilizing geographic and COVID-19 data sourced from the World Health Organization (WHO), the project attempts to offer an understanding of the virus' spread and its correlation with healthcare indicators. The primary objective is to analyze the relationship between total cases, population numbers, and death rates. By doing so, the project seeks to provide valuable insights into the effectiveness of healthcare systems across different regions in Germany in managing and mitigating the impact of future pandemics.
 
 ## Features
+
 **Interactive German Map**: Navigate through a detailed map of Germany to view COVID-19 statistics by region.  
-![Interactive German Map](Images/germanymap.png =300x200)  
+<img src="Images/germanymap.png" width="300" height="200" alt="Interactive German Map">
+
 **City-Specific Insights**: Explore data for the 40 most populated cities in Germany, understanding the local impact of the pandemic.   
- ![Interactive German Map](Images/graph2.png =300x200)  
+<img src="Images/graph2.png" width="300" height="200" alt="City-Specific Insights">
+
 **Insights for each year**: Covid data visualization for covid cases throughout each year of the pandemic in the 40 most populated German cities.  
-![Interactive German Map](Images/graph1.png =300x200)   
+<img src="Images/graph1.png" width="300" height="200" alt="Insights for each year">
+
  
   
 
