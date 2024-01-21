@@ -25,9 +25,32 @@ The primary goal of this project is to empower public health researchers with a 
 **Informed Decision Making**: The tool provides a user-friendly interface for accessing and interpreting complex data, leading to more informed and timely decision-making processes.  
 **Strategic Planning**: Public health researchers can strategically plan and implement public health interventions by identifying trends and correlations.  
 
-## Usage:
-To start the Uvicorn server, run the following command in the terminal in main.py:
-uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+## Installation and Setup Instructions
+**Running the Application in a Development Container Using GitHub Codespaces**
+**Automatic Setup**:
+
+Once it is open in GitHub Codespaces, the development container will automatically set up the environment for you. 
+**Accessing the Application**:
+
+Once the Codespace environment is ready and the application starts, go to the 'Ports' panel in GitHub Codespaces.
+Find the port 8080 (which the application uses) listed there.
+Click on 'Open in Browser' next to port 8080. This will open a new browser tab or window with the application running.
+
+**Local Setup**:
+If you prefer to run the application locally, follow these steps:
+
+**Clone the Repository**:
+git clone [repository URL]
+Navigate to the cloned directory.
+
+**Install Dependencies**:
+
+
+In the terminal run [pip install -r requirements.txt].
+**Starting the Application**:
+
+In the terminal run [uvicorn main:app --host 127.0.0.1 --port 8080 --reload'].
+The application will be available on http://localhost:8080 or the specified port.
 
 ## Notes
 This project is still a work in progress. 
