@@ -67,9 +67,10 @@ The primary goal of this project is to empower public health researchers with a 
 ## Notes
 This project is still a work in progress.
 
+## Contact
+For support, feedback, or contributions, feel free to contact me:
 
-## Notes
-This project is still a work in progress. 
+- Email: ali.badran@stud.th-deg.de
 
 ## License
 
