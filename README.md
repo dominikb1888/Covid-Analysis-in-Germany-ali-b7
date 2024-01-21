@@ -35,31 +35,43 @@ The primary goal of this project is to empower public health researchers with a 
 **Strategic Planning**: Public health researchers can strategically plan and implement public health interventions by identifying trends and correlations.  
 
 ## Installation and Setup Instructions
-**Running the Application in a Development Container Using GitHub Codespaces**  
-**Automatic Setup**:
 
-Once it is open in GitHub Codespaces, the development container will automatically set up the environment for you. 
+### Running the Application in a Development Container Using GitHub Codespaces
 
+1. **Open in GitHub Codespaces**:
+   - Go to the GitHub repository: [https://github.com/ali-b7/Covid-Analysis-in-Germany.git].
+   - Click on 'Code', then select 'Open with Codespaces'.
+   - Choose 'New codespace' to create a new development environment.
 
-**Accessing the Application**:
-Once the Codespace environment is ready and the application starts, go to the 'Ports' panel in GitHub Codespaces.
-Find the port 8080 (which the application uses) listed there.
-Click on 'Open in Browser' next to port 8080. This will open a new browser tab or window with the application running.
+2. **Automatic Setup**:
+   - Once open in GitHub Codespaces, the development container will automatically set up the environment for you.
 
+3. **Accessing the Application**:
+   - Once the Codespace environment is ready and the application starts, go to the 'Ports' panel.
+   - Find the port `8080` listed there.
+   - Click on 'Open in Browser' next to port `8080`. This will open a new browser tab or window with the application running.
 
-**Local Setup**: If you prefer to run the application locally, follow these steps.
+### Local Setup
 
-Clone the Repository:
-git clone [https://github.com/ali-b7/Covid-Analysis-in-Germany.git]  
-Navigate to the cloned directory.
+1. **Clone the Repository**:
+   - Run `git clone https://github.com/ali-b7/Covid-Analysis-in-Germany.git` in the terminal.
+   - Navigate to the cloned directory.
 
-**Install Dependencies**:
-In the terminal run [pip install -r requirements.txt].  
+2. **Install Dependencies**:
+   - In the terminal, run `pip install -r requirements.txt`.
 
+3. **Starting the Application**:
+   - Run `uvicorn main:app --host 127.0.0.1 --port 8080 --reload` in the terminal.
+   - The application will be available on `http://localhost:8080` or the specified port.
 
-**Starting the Application**:
-In the terminal run [uvicorn main:app --host 127.0.0.1 --port 8080 --reload'].  
-The application will be available on http://localhost:8080 or the specified port.
+## Notes
+This project is still a work in progress.
+
 
 ## Notes
 This project is still a work in progress. 
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
