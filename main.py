@@ -8,14 +8,13 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins
+    allow_origins=["*"],  
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],  
 )
 
 def get_db_connection():
-    conn = sqlite3.connect('covid_data.db')  # Adjust the path to your database file if necessary
+    conn = sqlite3.connect('covid_data.db')  
     conn.row_factory = sqlite3.Row
     return conn
 
