@@ -3,7 +3,7 @@
     "type": "batch",
     "entry": [
         {
-            "fullUrl": "urn:uuid:7de1bea8-c6fb-4139-be6d-a52bed245c56",
+            "fullUrl": "urn:uuid:45010f6a-f77f-4aa6-bda5-38d66efc255a",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-0",
@@ -11,7 +11,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:d1234805-0392-4d77-aaca-81f53d71b3ad",
+            "fullUrl": "urn:uuid:10dc9730-618e-4bf2-82df-0bdd7fee73bf",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-0",
@@ -38,7 +38,7 @@
                 "subject": {
                     "reference": "Location/location-0"
                 },
-                "issued": "2024-01-22T18:26:37.948515+00:00",
+                "issued": "2024-01-22T18:27:10.627086+00:00",
                 "valueQuantity": {
                     "value": 1150345,
                     "unit": "cases",
@@ -48,7 +48,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:5f626f58-d655-4265-ac6c-b32554b973c1",
+            "fullUrl": "urn:uuid:77013dce-8cf6-4554-bcb0-93ddf35cca8c",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-0",
@@ -75,7 +75,7 @@
                 "subject": {
                     "reference": "Location/location-0"
                 },
-                "issued": "2024-01-22T18:26:37.948515+00:00",
+                "issued": "2024-01-22T18:27:10.627086+00:00",
                 "valueQuantity": {
                     "value": 350000,
                     "unit": "deaths",
@@ -85,7 +85,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:b8d80b25-e8ce-4498-ba04-b3300e134bb8",
+            "fullUrl": "urn:uuid:5b38925f-c8d2-4fa3-b373-207dc444168d",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-1",
@@ -93,7 +93,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:9a289133-326f-4582-aa96-81e6d3de2a7e",
+            "fullUrl": "urn:uuid:7bb36e1f-b11b-4702-ab64-1c35931e8f97",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-1",
@@ -120,7 +120,7 @@
                 "subject": {
                     "reference": "Location/location-1"
                 },
-                "issued": "2024-01-22T18:26:37.968385+00:00",
+                "issued": "2024-01-22T18:27:10.644763+00:00",
                 "valueQuantity": {
                     "value": 1050746,
                     "unit": "cases",
@@ -130,7 +130,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:71271498-d048-4f21-a554-c586fe8003be",
+            "fullUrl": "urn:uuid:b306cf2c-5583-4de3-a622-3d42b236e01a",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-1",
@@ -157,7 +157,7 @@
                 "subject": {
                     "reference": "Location/location-1"
                 },
-                "issued": "2024-01-22T18:26:37.968385+00:00",
+                "issued": "2024-01-22T18:27:10.644763+00:00",
                 "valueQuantity": {
                     "value": 330420,
                     "unit": "deaths",
@@ -167,7 +167,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:d591c350-b175-40e7-af47-3ea987f9d3f5",
+            "fullUrl": "urn:uuid:d65eddbb-face-4487-bcbf-382981e7d74b",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-2",
@@ -175,7 +175,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:6e7fb137-5cc1-4c12-8635-1c31db4c8048",
+            "fullUrl": "urn:uuid:87f7e878-cca3-4981-8566-df461e0da44e",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-2",
@@ -202,7 +202,7 @@
                 "subject": {
                     "reference": "Location/location-2"
                 },
-                "issued": "2024-01-22T18:26:37.969521+00:00",
+                "issued": "2024-01-22T18:27:10.646369+00:00",
                 "valueQuantity": {
                     "value": 900530,
                     "unit": "cases",
@@ -212,7 +212,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:f5769a51-7256-417f-93a8-3f824fa7e2d5",
+            "fullUrl": "urn:uuid:3505d2e6-cdcb-40e5-8a66-3db1cfbb9151",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-2",
@@ -239,7 +239,7 @@
                 "subject": {
                     "reference": "Location/location-2"
                 },
-                "issued": "2024-01-22T18:26:37.969521+00:00",
+                "issued": "2024-01-22T18:27:10.646369+00:00",
                 "valueQuantity": {
                     "value": 305438,
                     "unit": "deaths",
@@ -249,7 +249,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:34500a04-0431-4e5c-922e-f422d2c9611c",
+            "fullUrl": "urn:uuid:bfbd23ee-1ba3-4888-a9d9-f8488f1492f1",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-3",
@@ -257,7 +257,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:0a37d406-cc07-4845-8e95-537cb5d5c57e",
+            "fullUrl": "urn:uuid:d7568589-95f9-43ba-ae38-8a0cdeeff00b",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-3",
@@ -284,7 +284,7 @@
                 "subject": {
                     "reference": "Location/location-3"
                 },
-                "issued": "2024-01-22T18:26:37.970629+00:00",
+                "issued": "2024-01-22T18:27:10.647522+00:00",
                 "valueQuantity": {
                     "value": 1093489,
                     "unit": "cases",
@@ -294,7 +294,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:d3f029e2-8ba8-4c03-964e-fa909f919989",
+            "fullUrl": "urn:uuid:e0fec2d7-59e7-4db5-b11d-d78d137f1ac9",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-3",
@@ -321,7 +321,7 @@
                 "subject": {
                     "reference": "Location/location-3"
                 },
-                "issued": "2024-01-22T18:26:37.970629+00:00",
+                "issued": "2024-01-22T18:27:10.647522+00:00",
                 "valueQuantity": {
                     "value": 300420,
                     "unit": "deaths",
@@ -331,7 +331,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:7a1c8445-0879-441c-8691-518e677587d5",
+            "fullUrl": "urn:uuid:f0bce950-332d-46fc-843b-0c3e30e1059d",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-4",
@@ -339,7 +339,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:7609d702-e2ab-46d6-9fed-a12ee3612f79",
+            "fullUrl": "urn:uuid:157fcdce-126d-4cbc-babd-d876dcd1ddea",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-4",
@@ -366,7 +366,7 @@
                 "subject": {
                     "reference": "Location/location-4"
                 },
-                "issued": "2024-01-22T18:26:37.971939+00:00",
+                "issued": "2024-01-22T18:27:10.648595+00:00",
                 "valueQuantity": {
                     "value": 400300,
                     "unit": "cases",
@@ -376,7 +376,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:e5e0ccd0-90c4-4c00-a820-cafe15bd3943",
+            "fullUrl": "urn:uuid:8594d0a4-ee4e-4b5c-bbae-da7082a2f0f7",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-4",
@@ -403,7 +403,7 @@
                 "subject": {
                     "reference": "Location/location-4"
                 },
-                "issued": "2024-01-22T18:26:37.971939+00:00",
+                "issued": "2024-01-22T18:27:10.648595+00:00",
                 "valueQuantity": {
                     "value": 120500,
                     "unit": "deaths",
@@ -413,7 +413,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:24301fce-e1b1-4e4f-ad60-34e54589343e",
+            "fullUrl": "urn:uuid:d7abe926-56b9-4268-b371-1d30a299abd2",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-5",
@@ -421,7 +421,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:ea3c58f1-3b2a-4cff-975e-7a5cfb97211f",
+            "fullUrl": "urn:uuid:f882658f-7d34-4968-9df7-b39096949bf8",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-5",
@@ -448,7 +448,7 @@
                 "subject": {
                     "reference": "Location/location-5"
                 },
-                "issued": "2024-01-22T18:26:37.973022+00:00",
+                "issued": "2024-01-22T18:27:10.649662+00:00",
                 "valueQuantity": {
                     "value": 300670,
                     "unit": "cases",
@@ -458,7 +458,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:87501f41-411c-466d-8c56-b5a0888a74b1",
+            "fullUrl": "urn:uuid:ee53e0b5-e6c3-44bc-bfe2-538fde034bb2",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-5",
@@ -485,7 +485,7 @@
                 "subject": {
                     "reference": "Location/location-5"
                 },
-                "issued": "2024-01-22T18:26:37.973022+00:00",
+                "issued": "2024-01-22T18:27:10.649662+00:00",
                 "valueQuantity": {
                     "value": 103410,
                     "unit": "deaths",
@@ -495,7 +495,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:53dfeb16-d58d-4713-a7ae-d49f42ede966",
+            "fullUrl": "urn:uuid:4ca716f5-3d68-45e2-b71d-b546fbf52c14",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-6",
@@ -503,7 +503,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:4c3b8ff6-c317-46dc-a5f9-cd425a9c038a",
+            "fullUrl": "urn:uuid:7c28b88c-ae3a-420f-9302-d1572b8bbce9",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-6",
@@ -530,7 +530,7 @@
                 "subject": {
                     "reference": "Location/location-6"
                 },
-                "issued": "2024-01-22T18:26:37.974052+00:00",
+                "issued": "2024-01-22T18:27:10.650749+00:00",
                 "valueQuantity": {
                     "value": 250865,
                     "unit": "cases",
@@ -540,7 +540,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:0747d9d3-c8f2-4b12-973f-27ddcf9cb917",
+            "fullUrl": "urn:uuid:99983a18-c1a0-4807-8e28-387b051d049b",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-6",
@@ -567,7 +567,7 @@
                 "subject": {
                     "reference": "Location/location-6"
                 },
-                "issued": "2024-01-22T18:26:37.974052+00:00",
+                "issued": "2024-01-22T18:27:10.650749+00:00",
                 "valueQuantity": {
                     "value": 80400,
                     "unit": "deaths",
@@ -577,7 +577,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:bbf46f87-4970-4a76-878e-95613d991f80",
+            "fullUrl": "urn:uuid:f53f2455-8654-4a3b-b720-300802b7b571",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-7",
@@ -585,7 +585,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:e83e68af-59e9-434c-a34a-538442121cb2",
+            "fullUrl": "urn:uuid:a739bb7b-e801-4899-8b8d-fcabca29c570",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-7",
@@ -612,7 +612,7 @@
                 "subject": {
                     "reference": "Location/location-7"
                 },
-                "issued": "2024-01-22T18:26:37.975166+00:00",
+                "issued": "2024-01-22T18:27:10.651822+00:00",
                 "valueQuantity": {
                     "value": 240897,
                     "unit": "cases",
@@ -622,7 +622,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:151966fd-b1bc-4fd1-8868-2ae6d9dd3d98",
+            "fullUrl": "urn:uuid:67b3f85f-5071-4acf-a381-866161c3226c",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-7",
@@ -649,7 +649,7 @@
                 "subject": {
                     "reference": "Location/location-7"
                 },
-                "issued": "2024-01-22T18:26:37.975166+00:00",
+                "issued": "2024-01-22T18:27:10.651822+00:00",
                 "valueQuantity": {
                     "value": 75680,
                     "unit": "deaths",
@@ -659,7 +659,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:fec7e202-b40e-4aaa-8e51-6bf0a2dc3270",
+            "fullUrl": "urn:uuid:f86c9b09-12ec-4cd9-9ef0-7e20de7a2e1f",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-8",
@@ -667,7 +667,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:ce716eb7-eead-4f45-a12c-9e61f25bb30d",
+            "fullUrl": "urn:uuid:7a7797b1-2487-478b-b8fa-2fe52c2328b4",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-8",
@@ -694,7 +694,7 @@
                 "subject": {
                     "reference": "Location/location-8"
                 },
-                "issued": "2024-01-22T18:26:37.976222+00:00",
+                "issued": "2024-01-22T18:27:10.652862+00:00",
                 "valueQuantity": {
                     "value": 236780,
                     "unit": "cases",
@@ -704,7 +704,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:15f36908-8535-4838-8e52-bb46e96c9b35",
+            "fullUrl": "urn:uuid:26e5e776-5e13-4ba6-81bc-11aa66f4ec9c",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-8",
@@ -731,7 +731,7 @@
                 "subject": {
                     "reference": "Location/location-8"
                 },
-                "issued": "2024-01-22T18:26:37.976222+00:00",
+                "issued": "2024-01-22T18:27:10.652862+00:00",
                 "valueQuantity": {
                     "value": 72687,
                     "unit": "deaths",
@@ -741,7 +741,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:6837da7e-d504-474f-ad33-6a62e36ec544",
+            "fullUrl": "urn:uuid:c2e0e9a8-fa9e-4f3a-8779-cdbfc4a8bf66",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-9",
@@ -749,7 +749,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:9387062e-6fb8-42c7-936e-1bf9366cc03f",
+            "fullUrl": "urn:uuid:82e0aaf2-5d8d-42f9-a01b-eb4805d78a00",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-9",
@@ -776,7 +776,7 @@
                 "subject": {
                     "reference": "Location/location-9"
                 },
-                "issued": "2024-01-22T18:26:37.977256+00:00",
+                "issued": "2024-01-22T18:27:10.653916+00:00",
                 "valueQuantity": {
                     "value": 218950,
                     "unit": "cases",
@@ -786,7 +786,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:b899c3dd-d78b-4d36-b95b-f88b0446f8f0",
+            "fullUrl": "urn:uuid:fccde172-9aca-4c0e-a311-223103a7648c",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-9",
@@ -813,7 +813,7 @@
                 "subject": {
                     "reference": "Location/location-9"
                 },
-                "issued": "2024-01-22T18:26:37.977256+00:00",
+                "issued": "2024-01-22T18:27:10.653916+00:00",
                 "valueQuantity": {
                     "value": 64000,
                     "unit": "deaths",
@@ -823,7 +823,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:9c4b9527-7128-412f-8ed6-46b3615e40be",
+            "fullUrl": "urn:uuid:693defbc-d5f1-4dae-9456-2b22a8966253",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-10",
@@ -831,7 +831,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:f9a6d2cf-2e6c-4963-9db3-c812a4f05791",
+            "fullUrl": "urn:uuid:cc0a20c3-0855-4d01-a6ee-8289190738f9",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-10",
@@ -858,7 +858,7 @@
                 "subject": {
                     "reference": "Location/location-10"
                 },
-                "issued": "2024-01-22T18:26:37.978297+00:00",
+                "issued": "2024-01-22T18:27:10.654993+00:00",
                 "valueQuantity": {
                     "value": 162970,
                     "unit": "cases",
@@ -868,7 +868,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:1fadaee0-809d-4eb2-9b0d-97f1f60f857a",
+            "fullUrl": "urn:uuid:df6cd6aa-38e3-4c02-9e31-8b8866a5cce1",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-10",
@@ -895,7 +895,7 @@
                 "subject": {
                     "reference": "Location/location-10"
                 },
-                "issued": "2024-01-22T18:26:37.978297+00:00",
+                "issued": "2024-01-22T18:27:10.654993+00:00",
                 "valueQuantity": {
                     "value": 30500,
                     "unit": "deaths",
@@ -905,7 +905,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:5b4ca328-b689-4478-a8e9-c22c0bc306b5",
+            "fullUrl": "urn:uuid:b87950da-b645-4b2a-8b2d-36e7d4b59fa1",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-11",
@@ -913,7 +913,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:0e2cc6f4-4317-4fdb-9e5d-3e9c5decd919",
+            "fullUrl": "urn:uuid:e026d4ba-5c9e-4990-b058-a776ceb36999",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-11",
@@ -940,7 +940,7 @@
                 "subject": {
                     "reference": "Location/location-11"
                 },
-                "issued": "2024-01-22T18:26:37.979404+00:00",
+                "issued": "2024-01-22T18:27:10.656138+00:00",
                 "valueQuantity": {
                     "value": 300897,
                     "unit": "cases",
@@ -950,7 +950,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:8408c0ad-877e-4ca8-9b49-1f13114f1678",
+            "fullUrl": "urn:uuid:38ed30fc-214d-47fb-bb8f-0962fd4bbbf5",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-11",
@@ -977,7 +977,7 @@
                 "subject": {
                     "reference": "Location/location-11"
                 },
-                "issued": "2024-01-22T18:26:37.979404+00:00",
+                "issued": "2024-01-22T18:27:10.656138+00:00",
                 "valueQuantity": {
                     "value": 55430,
                     "unit": "deaths",
@@ -987,7 +987,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:7d8b6de9-24a9-40d3-84c0-9409af5cff7c",
+            "fullUrl": "urn:uuid:e8c2b775-118b-4fa5-9461-532eb1b03509",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-12",
@@ -995,7 +995,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:77145731-9a37-4f0b-8eef-1760caa0cbd1",
+            "fullUrl": "urn:uuid:5f0ce16b-fc20-4d8d-b29e-dd59f7e94589",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-12",
@@ -1022,7 +1022,7 @@
                 "subject": {
                     "reference": "Location/location-12"
                 },
-                "issued": "2024-01-22T18:26:37.980549+00:00",
+                "issued": "2024-01-22T18:27:10.657382+00:00",
                 "valueQuantity": {
                     "value": 230200,
                     "unit": "cases",
@@ -1032,7 +1032,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:eb3339f2-0d0d-426d-b926-0c58c53f1b40",
+            "fullUrl": "urn:uuid:ef1fcb56-6a67-4563-85f6-85d4ab2f0a4a",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-12",
@@ -1059,7 +1059,7 @@
                 "subject": {
                     "reference": "Location/location-12"
                 },
-                "issued": "2024-01-22T18:26:37.980549+00:00",
+                "issued": "2024-01-22T18:27:10.657382+00:00",
                 "valueQuantity": {
                     "value": 14791,
                     "unit": "deaths",
@@ -1069,7 +1069,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:bfc81119-f2db-420b-9286-ed25add5cff5",
+            "fullUrl": "urn:uuid:3b07bd2a-1be7-4885-8126-e192247aa2e1",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-13",
@@ -1077,7 +1077,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:a07c995e-c2b1-45a0-a76d-137d9342cfa0",
+            "fullUrl": "urn:uuid:af1eaefd-abce-4edb-96f2-8791f4ca919e",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-13",
@@ -1104,7 +1104,7 @@
                 "subject": {
                     "reference": "Location/location-13"
                 },
-                "issued": "2024-01-22T18:26:37.981949+00:00",
+                "issued": "2024-01-22T18:27:10.658436+00:00",
                 "valueQuantity": {
                     "value": 150000,
                     "unit": "cases",
@@ -1114,7 +1114,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:5715ccb5-1c89-4998-affa-73b15f5190b1",
+            "fullUrl": "urn:uuid:29c9bfa6-1091-4630-8819-f8f6fc5f50df",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-13",
@@ -1141,7 +1141,7 @@
                 "subject": {
                     "reference": "Location/location-13"
                 },
-                "issued": "2024-01-22T18:26:37.981949+00:00",
+                "issued": "2024-01-22T18:27:10.658436+00:00",
                 "valueQuantity": {
                     "value": 46457,
                     "unit": "deaths",
@@ -1151,7 +1151,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:891d7675-9b62-47aa-b50b-b73edf2d5998",
+            "fullUrl": "urn:uuid:11c05a0a-0593-4d63-81a9-da1ca721df04",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-14",
@@ -1159,7 +1159,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:5aa28900-4e87-4084-94a9-1e9287c69634",
+            "fullUrl": "urn:uuid:9e1f9908-c575-46f2-9cd6-6cba159701ca",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-14",
@@ -1186,7 +1186,7 @@
                 "subject": {
                     "reference": "Location/location-14"
                 },
-                "issued": "2024-01-22T18:26:37.983124+00:00",
+                "issued": "2024-01-22T18:27:10.659552+00:00",
                 "valueQuantity": {
                     "value": 190670,
                     "unit": "cases",
@@ -1196,7 +1196,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:2aeef2ab-8ba3-4ecb-b2bb-ca222e7f7c2e",
+            "fullUrl": "urn:uuid:050aa65c-f3c7-432c-9560-18a10f62212d",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-14",
@@ -1223,7 +1223,7 @@
                 "subject": {
                     "reference": "Location/location-14"
                 },
-                "issued": "2024-01-22T18:26:37.983124+00:00",
+                "issued": "2024-01-22T18:27:10.659552+00:00",
                 "valueQuantity": {
                     "value": 32001,
                     "unit": "deaths",
@@ -1233,7 +1233,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:76f853ba-9f21-417e-ab74-7a06490061d8",
+            "fullUrl": "urn:uuid:f612b67b-9348-4350-ba0a-52ba6c2b04ee",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-15",
@@ -1241,7 +1241,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:64d40b8f-b76b-48d6-932b-3c7136296d35",
+            "fullUrl": "urn:uuid:4a245a8c-231c-44b5-aa93-aac6cb5f72a7",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-15",
@@ -1268,7 +1268,7 @@
                 "subject": {
                     "reference": "Location/location-15"
                 },
-                "issued": "2024-01-22T18:26:37.984292+00:00",
+                "issued": "2024-01-22T18:27:10.660605+00:00",
                 "valueQuantity": {
                     "value": 160785,
                     "unit": "cases",
@@ -1278,7 +1278,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:037cb46d-7644-4a0a-bb75-1bfce79049f5",
+            "fullUrl": "urn:uuid:a7fefe41-2725-4af2-8a85-247307962aa8",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-15",
@@ -1305,7 +1305,7 @@
                 "subject": {
                     "reference": "Location/location-15"
                 },
-                "issued": "2024-01-22T18:26:37.984292+00:00",
+                "issued": "2024-01-22T18:27:10.660605+00:00",
                 "valueQuantity": {
                     "value": 25095,
                     "unit": "deaths",
@@ -1315,7 +1315,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:d5f64080-d37f-4915-ad6e-1884f955a0df",
+            "fullUrl": "urn:uuid:7513395a-5af1-4801-92ce-3c2250929103",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-16",
@@ -1323,7 +1323,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:0cce6a58-4c0a-47cf-8ca8-cfd875dff304",
+            "fullUrl": "urn:uuid:59764244-8d33-4f00-84cf-c365e4da56c9",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-16",
@@ -1350,7 +1350,7 @@
                 "subject": {
                     "reference": "Location/location-16"
                 },
-                "issued": "2024-01-22T18:26:37.985352+00:00",
+                "issued": "2024-01-22T18:27:10.661663+00:00",
                 "valueQuantity": {
                     "value": 180743,
                     "unit": "cases",
@@ -1360,7 +1360,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:9e5babff-bc67-4275-8b30-33b1e9144ea4",
+            "fullUrl": "urn:uuid:126c9cf0-a279-4f71-9331-a44f365b46f7",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-16",
@@ -1387,7 +1387,7 @@
                 "subject": {
                     "reference": "Location/location-16"
                 },
-                "issued": "2024-01-22T18:26:37.985352+00:00",
+                "issued": "2024-01-22T18:27:10.661663+00:00",
                 "valueQuantity": {
                     "value": 36286,
                     "unit": "deaths",
@@ -1397,7 +1397,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:4c6ac664-2705-428f-b235-1136aa6d057a",
+            "fullUrl": "urn:uuid:1dcf8b47-02c9-49af-aaf5-a1e47c9aacac",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-17",
@@ -1405,7 +1405,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:71a5f96c-86e6-4cf5-a8ca-1084cf40236b",
+            "fullUrl": "urn:uuid:4fbcc218-1e63-402b-bbf7-e1f3cdf4ec9f",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-17",
@@ -1432,7 +1432,7 @@
                 "subject": {
                     "reference": "Location/location-17"
                 },
-                "issued": "2024-01-22T18:26:37.986400+00:00",
+                "issued": "2024-01-22T18:27:10.662704+00:00",
                 "valueQuantity": {
                     "value": 173500,
                     "unit": "cases",
@@ -1442,7 +1442,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:48c16fa6-01b5-4a30-b94b-221e204a0ad2",
+            "fullUrl": "urn:uuid:61edf6fd-b376-446b-820e-d37b0559c438",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-17",
@@ -1469,7 +1469,7 @@
                 "subject": {
                     "reference": "Location/location-17"
                 },
-                "issued": "2024-01-22T18:26:37.986400+00:00",
+                "issued": "2024-01-22T18:27:10.662704+00:00",
                 "valueQuantity": {
                     "value": 34894,
                     "unit": "deaths",
@@ -1479,7 +1479,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:7347f0f6-2885-448b-bdf4-e926cbdbb18d",
+            "fullUrl": "urn:uuid:adf7180f-9272-4940-992f-1ba67170d58f",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-18",
@@ -1487,7 +1487,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:8016ecd9-b6ea-429c-9f58-56f397922940",
+            "fullUrl": "urn:uuid:0bfd1146-55a8-4bc7-a03b-28f8732c6d36",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-18",
@@ -1514,7 +1514,7 @@
                 "subject": {
                     "reference": "Location/location-18"
                 },
-                "issued": "2024-01-22T18:26:37.987482+00:00",
+                "issued": "2024-01-22T18:27:10.663799+00:00",
                 "valueQuantity": {
                     "value": 165420,
                     "unit": "cases",
@@ -1524,7 +1524,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:78c0c7c9-fa4f-4adf-9f58-5da04473e3f4",
+            "fullUrl": "urn:uuid:8febfdc0-1a0d-4109-9407-abdd92b93f0f",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-18",
@@ -1551,7 +1551,7 @@
                 "subject": {
                     "reference": "Location/location-18"
                 },
-                "issued": "2024-01-22T18:26:37.987482+00:00",
+                "issued": "2024-01-22T18:27:10.663799+00:00",
                 "valueQuantity": {
                     "value": 23484,
                     "unit": "deaths",
@@ -1561,7 +1561,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:68b65301-f199-4812-b81e-bb7a78198a76",
+            "fullUrl": "urn:uuid:ea476392-1ee2-46e4-bf93-137dd93d174d",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-19",
@@ -1569,7 +1569,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:57754bb9-bd7f-4348-82ee-949a4b3bf97b",
+            "fullUrl": "urn:uuid:e7433849-afa8-4c86-ac68-3384e501b796",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-19",
@@ -1596,7 +1596,7 @@
                 "subject": {
                     "reference": "Location/location-19"
                 },
-                "issued": "2024-01-22T18:26:37.988769+00:00",
+                "issued": "2024-01-22T18:27:10.664855+00:00",
                 "valueQuantity": {
                     "value": 100345,
                     "unit": "cases",
@@ -1606,7 +1606,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:0e4bc8d7-bc8b-4a42-bd91-65e9e9e07cad",
+            "fullUrl": "urn:uuid:18dc1d89-69bf-403b-a02a-0946de347f5a",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-19",
@@ -1633,7 +1633,7 @@
                 "subject": {
                     "reference": "Location/location-19"
                 },
-                "issued": "2024-01-22T18:26:37.988769+00:00",
+                "issued": "2024-01-22T18:27:10.664855+00:00",
                 "valueQuantity": {
                     "value": 28071,
                     "unit": "deaths",
@@ -1643,7 +1643,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:6a0f6553-43c3-4315-86ce-db7a4c2ccd6e",
+            "fullUrl": "urn:uuid:65992858-1483-4d60-ac6b-e8ca9fdb5149",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-20",
@@ -1651,7 +1651,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:5d4446f9-62f2-49eb-8c6e-8c58d2bcd7e5",
+            "fullUrl": "urn:uuid:48888bb9-d8fa-411d-9848-5a3c5e7d79e4",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-20",
@@ -1678,7 +1678,7 @@
                 "subject": {
                     "reference": "Location/location-20"
                 },
-                "issued": "2024-01-22T18:26:37.989822+00:00",
+                "issued": "2024-01-22T18:27:10.665906+00:00",
                 "valueQuantity": {
                     "value": 110785,
                     "unit": "cases",
@@ -1688,7 +1688,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:0ba89136-2e3c-49fc-bac8-b0f3662bd079",
+            "fullUrl": "urn:uuid:36d41c4a-f5d0-40f2-8d7a-12fa1e08fbdc",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-20",
@@ -1715,7 +1715,7 @@
                 "subject": {
                     "reference": "Location/location-20"
                 },
-                "issued": "2024-01-22T18:26:37.989822+00:00",
+                "issued": "2024-01-22T18:27:10.665906+00:00",
                 "valueQuantity": {
                     "value": 16017,
                     "unit": "deaths",
@@ -1725,7 +1725,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:841acaa5-f19e-498e-937a-c3cd88a25441",
+            "fullUrl": "urn:uuid:7326fa7c-ad8c-4fbe-a13c-ce8704c48c10",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-21",
@@ -1733,7 +1733,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:4fe3f762-23d6-444e-bc2c-f95c9ed67352",
+            "fullUrl": "urn:uuid:f1f90d51-3a59-40b4-af6c-547e72bc130e",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-21",
@@ -1760,7 +1760,7 @@
                 "subject": {
                     "reference": "Location/location-21"
                 },
-                "issued": "2024-01-22T18:26:37.990889+00:00",
+                "issued": "2024-01-22T18:27:10.667077+00:00",
                 "valueQuantity": {
                     "value": 160142,
                     "unit": "cases",
@@ -1770,7 +1770,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:fb531586-dc83-4191-9360-4a9214a85620",
+            "fullUrl": "urn:uuid:81edfca3-882a-43c9-96e1-8c2d0bc5c993",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-21",
@@ -1797,7 +1797,7 @@
                 "subject": {
                     "reference": "Location/location-21"
                 },
-                "issued": "2024-01-22T18:26:37.990889+00:00",
+                "issued": "2024-01-22T18:27:10.667077+00:00",
                 "valueQuantity": {
                     "value": 10149,
                     "unit": "deaths",
@@ -1807,7 +1807,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:44050d39-3578-4ee8-9dc5-060b54fb4c98",
+            "fullUrl": "urn:uuid:5af37416-5d11-44d0-b91e-89fb89f3ba60",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-22",
@@ -1815,7 +1815,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:76b74362-bf7d-4b9f-b894-c280d3c08ba4",
+            "fullUrl": "urn:uuid:8a29e25f-c2bd-47e7-9cda-ff1e069e46ad",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-22",
@@ -1842,7 +1842,7 @@
                 "subject": {
                     "reference": "Location/location-22"
                 },
-                "issued": "2024-01-22T18:26:37.991925+00:00",
+                "issued": "2024-01-22T18:27:10.668119+00:00",
                 "valueQuantity": {
                     "value": 73500,
                     "unit": "cases",
@@ -1852,7 +1852,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:1de6c4bc-c0c7-4752-973c-966a7b442cc6",
+            "fullUrl": "urn:uuid:d38d81fa-ff82-4b1b-8594-72d42141600e",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-22",
@@ -1879,7 +1879,7 @@
                 "subject": {
                     "reference": "Location/location-22"
                 },
-                "issued": "2024-01-22T18:26:37.991925+00:00",
+                "issued": "2024-01-22T18:27:10.668119+00:00",
                 "valueQuantity": {
                     "value": 28219,
                     "unit": "deaths",
@@ -1889,7 +1889,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:4d642501-f51e-4a59-9a26-423a5b643e5d",
+            "fullUrl": "urn:uuid:561008aa-a645-467d-affe-54669b0cbed3",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-23",
@@ -1897,7 +1897,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:8cd8ca1f-595c-4b30-89b7-2161344134ec",
+            "fullUrl": "urn:uuid:a6560c52-1234-45bf-bcef-2f5f1d75b6fc",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-23",
@@ -1924,7 +1924,7 @@
                 "subject": {
                     "reference": "Location/location-23"
                 },
-                "issued": "2024-01-22T18:26:37.993062+00:00",
+                "issued": "2024-01-22T18:27:10.669922+00:00",
                 "valueQuantity": {
                     "value": 65420,
                     "unit": "cases",
@@ -1934,7 +1934,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:990ad168-ea28-4838-9726-9f7338745c55",
+            "fullUrl": "urn:uuid:760cc120-be64-45c0-ac95-32268b7f53e0",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-23",
@@ -1961,7 +1961,7 @@
                 "subject": {
                     "reference": "Location/location-23"
                 },
-                "issued": "2024-01-22T18:26:37.993062+00:00",
+                "issued": "2024-01-22T18:27:10.669922+00:00",
                 "valueQuantity": {
                     "value": 41903,
                     "unit": "deaths",
@@ -1971,7 +1971,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:bfe2150d-5462-4e97-86c7-1f3f4cf019e7",
+            "fullUrl": "urn:uuid:a37942d3-5e92-410b-a0aa-76a400f8c571",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-24",
@@ -1979,7 +1979,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:c5eb2e48-b13f-487d-9d3f-f979a4885609",
+            "fullUrl": "urn:uuid:2f19cadd-a158-4f2e-b316-aeb49723a515",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-24",
@@ -2006,7 +2006,7 @@
                 "subject": {
                     "reference": "Location/location-24"
                 },
-                "issued": "2024-01-22T18:26:37.994074+00:00",
+                "issued": "2024-01-22T18:27:10.671006+00:00",
                 "valueQuantity": {
                     "value": 40345,
                     "unit": "cases",
@@ -2016,7 +2016,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:f472feaf-984b-4201-a5c5-3cbe6ccbc0d8",
+            "fullUrl": "urn:uuid:eff606ec-af44-47fd-829d-73060ccc4d4c",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-24",
@@ -2043,7 +2043,7 @@
                 "subject": {
                     "reference": "Location/location-24"
                 },
-                "issued": "2024-01-22T18:26:37.994074+00:00",
+                "issued": "2024-01-22T18:27:10.671006+00:00",
                 "valueQuantity": {
                     "value": 37652,
                     "unit": "deaths",
@@ -2053,7 +2053,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:2b07b9aa-bc3b-402d-aea2-9b44eb4050f5",
+            "fullUrl": "urn:uuid:dea09665-c882-40aa-8cea-e18379ab9f12",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-25",
@@ -2061,7 +2061,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:55cfe743-8246-4703-8eb5-48841fd16fc7",
+            "fullUrl": "urn:uuid:2e2639cb-ee61-4d51-a886-5960bce9026d",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-25",
@@ -2088,7 +2088,7 @@
                 "subject": {
                     "reference": "Location/location-25"
                 },
-                "issued": "2024-01-22T18:26:37.995150+00:00",
+                "issued": "2024-01-22T18:27:10.672043+00:00",
                 "valueQuantity": {
                     "value": 80500,
                     "unit": "cases",
@@ -2098,7 +2098,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:dadeb48b-09ae-4eb5-871c-2a0db5345557",
+            "fullUrl": "urn:uuid:8e59a138-0f9c-4614-a377-c59eeb3f974a",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-25",
@@ -2125,7 +2125,7 @@
                 "subject": {
                     "reference": "Location/location-25"
                 },
-                "issued": "2024-01-22T18:26:37.995150+00:00",
+                "issued": "2024-01-22T18:27:10.672043+00:00",
                 "valueQuantity": {
                     "value": 13021,
                     "unit": "deaths",
@@ -2135,7 +2135,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:a4f238d0-1037-48e6-84e0-4ea9d0d6118d",
+            "fullUrl": "urn:uuid:62fdecbe-cd1a-43f5-ab1b-c829dfc6a297",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-26",
@@ -2143,7 +2143,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:578f5982-d838-42ce-a379-161cf2641730",
+            "fullUrl": "urn:uuid:d722551d-55d2-499b-a70b-5f874109edbe",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-26",
@@ -2170,7 +2170,7 @@
                 "subject": {
                     "reference": "Location/location-26"
                 },
-                "issued": "2024-01-22T18:26:37.996183+00:00",
+                "issued": "2024-01-22T18:27:10.673075+00:00",
                 "valueQuantity": {
                     "value": 23500,
                     "unit": "cases",
@@ -2180,7 +2180,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:ebb79db1-8d8f-44dc-9cc7-5c585e878ce5",
+            "fullUrl": "urn:uuid:75cc3e2c-692f-46f6-b744-551093b21f5a",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-26",
@@ -2207,7 +2207,7 @@
                 "subject": {
                     "reference": "Location/location-26"
                 },
-                "issued": "2024-01-22T18:26:37.996183+00:00",
+                "issued": "2024-01-22T18:27:10.673075+00:00",
                 "valueQuantity": {
                     "value": 44514,
                     "unit": "deaths",
@@ -2217,7 +2217,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:9b68103a-03a5-4291-8ba9-88d295d7a2cd",
+            "fullUrl": "urn:uuid:fdad0087-aacc-4327-82b3-c5a4298a4e45",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-27",
@@ -2225,7 +2225,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:2b74776a-9e99-46da-85dd-bf3b608f1966",
+            "fullUrl": "urn:uuid:b5653824-0f2c-4dad-90fe-6ecb0f62d4cc",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-27",
@@ -2252,7 +2252,7 @@
                 "subject": {
                     "reference": "Location/location-27"
                 },
-                "issued": "2024-01-22T18:26:37.997220+00:00",
+                "issued": "2024-01-22T18:27:10.674112+00:00",
                 "valueQuantity": {
                     "value": 15420,
                     "unit": "cases",
@@ -2262,7 +2262,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:39a8c412-d8fb-44f0-850a-032984932efd",
+            "fullUrl": "urn:uuid:3646471b-c68f-4b0e-878f-2233e4888b42",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-27",
@@ -2289,7 +2289,7 @@
                 "subject": {
                     "reference": "Location/location-27"
                 },
-                "issued": "2024-01-22T18:26:37.997220+00:00",
+                "issued": "2024-01-22T18:27:10.674112+00:00",
                 "valueQuantity": {
                     "value": 12847,
                     "unit": "deaths",
@@ -2299,7 +2299,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:6c4c94b9-4454-431d-b419-1de0767b51ec",
+            "fullUrl": "urn:uuid:4aa47323-82dd-4fe1-a6e7-98e9e38847c3",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-28",
@@ -2307,7 +2307,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:931cd7a2-a5d8-4630-a772-3622789acb82",
+            "fullUrl": "urn:uuid:baf2bcab-5515-4872-b12d-12378feedd4b",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-28",
@@ -2334,7 +2334,7 @@
                 "subject": {
                     "reference": "Location/location-28"
                 },
-                "issued": "2024-01-22T18:26:37.998246+00:00",
+                "issued": "2024-01-22T18:27:10.675162+00:00",
                 "valueQuantity": {
                     "value": 52745,
                     "unit": "cases",
@@ -2344,7 +2344,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:0b6539d9-ca49-427d-9cb0-9255a0662c19",
+            "fullUrl": "urn:uuid:50cdece1-c015-41e0-b990-9b8fabb87dcd",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-28",
@@ -2371,7 +2371,7 @@
                 "subject": {
                     "reference": "Location/location-28"
                 },
-                "issued": "2024-01-22T18:26:37.998246+00:00",
+                "issued": "2024-01-22T18:27:10.675162+00:00",
                 "valueQuantity": {
                     "value": 33835,
                     "unit": "deaths",
@@ -2381,7 +2381,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:14359885-be4e-4628-a377-19bd7110386e",
+            "fullUrl": "urn:uuid:3ac91914-92be-4bf4-af7b-4f1f797f2b66",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-29",
@@ -2389,7 +2389,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:c4814ac7-77c3-413f-ae7e-60a42cd1dd36",
+            "fullUrl": "urn:uuid:294b7e0c-c996-4f0e-a5f9-43bff1088b2d",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-29",
@@ -2416,7 +2416,7 @@
                 "subject": {
                     "reference": "Location/location-29"
                 },
-                "issued": "2024-01-22T18:26:37.999314+00:00",
+                "issued": "2024-01-22T18:27:10.676193+00:00",
                 "valueQuantity": {
                     "value": 22570,
                     "unit": "cases",
@@ -2426,7 +2426,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:d081f880-5009-4163-acc3-851da5948bd5",
+            "fullUrl": "urn:uuid:76a27ba9-bc35-4b9a-9ec3-04380d4efd90",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-29",
@@ -2453,7 +2453,7 @@
                 "subject": {
                     "reference": "Location/location-29"
                 },
-                "issued": "2024-01-22T18:26:37.999314+00:00",
+                "issued": "2024-01-22T18:27:10.676193+00:00",
                 "valueQuantity": {
                     "value": 46183,
                     "unit": "deaths",
@@ -2463,7 +2463,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:98be82c2-d9f4-422e-9fa5-f9ac449e44ae",
+            "fullUrl": "urn:uuid:32a4ce1d-58d4-4f69-a45e-609d9dcf3b0e",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-30",
@@ -2471,7 +2471,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:d6336390-e36c-42f4-bce2-a049f4205446",
+            "fullUrl": "urn:uuid:de5e9210-3aa2-4f95-8785-a8d106088710",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-30",
@@ -2498,7 +2498,7 @@
                 "subject": {
                     "reference": "Location/location-30"
                 },
-                "issued": "2024-01-22T18:26:38.000357+00:00",
+                "issued": "2024-01-22T18:27:10.677218+00:00",
                 "valueQuantity": {
                     "value": 33578,
                     "unit": "cases",
@@ -2508,7 +2508,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:dac0e6f8-c330-4acd-a186-e42986233b3b",
+            "fullUrl": "urn:uuid:9713505f-6e5e-41f7-ac25-b9308cd4aab9",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-30",
@@ -2535,7 +2535,7 @@
                 "subject": {
                     "reference": "Location/location-30"
                 },
-                "issued": "2024-01-22T18:26:38.000357+00:00",
+                "issued": "2024-01-22T18:27:10.677218+00:00",
                 "valueQuantity": {
                     "value": 32254,
                     "unit": "deaths",
@@ -2545,7 +2545,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:92ffe5e4-32ba-422d-b06f-81956330bf93",
+            "fullUrl": "urn:uuid:d48553fa-4269-4d7b-94e5-94364729ab9c",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-31",
@@ -2553,7 +2553,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:5714706f-5feb-4e08-979a-3b9851b713c3",
+            "fullUrl": "urn:uuid:ec9d97ce-c05d-4794-92fc-3757cc8f0671",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-31",
@@ -2580,7 +2580,7 @@
                 "subject": {
                     "reference": "Location/location-31"
                 },
-                "issued": "2024-01-22T18:26:38.001430+00:00",
+                "issued": "2024-01-22T18:27:10.678254+00:00",
                 "valueQuantity": {
                     "value": 32470,
                     "unit": "cases",
@@ -2590,7 +2590,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:9f3f3cb3-704b-4682-9d94-0b9268314c11",
+            "fullUrl": "urn:uuid:e8c16985-6e76-4a61-9e89-c226ff30815b",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-31",
@@ -2617,7 +2617,7 @@
                 "subject": {
                     "reference": "Location/location-31"
                 },
-                "issued": "2024-01-22T18:26:38.001430+00:00",
+                "issued": "2024-01-22T18:27:10.678254+00:00",
                 "valueQuantity": {
                     "value": 39408,
                     "unit": "deaths",
@@ -2627,7 +2627,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:fa22965f-6963-409f-b189-5ed3ec38f3c6",
+            "fullUrl": "urn:uuid:0bc8af84-4233-4507-9e63-3f5b2f983da0",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-32",
@@ -2635,7 +2635,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:0a6c2198-299b-49bb-bb26-0ff1922cab99",
+            "fullUrl": "urn:uuid:9d460dfd-d0fe-4590-b684-ef4bf40f3928",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-32",
@@ -2662,7 +2662,7 @@
                 "subject": {
                     "reference": "Location/location-32"
                 },
-                "issued": "2024-01-22T18:26:38.002482+00:00",
+                "issued": "2024-01-22T18:27:10.679328+00:00",
                 "valueQuantity": {
                     "value": 29540,
                     "unit": "cases",
@@ -2672,7 +2672,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:d116e5d2-884e-4e2d-8f09-2fed32bcc25e",
+            "fullUrl": "urn:uuid:e210f87a-1bde-4285-be6b-79c6ad78021a",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-32",
@@ -2699,7 +2699,7 @@
                 "subject": {
                     "reference": "Location/location-32"
                 },
-                "issued": "2024-01-22T18:26:38.002482+00:00",
+                "issued": "2024-01-22T18:27:10.679328+00:00",
                 "valueQuantity": {
                     "value": 13829,
                     "unit": "deaths",
@@ -2709,7 +2709,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:e3172e53-240c-4f08-af36-3f0a69ec4cc9",
+            "fullUrl": "urn:uuid:f6d76ec7-9c5a-4a04-9d2e-1de6fff99930",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-33",
@@ -2717,7 +2717,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:8e28fe7e-be41-4982-8eb8-d9aa4aa474dd",
+            "fullUrl": "urn:uuid:4f17e656-6393-4653-8488-26ef5c501283",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-33",
@@ -2744,7 +2744,7 @@
                 "subject": {
                     "reference": "Location/location-33"
                 },
-                "issued": "2024-01-22T18:26:38.003518+00:00",
+                "issued": "2024-01-22T18:27:10.680377+00:00",
                 "valueQuantity": {
                     "value": 26810,
                     "unit": "cases",
@@ -2754,7 +2754,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:dd33bf66-187f-4709-8039-734e57ba04ec",
+            "fullUrl": "urn:uuid:3e4d363d-b430-438c-8543-e146ee32102b",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-33",
@@ -2781,7 +2781,7 @@
                 "subject": {
                     "reference": "Location/location-33"
                 },
-                "issued": "2024-01-22T18:26:38.003518+00:00",
+                "issued": "2024-01-22T18:27:10.680377+00:00",
                 "valueQuantity": {
                     "value": 30988,
                     "unit": "deaths",
@@ -2791,7 +2791,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:4b8e6b73-7e2d-4b59-af66-e32e6e1ec0ab",
+            "fullUrl": "urn:uuid:87e526b1-2234-46df-8847-5d93a0e4f813",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-34",
@@ -2799,7 +2799,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:1062daca-bcfe-4b30-8c9c-d07544ebacf4",
+            "fullUrl": "urn:uuid:b8803c05-36f4-4bf2-ac46-2d933bd694ad",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-34",
@@ -2826,7 +2826,7 @@
                 "subject": {
                     "reference": "Location/location-34"
                 },
-                "issued": "2024-01-22T18:26:38.004549+00:00",
+                "issued": "2024-01-22T18:27:10.681427+00:00",
                 "valueQuantity": {
                     "value": 15000,
                     "unit": "cases",
@@ -2836,7 +2836,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:8879c9a3-89a8-42c5-8585-9023a44da6c1",
+            "fullUrl": "urn:uuid:67d8f870-5f1f-4c05-95d3-b9d25e148cfd",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-34",
@@ -2863,7 +2863,7 @@
                 "subject": {
                     "reference": "Location/location-34"
                 },
-                "issued": "2024-01-22T18:26:38.004549+00:00",
+                "issued": "2024-01-22T18:27:10.681427+00:00",
                 "valueQuantity": {
                     "value": 13520,
                     "unit": "deaths",
@@ -2873,7 +2873,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:57dae0ec-f975-4a56-aac2-763f9234325f",
+            "fullUrl": "urn:uuid:347a3b29-0a8b-422a-bded-fa706abd512c",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-35",
@@ -2881,7 +2881,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:d1213073-4e9b-40e0-b57b-bb325b542c93",
+            "fullUrl": "urn:uuid:8c7f777a-2835-43d2-955d-f66eca49bca7",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-35",
@@ -2908,7 +2908,7 @@
                 "subject": {
                     "reference": "Location/location-35"
                 },
-                "issued": "2024-01-22T18:26:38.005717+00:00",
+                "issued": "2024-01-22T18:27:10.682553+00:00",
                 "valueQuantity": {
                     "value": 22890,
                     "unit": "cases",
@@ -2918,7 +2918,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:a6f730ec-3b21-4875-bd4b-c50494cf793e",
+            "fullUrl": "urn:uuid:0a98d20d-b42a-421a-9c69-1ceed1dab56c",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-35",
@@ -2945,7 +2945,7 @@
                 "subject": {
                     "reference": "Location/location-35"
                 },
-                "issued": "2024-01-22T18:26:38.005717+00:00",
+                "issued": "2024-01-22T18:27:10.682553+00:00",
                 "valueQuantity": {
                     "value": 11359,
                     "unit": "deaths",
@@ -2955,7 +2955,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:073c86c0-ffb4-45a5-9971-ce1487918d9f",
+            "fullUrl": "urn:uuid:b6d09727-57e7-4387-b7a9-1dfc43137a98",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-36",
@@ -2963,7 +2963,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:bbffac0b-751d-4109-96e6-21914cf657aa",
+            "fullUrl": "urn:uuid:30452d26-d999-40f9-ac88-a511594f2107",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-36",
@@ -2990,7 +2990,7 @@
                 "subject": {
                     "reference": "Location/location-36"
                 },
-                "issued": "2024-01-22T18:26:38.006771+00:00",
+                "issued": "2024-01-22T18:27:10.683646+00:00",
                 "valueQuantity": {
                     "value": 24646,
                     "unit": "cases",
@@ -3000,7 +3000,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:9c002609-4351-48c3-8a74-65431696c412",
+            "fullUrl": "urn:uuid:29908e5a-737a-4e16-b98f-48a9a9c40dda",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-36",
@@ -3027,7 +3027,7 @@
                 "subject": {
                     "reference": "Location/location-36"
                 },
-                "issued": "2024-01-22T18:26:38.006771+00:00",
+                "issued": "2024-01-22T18:27:10.683646+00:00",
                 "valueQuantity": {
                     "value": 29231,
                     "unit": "deaths",
@@ -3037,7 +3037,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:0e7de05a-bcf7-4f7d-9a60-aaef673842f8",
+            "fullUrl": "urn:uuid:441de1f6-b6a4-436d-8c43-2c3ccee4f1dc",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-37",
@@ -3045,7 +3045,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:b765e5c3-53df-47d0-8c7e-50eb93f7cb99",
+            "fullUrl": "urn:uuid:8a1cfb96-98c1-47e2-940e-0e8bcfdb8c19",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-37",
@@ -3072,7 +3072,7 @@
                 "subject": {
                     "reference": "Location/location-37"
                 },
-                "issued": "2024-01-22T18:26:38.007803+00:00",
+                "issued": "2024-01-22T18:27:10.684670+00:00",
                 "valueQuantity": {
                     "value": 40568,
                     "unit": "cases",
@@ -3082,7 +3082,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:d726666b-62b9-44a8-aa8c-3d60b322507e",
+            "fullUrl": "urn:uuid:e332044e-de13-498f-afdf-c7e59cdac985",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-37",
@@ -3109,7 +3109,7 @@
                 "subject": {
                     "reference": "Location/location-37"
                 },
-                "issued": "2024-01-22T18:26:38.007803+00:00",
+                "issued": "2024-01-22T18:27:10.684670+00:00",
                 "valueQuantity": {
                     "value": 25403,
                     "unit": "deaths",
@@ -3119,7 +3119,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:2438111f-0baa-4812-adf7-be6f97750b5f",
+            "fullUrl": "urn:uuid:d62e6e67-2296-4f66-bd4d-5a5c45b56aa8",
             "resource": {
                 "resourceType": "Location",
                 "id": "location-38",
@@ -3127,7 +3127,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:0517be03-156b-4328-bb4b-f8ae61c4f8b4",
+            "fullUrl": "urn:uuid:a6ef5832-f3f8-4e0c-afb0-6a5369438e45",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-cases-38",
@@ -3154,7 +3154,7 @@
                 "subject": {
                     "reference": "Location/location-38"
                 },
-                "issued": "2024-01-22T18:26:38.008832+00:00",
+                "issued": "2024-01-22T18:27:10.685794+00:00",
                 "valueQuantity": {
                     "value": 31950,
                     "unit": "cases",
@@ -3164,7 +3164,7 @@
             }
         },
         {
-            "fullUrl": "urn:uuid:7553c795-4f2a-4465-8d9e-f7b2feb4d584",
+            "fullUrl": "urn:uuid:a2f3c757-d54b-4ce7-b10e-e1b433757e05",
             "resource": {
                 "resourceType": "Observation",
                 "id": "covid-deaths-38",
@@ -3191,7 +3191,7 @@
                 "subject": {
                     "reference": "Location/location-38"
                 },
-                "issued": "2024-01-22T18:26:38.008832+00:00",
+                "issued": "2024-01-22T18:27:10.685794+00:00",
                 "valueQuantity": {
                     "value": 13567,
                     "unit": "deaths",

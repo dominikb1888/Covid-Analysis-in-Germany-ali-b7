@@ -5,6 +5,7 @@ from fhir.resources.location import Location
 from fhir.resources.observation import Observation
 from datetime import datetime
 import pytz
+import uuid
 
 # Load the CSV file
 data = pd.read_csv('Archive/cities_data.csv')
@@ -13,6 +14,12 @@ data = pd.read_csv('Archive/cities_data.csv')
 bundle_entries = []
 
 for index, row in data.iterrows():
+
+    # Generate a unique fullUrl for each resource
+    location_fullUrl = f"urn:uuid:{uuid.uuid4()}"
+    observation_cases_fullUrl = f"urn:uuid:{uuid.uuid4()}"
+    observation_deaths_fullUrl = f"urn:uuid:{uuid.uuid4()}"
+
     # Create a Location resource for each city
     location = Location.construct()
     location.name = row['city']
@@ -65,10 +72,10 @@ for index, row in data.iterrows():
         subject={"reference": f"Location/{location.id}"}
     )
 
-    # Add resources to bundle entries
-    bundle_entries.append(BundleEntry.construct(resource=location))
-    bundle_entries.append(BundleEntry.construct(resource=observation_cases))
-    bundle_entries.append(BundleEntry.construct(resource=observation_deaths))
+     # Add resources to bundle entries with fullUrl
+    bundle_entries.append(BundleEntry.construct(fullUrl=location_fullUrl, resource=location))
+    bundle_entries.append(BundleEntry.construct(fullUrl=observation_cases_fullUrl, resource=observation_cases))
+    bundle_entries.append(BundleEntry.construct(fullUrl=observation_deaths_fullUrl, resource=observation_deaths))
 
 # Create the bundle
 bundle = Bundle.construct()
@@ -82,5 +89,5 @@ bundle_json = bundle.json(indent=4)
 print(bundle_json)
 
 # Save the JSON to a file
-with open('fhir_bundle.json', 'w') as file:
+with open('fhir_bundle1.json', 'w') as file:
     file.write(bundle_json)
