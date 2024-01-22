@@ -45,7 +45,7 @@ const margin = {top: 30, right: 30, bottom: 70, left: 60},
     function update(selectedVar, sortAscending) {  // Add sortAscending parameter
         currentSelectedYearVar = selectedVar; // Update the selected year variable
 
-        fetch(`/data2`)
+        fetch(`/data`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
