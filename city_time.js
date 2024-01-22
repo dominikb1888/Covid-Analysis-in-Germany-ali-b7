@@ -1,158 +1,173 @@
-const margin = {top: 30, right: 30, bottom: 70, left: 60},
-        width = 800 - margin.left - margin.right,
-        height = 500 - margin.top - margin.bottom;
+const margin = { top: 30, right: 60, bottom: 70, left: 60 },
+      width = 800 - margin.left - margin.right,
+      height = 500 - margin.top - margin.bottom;
 
-    const svg = d3.select("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", `translate(${margin.left},${margin.top})`);
+const svg = d3.select("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    const tooltip = d3.select("#tooltip");
+const tooltip = d3.select("#tooltip");
+const tooltip2 = d3.select("#tooltip2")
 
-    const x = d3.scaleBand()
-        .range([0, width])
-        .padding(0.2);
+const x = d3.scaleBand()
+    .range([0, width])
+    .padding(0.2);
 
-    // Define x-axis
-    const xAxis = svg.append("g")
-        .attr("transform", `translate(0,${height})`);
+// Define x-axis
+const xAxis = svg.append("g")
+    .attr("transform", `translate(0,${height})`);
 
-    const y = d3.scaleLinear()
-        .range([height, 0]);
+const y = d3.scaleLinear()
+    .range([height, 0]);
 
-    // Define y-axis
-    const yAxis = svg.append("g")
-        .attr("class", "myYaxis");
+// Define y-axis
+const yAxis = svg.append("g")
+    .attr("class", "myYaxis");
 
-    let selectedCities = [];
-    let currentSelectedYearVar = 'covid_cases_2020'; // Default year
+const y1 = d3.scaleLinear()
+    .range([height, 0]);
 
-    // Add listener for the color picker
-    d3.select("#barColorPicker").on("input", function() {
-        svg.selectAll(".bar")
-            .style("fill", this.value);
-    });
+// Define second y-axis (right side for population)
+const yAxisRight = svg.append("g")
+    .attr("class", "myYaxis")
+    .attr("transform", `translate(${width}, 0)`);
 
-    // Sorting function
-    function sortData(data, ascending = true) {
-        return data.sort((a, b) => ascending ?
-            a[currentSelectedYearVar] - b[currentSelectedYearVar] :
-            b[currentSelectedYearVar] - a[currentSelectedYearVar]);
-    }
+let selectedCities = [];
+let currentSelectedYearVar = 'covid_cases_2020'; // Default year
 
-    // Update function with sorting logic
-    function update(selectedVar, sortAscending) {  // Add sortAscending parameter
-        currentSelectedYearVar = selectedVar; // Update the selected year variable
+// Add listener for the color picker
+d3.select("#barColorPicker").on("input", function() {
+    svg.selectAll(".bar")
+        .style("fill", this.value);
+});
 
-        fetch(`/data`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
+// Sorting function
+function sortData(data, ascending = true) {
+    return data.sort((a, b) => ascending ?
+        a[currentSelectedYearVar] - b[currentSelectedYearVar] :
+        b[currentSelectedYearVar] - a[currentSelectedYearVar]);
+}
+
+// Add an option for total COVID cases
+document.getElementById('year').innerHTML += '<option value="covid_cases">All Years (Total Cases)</option>';
+
+// Update function with sorting logic
+function update(selectedVar, sortAscending) { 
+    currentSelectedYearVar = selectedVar;
+
+    fetch(`/data`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (Array.isArray(data)) {
+            if (sortAscending !== undefined) {
+                data = sortData(data, sortAscending);
             }
-            return response.json();
-        })
-            .then(data => {
-                if (Array.isArray(data)) {
+            svg.selectAll(".bar").remove();
 
-                    if (sortAscending !== undefined) {
-                        data = sortData(data, sortAscending);
-                    }
-                    // Remove only the bars, not the entire SVG
-                    svg.selectAll(".bar").remove();
+            x.domain(data.map(d => d.city));
+            xAxis.call(d3.axisBottom(x))
+                .selectAll("text")
+                .style("text-anchor", "end")
+                .attr("dx", "-.8em")
+                .attr("dy", ".15em")
+                .attr("transform", "rotate(-65)");
 
-                    // Update to use the correct property based on the selected year
-                    x.domain(data.map(d => d.city));
-                    xAxis.call(d3.axisBottom(x))
-                        .selectAll("text")
-                        .style("text-anchor", "end")
-                        .attr("dx", "-.8em")
-                        .attr("dy", ".15em")
-                        .attr("transform", "rotate(-65)");
+            // Set the domains for both y-axes
+            y.domain([0, d3.max(data, d => d[selectedVar])]); // For COVID cases
+            y1.domain([0, d3.max(data, d => d.population)]);  // For population
 
-                    // Use the year-specific property for each city
-                    y.domain([0, d3.max(data, d => d[selectedVar])]);
-                    yAxis.transition().duration(1000).call(d3.axisLeft(y));
+            // Update the axes
+            yAxis.transition().duration(1000).call(d3.axisLeft(y));
+            yAxisRight.transition().duration(1000).call(d3.axisRight(y1));
 
-                    const bars = svg.selectAll(".bar")
-                        .data(data);
+            const bars = svg.selectAll(".bar")
+                .data(data);
 
-                    bars.enter()
-                        .append("rect")
-                        .attr("class", "bar")
-                        .attr("x", d => x(d.city))
-                        .attr("width", x.bandwidth())
-                        .attr("y", height)  // Start the bars at the bottom of the chart
-                        .attr("height", 0)  // Initial height set to 0
-                        .style("fill", d3.select("#barColorPicker").property("value"))
-                        .merge(bars)  // Merge with existing bars
-                        .transition()  // Apply a transition to animate the bars
-                        .duration(1000)  // Duration of the transition in milliseconds
-                        .attr("y", d => y(d[currentSelectedYearVar]))  // Animate to the actual y position
-                        .attr("height", d => height - y(d[currentSelectedYearVar]));  // Animate to the actual height
+            bars.enter()
+                .append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.city))
+                .attr("width", x.bandwidth())
+                .attr("y", height)
+                .attr("height", 0)
+                .style("fill", "green")
+                .merge(bars)
+                .transition()
+                .duration(1000)
+                .attr("y", d => y(d[currentSelectedYearVar]))
+                .attr("height", d => height - y(d[currentSelectedYearVar]));
 
-                    bars.exit().remove();
+            bars.exit().remove();
 
-                    svg.selectAll(".bar").on("click", function(event, d) {
-                        const index = selectedCities.findIndex(city => city.city === d.city);
-                        if (index > -1) {
-                            selectedCities.splice(index, 1);
-                        } else {
-                            selectedCities.push(d);
-                        }
-                        updateComparisonArea();
-                    });
+            svg.selectAll(".bar").on("click", function(event, d) {
+                const index = selectedCities.findIndex(city => city.city === d.city);
+                if (index > -1) {
+                    selectedCities.splice(index, 1);
+                } else {
+                    selectedCities.push(d);
                 }
+                updateComparisonArea();
             });
-    }
 
-    // Comparison Area Update Function
-    function updateComparisonArea() {
-        const list = d3.select("#comparison-list");
-        list.html("");
-        selectedCities.forEach(city => {
-            list.append("li").text(`City: ${city.city}, COVID Cases: ${city[currentSelectedYearVar].toLocaleString()}`);
-        });
-    }
-
-    update('covid_cases_2020');
-
-    function downloadSVG() {
-        const svg = document.querySelector('svg');
-        const svgData = new XMLSerializer().serializeToString(svg);
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d');
-        const img = new Image();
-        img.onload = () => {
-            ctx.drawImage(img, 0, 0);
-            const pngFile = canvas.toDataURL("image/png");
-            const downloadLink = document.createElement('a');
-            downloadLink.download = 'chart.png';
-            downloadLink.href = `${pngFile}`;
-            downloadLink.click();
-        };
-        img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgData)));
-    }
-
-    document.getElementById('downloadButton').addEventListener('click', downloadSVG);
-
-
-    // Event listener for year change
-    d3.select("#year").on("change", function(event) {
-        const selectedOption = d3.select(this).property("value");
-        update(selectedOption);
+            // Create elements for population data
+            svg.selectAll(".populationCircle").remove();
+            svg.selectAll(".populationCircle")
+                .data(data)
+                .enter()
+                .append("circle")
+                .attr("class", "populationCircle")
+                .attr("cx", d => x(d.city) + x.bandwidth() / 2) // Center in the band
+                .attr("cy", d => y1(d.population))
+                .attr("r", 5) // Radius of circles
+                .style("fill", "blue") // Example color for population data
+                .style("opacity", 0.7)
+                .on("mouseenter", function(event, d) {
+                    tooltip2.style("display", "block")
+                           .html(`Population: ${d.population.toLocaleString()}`)
+                           .style("left", (event.pageX + 10) + "px")
+                           .style("top", (event.pageY - 28) + "px");
+                })
+                .on("mouseleave", function() {
+                    tooltip2.style("display", "none");
+                });
+        }
     });
+}
 
-    // Event listeners for sorting
-    d3.select("#sortAscending").on("click", function() {
-        update(d3.select("#year").property("value"), true);
+// Comparison Area Update Function
+function updateComparisonArea() {
+    const list = d3.select("#comparison-list");
+    list.html("");
+    selectedCities.forEach(city => {
+        list.append("li").text(`City: ${city.city}, COVID Cases: ${city[currentSelectedYearVar].toLocaleString()}`);
     });
+}
 
-    d3.select("#sortDescending").on("click", function() {
-        update(d3.select("#year").property("value"), false);
-    });
+update('covid_cases_2020');
 
-    d3.select("#clear-comparison").on("click", function() {
-        selectedCities = []; // Clear the selectCities array
-        updateComparisonArea();   // Update the comparison area to reflect the cleared array
-    });
+// Event listener for year change
+d3.select("#year").on("change", function(event) {
+    const selectedOption = d3.select(this).property("value");
+    update(selectedOption);
+});
+
+// Event listeners for sorting
+d3.select("#sortAscending").on("click", function() {
+    update(d3.select("#year").property("value"), true);
+});
+
+d3.select("#sortDescending").on("click", function() {
+    update(d3.select("#year").property("value"), false);
+});
+
+d3.select("#clear-comparison").on("click", function() {
+    selectedCities = []; // Clear the selectCities array
+    updateComparisonArea();   // Update the comparison area to reflect the cleared array
+});

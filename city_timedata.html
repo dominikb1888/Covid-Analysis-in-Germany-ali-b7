@@ -33,6 +33,15 @@
             display: none;
             z-index: 9999; /* Ensure the tooltip is above other elements */
         }
+        .tooltip2 {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            display: none;
+            z-index: 9999; /* Ensure the tooltip is above other elements */
+        }
         .chart-container {
             display: flex;
             flex-direction: column;
@@ -76,6 +85,9 @@
     <span id="covid-cases"></span>
 </div>
 
+<div id="tooltip2" class="tooltip2">
+    <span id="'population"></span>
+</div>
 <div>
     <h1 style="text-align: center">Covid Cases in German Cities from 2020-2022</h1>
     
@@ -89,7 +101,6 @@
         <input type="color" id="barColorPicker" value="#4682b4">
     <button id="sortAscending">Sort Ascending</button>
     <button id="sortDescending">Sort Descending</button>
-        <button id="downloadButton">Download Chart</button>
     </div>
 
     <div id="comparison" class="comparison">
@@ -100,10 +111,12 @@
     <button id="clear-comparison">Clear Comparison Area</button>
 
     <select id="year">
+        <option value="covid_cases">All Years (Total Cases)</option>
         <option value="covid_cases_2020">2020</option>
         <option value="covid_cases_2021">2021</option>
         <option value="covid_cases_2022">2022</option>
     </select>
+    
      <!-- Default color -->
     <svg width="800" height="500"></svg>
 
