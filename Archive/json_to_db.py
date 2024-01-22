@@ -31,7 +31,7 @@ def main():
 
     create_table(cursor)
 
-    filename = pathlib.Path("test1.json")
+    filename = pathlib.Path("covid_data.json")
     with open(filename, 'r') as file:
         data = json.load(file)
         for entry in data["entry"]:
