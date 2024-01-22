@@ -1,0 +1,3087 @@
+{
+    "resourceType": "Bundle",
+    "type": "batch",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-0",
+                "name": "Berlin"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-0",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-0"
+                },
+                "issued": "2024-01-22T18:16:18.746099+00:00",
+                "valueQuantity": {
+                    "value": 1150345,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-0",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-0"
+                },
+                "issued": "2024-01-22T18:16:18.746099+00:00",
+                "valueQuantity": {
+                    "value": 350000,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-1",
+                "name": "Stuttgart"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-1",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-1"
+                },
+                "issued": "2024-01-22T18:16:18.789012+00:00",
+                "valueQuantity": {
+                    "value": 1050746,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-1",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-1"
+                },
+                "issued": "2024-01-22T18:16:18.789012+00:00",
+                "valueQuantity": {
+                    "value": 330420,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-2",
+                "name": "Munich"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-2",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-2"
+                },
+                "issued": "2024-01-22T18:16:18.789985+00:00",
+                "valueQuantity": {
+                    "value": 900530,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-2",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-2"
+                },
+                "issued": "2024-01-22T18:16:18.789985+00:00",
+                "valueQuantity": {
+                    "value": 305438,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-3",
+                "name": "Hamburg"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-3",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-3"
+                },
+                "issued": "2024-01-22T18:16:18.790930+00:00",
+                "valueQuantity": {
+                    "value": 1093489,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-3",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-3"
+                },
+                "issued": "2024-01-22T18:16:18.790930+00:00",
+                "valueQuantity": {
+                    "value": 300420,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-4",
+                "name": "Cologne"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-4",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-4"
+                },
+                "issued": "2024-01-22T18:16:18.791816+00:00",
+                "valueQuantity": {
+                    "value": 400300,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-4",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-4"
+                },
+                "issued": "2024-01-22T18:16:18.791816+00:00",
+                "valueQuantity": {
+                    "value": 120500,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-5",
+                "name": "Frankfurt"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-5",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-5"
+                },
+                "issued": "2024-01-22T18:16:18.792679+00:00",
+                "valueQuantity": {
+                    "value": 300670,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-5",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-5"
+                },
+                "issued": "2024-01-22T18:16:18.792679+00:00",
+                "valueQuantity": {
+                    "value": 103410,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-6",
+                "name": "Dusseldorf"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-6",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-6"
+                },
+                "issued": "2024-01-22T18:16:18.793542+00:00",
+                "valueQuantity": {
+                    "value": 250865,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-6",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-6"
+                },
+                "issued": "2024-01-22T18:16:18.793542+00:00",
+                "valueQuantity": {
+                    "value": 80400,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-7",
+                "name": "Leipzig"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-7",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-7"
+                },
+                "issued": "2024-01-22T18:16:18.794387+00:00",
+                "valueQuantity": {
+                    "value": 240897,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-7",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-7"
+                },
+                "issued": "2024-01-22T18:16:18.794387+00:00",
+                "valueQuantity": {
+                    "value": 75680,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-8",
+                "name": "Dortmund"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-8",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-8"
+                },
+                "issued": "2024-01-22T18:16:18.796840+00:00",
+                "valueQuantity": {
+                    "value": 236780,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-8",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-8"
+                },
+                "issued": "2024-01-22T18:16:18.796840+00:00",
+                "valueQuantity": {
+                    "value": 72687,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-9",
+                "name": "Essen"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-9",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-9"
+                },
+                "issued": "2024-01-22T18:16:18.798562+00:00",
+                "valueQuantity": {
+                    "value": 218950,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-9",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-9"
+                },
+                "issued": "2024-01-22T18:16:18.798562+00:00",
+                "valueQuantity": {
+                    "value": 64000,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-10",
+                "name": "Bremen"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-10",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-10"
+                },
+                "issued": "2024-01-22T18:16:18.799982+00:00",
+                "valueQuantity": {
+                    "value": 162970,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-10",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-10"
+                },
+                "issued": "2024-01-22T18:16:18.799982+00:00",
+                "valueQuantity": {
+                    "value": 30500,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-11",
+                "name": "Dresden"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-11",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-11"
+                },
+                "issued": "2024-01-22T18:16:18.800918+00:00",
+                "valueQuantity": {
+                    "value": 300897,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-11",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-11"
+                },
+                "issued": "2024-01-22T18:16:18.800918+00:00",
+                "valueQuantity": {
+                    "value": 55430,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-12",
+                "name": "Hannover"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-12",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-12"
+                },
+                "issued": "2024-01-22T18:16:18.801891+00:00",
+                "valueQuantity": {
+                    "value": 230200,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-12",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-12"
+                },
+                "issued": "2024-01-22T18:16:18.801891+00:00",
+                "valueQuantity": {
+                    "value": 14791,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-13",
+                "name": "Nuremberg"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-13",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-13"
+                },
+                "issued": "2024-01-22T18:16:18.802790+00:00",
+                "valueQuantity": {
+                    "value": 150000,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-13",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-13"
+                },
+                "issued": "2024-01-22T18:16:18.802790+00:00",
+                "valueQuantity": {
+                    "value": 46457,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-14",
+                "name": "Duisburg"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-14",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-14"
+                },
+                "issued": "2024-01-22T18:16:18.803654+00:00",
+                "valueQuantity": {
+                    "value": 190670,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-14",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-14"
+                },
+                "issued": "2024-01-22T18:16:18.803654+00:00",
+                "valueQuantity": {
+                    "value": 32001,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-15",
+                "name": "Bochum"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-15",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-15"
+                },
+                "issued": "2024-01-22T18:16:18.804516+00:00",
+                "valueQuantity": {
+                    "value": 160785,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-15",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-15"
+                },
+                "issued": "2024-01-22T18:16:18.804516+00:00",
+                "valueQuantity": {
+                    "value": 25095,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-16",
+                "name": "Wuppertal"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-16",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-16"
+                },
+                "issued": "2024-01-22T18:16:18.805371+00:00",
+                "valueQuantity": {
+                    "value": 180743,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-16",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-16"
+                },
+                "issued": "2024-01-22T18:16:18.805371+00:00",
+                "valueQuantity": {
+                    "value": 36286,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-17",
+                "name": "Bielefeld"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-17",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-17"
+                },
+                "issued": "2024-01-22T18:16:18.806216+00:00",
+                "valueQuantity": {
+                    "value": 173500,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-17",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-17"
+                },
+                "issued": "2024-01-22T18:16:18.806216+00:00",
+                "valueQuantity": {
+                    "value": 34894,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-18",
+                "name": "Bonn"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-18",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-18"
+                },
+                "issued": "2024-01-22T18:16:18.807318+00:00",
+                "valueQuantity": {
+                    "value": 165420,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-18",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-18"
+                },
+                "issued": "2024-01-22T18:16:18.807318+00:00",
+                "valueQuantity": {
+                    "value": 23484,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-19",
+                "name": "Munster"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-19",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-19"
+                },
+                "issued": "2024-01-22T18:16:18.808282+00:00",
+                "valueQuantity": {
+                    "value": 100345,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-19",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-19"
+                },
+                "issued": "2024-01-22T18:16:18.808282+00:00",
+                "valueQuantity": {
+                    "value": 28071,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-20",
+                "name": "Mannheim"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-20",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-20"
+                },
+                "issued": "2024-01-22T18:16:18.809236+00:00",
+                "valueQuantity": {
+                    "value": 110785,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-20",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-20"
+                },
+                "issued": "2024-01-22T18:16:18.809236+00:00",
+                "valueQuantity": {
+                    "value": 16017,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-21",
+                "name": "Karlsruhe"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-21",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-21"
+                },
+                "issued": "2024-01-22T18:16:18.810082+00:00",
+                "valueQuantity": {
+                    "value": 160142,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-21",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-21"
+                },
+                "issued": "2024-01-22T18:16:18.810082+00:00",
+                "valueQuantity": {
+                    "value": 10149,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-22",
+                "name": "Augsburg"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-22",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-22"
+                },
+                "issued": "2024-01-22T18:16:18.810975+00:00",
+                "valueQuantity": {
+                    "value": 73500,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-22",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-22"
+                },
+                "issued": "2024-01-22T18:16:18.810975+00:00",
+                "valueQuantity": {
+                    "value": 28219,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-23",
+                "name": "Wiesbaden"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-23",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-23"
+                },
+                "issued": "2024-01-22T18:16:18.812026+00:00",
+                "valueQuantity": {
+                    "value": 65420,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-23",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-23"
+                },
+                "issued": "2024-01-22T18:16:18.812026+00:00",
+                "valueQuantity": {
+                    "value": 41903,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-24",
+                "name": "Munchengladbach"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-24",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-24"
+                },
+                "issued": "2024-01-22T18:16:18.813108+00:00",
+                "valueQuantity": {
+                    "value": 40345,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-24",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-24"
+                },
+                "issued": "2024-01-22T18:16:18.813108+00:00",
+                "valueQuantity": {
+                    "value": 37652,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-25",
+                "name": "Gelsenkirchen"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-25",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-25"
+                },
+                "issued": "2024-01-22T18:16:18.814108+00:00",
+                "valueQuantity": {
+                    "value": 80500,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-25",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-25"
+                },
+                "issued": "2024-01-22T18:16:18.814108+00:00",
+                "valueQuantity": {
+                    "value": 13021,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-26",
+                "name": "Aachen"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-26",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-26"
+                },
+                "issued": "2024-01-22T18:16:18.815119+00:00",
+                "valueQuantity": {
+                    "value": 23500,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-26",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-26"
+                },
+                "issued": "2024-01-22T18:16:18.815119+00:00",
+                "valueQuantity": {
+                    "value": 44514,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-27",
+                "name": "Braunschweig"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-27",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-27"
+                },
+                "issued": "2024-01-22T18:16:18.816000+00:00",
+                "valueQuantity": {
+                    "value": 15420,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-27",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-27"
+                },
+                "issued": "2024-01-22T18:16:18.816000+00:00",
+                "valueQuantity": {
+                    "value": 12847,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-28",
+                "name": "Chemnitz"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-28",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-28"
+                },
+                "issued": "2024-01-22T18:16:18.816844+00:00",
+                "valueQuantity": {
+                    "value": 52745,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-28",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-28"
+                },
+                "issued": "2024-01-22T18:16:18.816844+00:00",
+                "valueQuantity": {
+                    "value": 33835,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-29",
+                "name": "Kiel"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-29",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-29"
+                },
+                "issued": "2024-01-22T18:16:18.817702+00:00",
+                "valueQuantity": {
+                    "value": 22570,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-29",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-29"
+                },
+                "issued": "2024-01-22T18:16:18.817702+00:00",
+                "valueQuantity": {
+                    "value": 46183,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-30",
+                "name": "Halle"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-30",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-30"
+                },
+                "issued": "2024-01-22T18:16:18.818578+00:00",
+                "valueQuantity": {
+                    "value": 33578,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-30",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-30"
+                },
+                "issued": "2024-01-22T18:16:18.818578+00:00",
+                "valueQuantity": {
+                    "value": 32254,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-31",
+                "name": "Magdeburg"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-31",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-31"
+                },
+                "issued": "2024-01-22T18:16:18.819444+00:00",
+                "valueQuantity": {
+                    "value": 32470,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-31",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-31"
+                },
+                "issued": "2024-01-22T18:16:18.819444+00:00",
+                "valueQuantity": {
+                    "value": 39408,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-32",
+                "name": "Freiburg im Breisgau"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-32",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-32"
+                },
+                "issued": "2024-01-22T18:16:18.820280+00:00",
+                "valueQuantity": {
+                    "value": 29540,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-32",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-32"
+                },
+                "issued": "2024-01-22T18:16:18.820280+00:00",
+                "valueQuantity": {
+                    "value": 13829,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-33",
+                "name": "Krefeld"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-33",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-33"
+                },
+                "issued": "2024-01-22T18:16:18.821100+00:00",
+                "valueQuantity": {
+                    "value": 26810,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-33",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-33"
+                },
+                "issued": "2024-01-22T18:16:18.821100+00:00",
+                "valueQuantity": {
+                    "value": 30988,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-34",
+                "name": "Mainz"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-34",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-34"
+                },
+                "issued": "2024-01-22T18:16:18.821940+00:00",
+                "valueQuantity": {
+                    "value": 15000,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-34",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-34"
+                },
+                "issued": "2024-01-22T18:16:18.821940+00:00",
+                "valueQuantity": {
+                    "value": 13520,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-35",
+                "name": "Lubeck"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-35",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-35"
+                },
+                "issued": "2024-01-22T18:16:18.823039+00:00",
+                "valueQuantity": {
+                    "value": 22890,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-35",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-35"
+                },
+                "issued": "2024-01-22T18:16:18.823039+00:00",
+                "valueQuantity": {
+                    "value": 11359,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-36",
+                "name": "Erfurt"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-36",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-36"
+                },
+                "issued": "2024-01-22T18:16:18.823913+00:00",
+                "valueQuantity": {
+                    "value": 24646,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-36",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-36"
+                },
+                "issued": "2024-01-22T18:16:18.823913+00:00",
+                "valueQuantity": {
+                    "value": 29231,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-37",
+                "name": "Oberhausen"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-37",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-37"
+                },
+                "issued": "2024-01-22T18:16:18.824760+00:00",
+                "valueQuantity": {
+                    "value": 40568,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-37",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-37"
+                },
+                "issued": "2024-01-22T18:16:18.824760+00:00",
+                "valueQuantity": {
+                    "value": 25403,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Location",
+                "id": "location-38",
+                "name": "Rostock"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-cases-38",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94500-6",
+                            "display": "COVID-19 cases"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-38"
+                },
+                "issued": "2024-01-22T18:16:18.825596+00:00",
+                "valueQuantity": {
+                    "value": 31950,
+                    "unit": "cases",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{cases}"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "covid-deaths-38",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "laboratory"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "94762-2",
+                            "display": "COVID-19 deaths"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/location-38"
+                },
+                "issued": "2024-01-22T18:16:18.825596+00:00",
+                "valueQuantity": {
+                    "value": 13567,
+                    "unit": "deaths",
+                    "system": "http://unitsofmeasure.org",
+                    "code": "{deaths}"
+                }
+            }
+        }
+    ]
+}
