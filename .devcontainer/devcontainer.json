@@ -8,6 +8,6 @@
     "settings": { 
         "terminal.integrated.shell.linux": "/bin/bash"
     },
-    "extensions": ["ms-python.python"],
+    "extensions": ["ms-python.python", "ms-vscode-remote.vscode-remote-extensionpack"],
     "postStartCommand": "uvicorn main:app --host 127.0.0.1 --port 8000 --reload"
 }
