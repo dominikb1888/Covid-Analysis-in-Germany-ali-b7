@@ -101,99 +101,15 @@ function createBubbleChart() {
         });
 }
 
-// Function to create the scatter plot
-function createScatterPlot() {
-    fetch('/data')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (Array.isArray(data)) {
-                console.log('Data received:', data);
-
-                data.forEach(function(d) {
-                    d.population = +d.population;
-                    d.covid_cases = +d.covid_cases;
-                    d.cityAbbreviation = d.city.substring(0, 2); // Abbreviate city name
-                });
-
-                // Initialize SVG and scales
-                var svgWidth = 1000, svgHeight = 600;
-                var margin = { top: 20, right: 20, bottom: 60, left: 70 };
-                var width = svgWidth - margin.left - margin.right;
-                var height = svgHeight - margin.top - margin.bottom;
-
-                var svg = d3.select("#scatterPlot")
-                    .attr("width", svgWidth)
-                    .attr("height", svgHeight)
-                    .append("g")
-                    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-                // Create an ordinal scale for x-axis using abbreviated city names
-                var x = d3.scaleBand()
-                    .domain(data.map(function(d) { return d.cityAbbreviation; }))
-                    .range([0, width])
-                    .padding(0.1);
-
-                svg.append("g")
-                    .attr("class", "myXaxis")
-                    .attr("transform", "translate(0," + height + ")")
-                    .call(d3.axisBottom(x).tickSize(0)); // Remove x-axis ticks
-
-                var y = d3.scaleLinear()
-                    .domain([0, d3.max(data, function(d) { return d.covid_cases; })])
-                    .range([height, 0]);
-                svg.append("g").call(d3.axisLeft(y));
-
-                // Color scale - you can choose a different scale if you prefer
-                var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
-
-                // Add dots
-                var points = svg.append('g')
-                    .selectAll("dot")
-                    .data(data)
-                    .enter()
-                    .append("circle")
-                    .attr("cx", function (d) { return x(d.cityAbbreviation); }) // Use abbreviated city name for x-coordinate
-                    .attr("cy", function (d) { return y(d.covid_cases); })
-                    .attr("r", 15)
-                    .style("fill", function(d, i) { return colorScale(i); });
-
-
-                // Tooltip and hover effects
-                points.on("mouseenter", function(event, d) {
-                    d3.select("#tooltip")
-                        .style("opacity", 1)
-                        .html("City: " + d.city + "<br>Population: " + d.population.toLocaleString() + "<br>COVID-19 Cases: " + d.covid_cases.toLocaleString())
-                        .style("left", (event.pageX + 10) + "px")
-                        .style("top", (event.pageY - 28) + "px");
-                }).on("mouseleave", function() {
-                    d3.select("#tooltip").style("opacity", 0);
-                });
-            } else {
-                console.error('Data is not an array:', data);
-            }
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-            // Handle the error appropriately
-        });
-}
-
 // Function to show the selected graph
 function showGraph() {
     var selectedGraph = document.getElementById('graphSelect').value;
     var bubbleChart = document.getElementById('bubbleChart');
-    var scatterPlot = document.getElementById('scatterPlot');
     var bubbleColorPicker = document.getElementById('bubbleCustomizationForm');
     var infoBox = document.getElementById('infoBox');
     var infoTextBubble = document.getElementById('infoTextBubble')
 
     bubbleChart.style.display = 'none';
-    scatterPlot.style.display = 'none';
     bubbleColorPicker.style.display = 'none';
     infoBox.style.display = 'none';
     infoTextBubble.style.display = 'none';

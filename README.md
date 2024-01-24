@@ -5,8 +5,6 @@ This project aims to conduct a comprehensive analysis of the impact of the Covid
 
 ## Features
 
-**Interactive German Map**: Navigate through an interactive, detailed map of Germany to view COVID-19 statistics by region. The map offers the ability to remove/add layers to better focus on specific data.
-<img src="Images/germanymap.png" width="300" height="200" alt="Interactive German Map">
 
 **City-Specific Insights**: Explore data for the 40 most populated cities in Germany, understanding the local impact of the pandemic.   
 <img src="Images/graph2.png" width="300" height="200" alt="City-Specific Insights">
@@ -48,8 +46,8 @@ The primary goal of this project is to empower public health researchers with a 
 
 3. **Accessing the Application**:
    - Once the Codespace environment is ready and the application starts, go to the 'Ports' panel.
-   - Find the port `8080` listed there.
-   - Click on 'Open in Browser' next to port `8080`. This will open a new browser tab or window with the application running.
+   - Find the port `8000` listed there.
+   - Click on 'Open in Browser' next to port `8000`. This will open a new browser tab or window with the application running.
 
 ### Local Setup
 
@@ -61,7 +59,7 @@ The primary goal of this project is to empower public health researchers with a 
    - In the terminal, run `pip install -r requirements.txt`.
 
 3. **Starting the Application**:
-   - Run `uvicorn main:app --host 127.0.0.1 --port 8080 --reload` in the terminal.
+   - Run `uvicorn main:app --host 127.0.0.1 --port 8000 --reload` in the terminal.
    - The application will be available on `http://localhost:8080` or the specified port.
 
 ## Notes

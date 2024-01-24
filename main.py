@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -46,15 +46,16 @@ def read_items():
 async def upload_json(file: UploadFile = File(...)):
     if file.filename.endswith(".json"):
         try:
-            temp_file_path = f"temp_{file.filename}"
-            with open(temp_file_path, "wb") as temp_file:
-                content = await file.read()
-                temp_file.write(content)
+            json_content = await file.read()
+            decoded_json = json_content.decode("utf-8")
+
+            json_file_name = "new_covid_data.json"
+            with open(json_file_name, "w") as json_file:
+                json_file.write(decoded_json)
 
             json_in_db = JsonInDatabaseTransformer()
-            json_in_db.push_json_data_in_db(temp_file_path)
-
-            return {"status": "File uploaded and data inserted successfully"}
+            json_in_db.push_json_data_in_db(json_file_name)
+            return {"status": "File uploaded and data inserted successfully", "json_content": decoded_json}
         except Exception as e:
             raise HTTPException(status_code=500, detail=f"Error processing JSON file: {str(e)}")
     else:
@@ -66,5 +67,5 @@ if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000, reload=True)
 
 # run application
-# uvicorn main:app --host 127.0.0.1 --port 8080 --reload
+# uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 app.mount("/", StaticFiles(directory="./", html=True), name="static")
