@@ -3,7 +3,7 @@ from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 import sqlite3
-from jsonindb import JsonInDatabaseTransformer
+from json_to_db import JsonInDatabaseTransformer
 
 app = FastAPI()
 
@@ -33,14 +33,14 @@ def read_items():
     conn.close()
     return [dict(item) for item in items]
 
-"""
+
 @app.get("/data2")
 def read_items():
     conn = get_db_connection()
     items = conn.execute('SELECT city, covid_cases_2020, covid_cases_2021, covid_cases_2022  FROM covid_data1').fetchall()  # Replace 'your_table_name' with your actual table name
     conn.close()
     return [dict(item) for item in items]
-"""
+
 
 @app.post("/uploadjson/")
 async def upload_json(file: UploadFile = File(...)):
