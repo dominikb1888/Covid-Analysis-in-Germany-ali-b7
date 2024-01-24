@@ -107,11 +107,16 @@ function update(selectedVar, sortAscending) {
             bars.exit().remove();
 
             svg.selectAll(".bar").on("click", function(event, d) {
+                console.log("Clicked bar:", d.city);
                 const index = selectedCities.findIndex(city => city.city === d.city);
                 if (index > -1) {
                     selectedCities.splice(index, 1);
+                    // Remove the highlight class
+                    d3.select(this).classed("highlighted-bar", false);
                 } else {
                     selectedCities.push(d);
+                    // Add the highlight class
+                    d3.select(this).classed("highlighted-bar", true);
                 }
                 updateComparisonArea();
             });
@@ -141,14 +146,18 @@ function update(selectedVar, sortAscending) {
     });
 }
 
-// Comparison Area Update Function
 function updateComparisonArea() {
     const list = d3.select("#comparison-list");
     list.html("");
     selectedCities.forEach(city => {
-        list.append("li").text(`City: ${city.city}, COVID Cases: ${city[currentSelectedYearVar].toLocaleString()}`);
+        list.append("li").html(`City: ${city.city}<br>COVID Cases: ${city.covid_cases_2020.toLocaleString()}<br>Deaths: ${city.deaths.toLocaleString()}`);
+        // Apply the highlight class to the corresponding bars in the chart
+        svg.selectAll(".bar")
+            .filter(d => d.city === city.city)
+            .classed("highlighted-bar", true);
     });
 }
+
 
 update('covid_cases_2020');
 
