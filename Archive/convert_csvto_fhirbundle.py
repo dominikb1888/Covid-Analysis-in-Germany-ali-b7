@@ -1,6 +1,6 @@
 import pandas as pd
 from fhir.resources.bundle import Bundle
-from fhir.resources.bundle import BundleEntry
+from fhir.resources.bundle import BundleEntry, BundleEntryRequest
 from fhir.resources.location import Location
 from fhir.resources.observation import Observation
 from datetime import datetime
@@ -14,7 +14,6 @@ data = pd.read_csv('Archive/cities_data.csv')
 bundle_entries = []
 
 for index, row in data.iterrows():
-
     # Generate a unique fullUrl for each resource
     location_fullUrl = f"urn:uuid:{uuid.uuid4()}"
     observation_cases_fullUrl = f"urn:uuid:{uuid.uuid4()}"
@@ -72,10 +71,15 @@ for index, row in data.iterrows():
         subject={"reference": f"Location/{location.id}"}
     )
 
-     # Add resources to bundle entries with fullUrl
-    bundle_entries.append(BundleEntry.construct(fullUrl=location_fullUrl, resource=location))
-    bundle_entries.append(BundleEntry.construct(fullUrl=observation_cases_fullUrl, resource=observation_cases))
-    bundle_entries.append(BundleEntry.construct(fullUrl=observation_deaths_fullUrl, resource=observation_deaths))
+    # Create requests for each entry
+    location_request = BundleEntryRequest.construct(method="POST", url="Location")
+    observation_cases_request = BundleEntryRequest.construct(method="POST", url="Observation")
+    observation_deaths_request = BundleEntryRequest.construct(method="POST", url="Observation")
+
+    # Add resources to bundle entries with fullUrl and request
+    bundle_entries.append(BundleEntry.construct(fullUrl=location_fullUrl, resource=location, request=location_request))
+    bundle_entries.append(BundleEntry.construct(fullUrl=observation_cases_fullUrl, resource=observation_cases, request=observation_cases_request))
+    bundle_entries.append(BundleEntry.construct(fullUrl=observation_deaths_fullUrl, resource=observation_deaths, request=observation_deaths_request))
 
 # Create the bundle
 bundle = Bundle.construct()
@@ -86,8 +90,8 @@ bundle.entry = bundle_entries
 bundle_json = bundle.json(indent=4)
 
 # Output the JSON or save it to a file
-print(bundle_json)
+print("all good here")
 
 # Save the JSON to a file
-with open('fhir_bundle1.json', 'w') as file:
+with open('fhir_bundle2.json', 'w') as file:
     file.write(bundle_json)
