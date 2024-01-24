@@ -66,6 +66,11 @@
         .highlighted-bar {
             fill: orange; /* Change the fill color to highlight the bar */
         }
+        .comparison-wrapper {
+    display: flex;
+    align-items: center; /* Aligns items vertically center */
+    gap: 10px; /* Space between the comparison area and the button */
+}
 
 
     </style>
@@ -79,7 +84,6 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="map.html">Map of Germany</a></li>
             </ul>
         </div>
     </div>
@@ -87,6 +91,7 @@
 <div id="tooltip" class="tooltip">
     <span id="city-name"></span><br>
     <span id="covid-cases"></span>
+    <span id="deaths"></span>
 </div>
 
 <div id="tooltip2" class="tooltip2">
@@ -94,6 +99,9 @@
 </div>
 <div>
     <h1 style="text-align: center">Covid Cases in German Cities from 2020-2022</h1>
+    <h2 style="text-align: center;">Instructions:</h2>
+    <p>Click on any bar to show more information in the comparison area<br>Hover over the circles to display the population of the city<br>You can also change bar color,
+        sort ascending and descending<br>You can choose a year from the dropdown menu above the graph</p>
     
 </div>
 
@@ -107,15 +115,17 @@
     <button id="sortDescending">Sort Descending</button>
     </div>
 
-    <div id="comparison" class="comparison">
-        <h2>Comparison Area</h2>
-        <ul id="comparison-list"></ul>
+    <div class="comparison-wrapper">
+        <div id="comparison" class="comparison">
+            <h2>Comparison Area</h2>
+            <ul id="comparison-list"></ul>
+        </div>
+
+        <button id="clear-comparison">Clear Comparison Area</button>
     </div>
 
-    <button id="clear-comparison">Clear Comparison Area</button>
-
     <select id="year">
-        <option value="covid_cases">All Years (Total Cases)</option>
+        
         <option value="covid_cases_2020">2020</option>
         <option value="covid_cases_2021">2021</option>
         <option value="covid_cases_2022">2022</option>
@@ -124,8 +134,7 @@
      <!-- Default color -->
     <svg width="800" height="500"></svg>
 
-    <p>Click on any bar to show more information in the comparison area<br>You can also change bar color,
-        sort ascending and descending<br>You can choose a year from the dropdown menu above the graph</p>
+    
 
 </div>
 </div>

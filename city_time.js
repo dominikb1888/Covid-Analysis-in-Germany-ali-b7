@@ -1,12 +1,13 @@
-const margin = { top: 30, right: 60, bottom: 70, left: 60 },
-      width = 800 - margin.left - margin.right,
-      height = 500 - margin.top - margin.bottom;
+const margin = { top: 50, right: 80, bottom: 100, left: 100 }, // Increased margins
+      width = 900 - margin.left - margin.right,  // Adjusted width
+      height = 600 - margin.top - margin.bottom; // Adjusted height
 
 const svg = d3.select("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
+
 
 const tooltip = d3.select("#tooltip");
 const tooltip2 = d3.select("#tooltip2")
@@ -22,6 +23,15 @@ const xAxis = svg.append("g")
 const y = d3.scaleLinear()
     .range([height, 0]);
 
+    svg.append("text")
+    .attr("text-anchor", "end")
+    .attr("x", width / 3 + margin.left)
+    .attr("y", height + margin.bottom - 5)
+    .text("Cities")
+    .style("font-size", "17px")
+    .style("font-weight", "bold");
+ 
+
 // Define y-axis
 const yAxis = svg.append("g")
     .attr("class", "myYaxis");
@@ -29,10 +39,28 @@ const yAxis = svg.append("g")
 const y1 = d3.scaleLinear()
     .range([height, 0]);
 
+    svg.append("text")
+    .attr("text-anchor", "end")
+    .attr("transform", "rotate(-90)")
+    .attr("y", -margin.left + 40)
+    .attr("x", -height / 4 - margin.top)
+    .text("COVID Cases")
+    .style("font-size", "17px")
+    .style("font-weight", "bold");
+
 // Define second y-axis (right side for population)
 const yAxisRight = svg.append("g")
     .attr("class", "myYaxis")
     .attr("transform", `translate(${width}, 0)`);
+
+    svg.append("text")
+   .attr("text-anchor", "start")
+   .attr("transform", `rotate(-90)`)
+   .attr("y", width + margin.right - 20) // Adjust this to move title left/right
+   .attr("x", -height / 2 - margin.top)
+   .text("Population")
+   .style("font-size", "17px")
+   .style("font-weight", "bold") // Replace with your right Y-axis title
 
 let selectedCities = [];
 let currentSelectedYearVar = 'covid_cases_2020'; // Default year
@@ -106,17 +134,19 @@ function update(selectedVar, sortAscending) {
 
             bars.exit().remove();
 
+            const highlightColor = "orange";
+
             svg.selectAll(".bar").on("click", function(event, d) {
                 console.log("Clicked bar:", d.city);
                 const index = selectedCities.findIndex(city => city.city === d.city);
                 if (index > -1) {
                     selectedCities.splice(index, 1);
-                    // Remove the highlight class
-                    d3.select(this).classed("highlighted-bar", false);
+                    // Revert the bar color to original
+                    d3.select(this).style("fill", "green");
                 } else {
                     selectedCities.push(d);
-                    // Add the highlight class
-                    d3.select(this).classed("highlighted-bar", true);
+                    // Change the bar color to highlight color
+                    d3.select(this).style("fill", highlightColor);
                 }
                 updateComparisonArea();
             });
@@ -178,5 +208,40 @@ d3.select("#sortDescending").on("click", function() {
 
 d3.select("#clear-comparison").on("click", function() {
     selectedCities = []; // Clear the selectCities array
-    updateComparisonArea();   // Update the comparison area to reflect the cleared array
+    updateComparisonArea();
+     // Reset the color of all bars to their original color
+     svg.selectAll(".bar").style("fill", "green");
 });
+
+// Adjust these values as needed for positioning
+const legendX = width + margin.left - 220; // Adjust this to fit within the SVG area
+const legendY = margin.top; // Position from top
+
+const legend = svg.append("g")
+    .attr("transform", `translate(${legendX}, ${legendY})`);
+
+// COVID Cases Legend Item
+legend.append("rect")
+    .attr("width", 10)
+    .attr("height", 10)
+    .style("fill", "green");
+legend.append("text")
+    .attr("x", 20)
+    .attr("y", 10)
+    .text("COVID Cases")
+    .style("font-size", "15px")
+    .attr("alignment-baseline","middle");
+
+// Population Legend Item
+legend.append("rect")
+    .attr("width", 10)
+    .attr("height", 10)
+    .attr("y", 20)
+    .style("fill", "blue");
+legend.append("text")
+    .attr("x", 20)
+    .attr("y", 30)
+    .text("Population")
+    .style("font-size", "15px")
+    .attr("alignment-baseline","middle");
+
