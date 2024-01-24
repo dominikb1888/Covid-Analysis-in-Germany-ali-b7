@@ -1,57 +1,69 @@
 import json
 import sqlite3
+from fhir.resources.bundle import Bundle
 import pathlib
 
-def create_table(cursor):
-    cursor.execute('DROP TABLE IF EXISTS covid_data;')
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS covid_data(
-            id INTEGER PRIMARY KEY,
-            city TEXT,
-            population INT,
-            covid_cases INT,
-            covid_cases_2020 INT,
-            covid_cases_2021 INT,
-            covid_cases_2022 INT,
-            vaccination_rate DECIMAL,
-            deaths INT
-        );
-    ''')
+class JsonInDatabaseTransformer:
+    def __init__(self):
+        pass
 
-def insert_data(cursor, city, population, covid_cases, covid_cases_2020, covid_cases_2021, covid_cases_2022, vaccination_rate, deaths):
-    cursor.execute('''
-        INSERT INTO covid_data (city, population, covid_cases, covid_cases_2020, covid_cases_2021, covid_cases_2022, vaccination_rate, deaths)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?);
-    ''', (city, population, covid_cases, covid_cases_2020, covid_cases_2021, covid_cases_2022, vaccination_rate, deaths))
+    def create_table(self, cursor):
+        # Drop the table if it exists
+        cursor.execute('DROP TABLE IF EXISTS covid_data1;')
 
-def main():
-    database_file = 'test2.db'
-    connection = sqlite3.connect(database_file)
-    cursor = connection.cursor()
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS covid_data1(
+                city TEXT PRIMARY KEY,
+                population INT,
+                vaccination_rate DECIMAL,
+                covid_cases INT,
+                deaths INT,
+                covid_cases_2020 INT,
+                covid_cases_2021 INT,
+                covid_cases_2022 INT
+            );
+        ''')
 
-    create_table(cursor)
+    def insert_data(self, cursor, location, data):
+        city = location.split("/")[1]
+        population = int(data['population'])
+        vaccination_rate = float(data['vaccination-rate'])
+        covid_cases = int(data['covid-cases'])
+        deaths = int(data['deaths'])
+        covid_cases_2020 = int(data['covid_cases_2020'])
+        covid_cases_2021 = int(data['covid_cases_2021'])
+        covid_cases_2022 = int(data['covid_cases_2022'])
 
-    filename = pathlib.Path("covid_data.json")
-    with open(filename, 'r') as file:
-        data = json.load(file)
-        for entry in data["entry"]:
-            resource = entry["resource"]
+        cursor.execute('''
+            INSERT INTO covid_data1 (city, population, vaccination_rate, covid_cases, deaths, 
+                                    covid_cases_2020, covid_cases_2021, covid_cases_2022)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+        ''', (city, population, vaccination_rate, covid_cases, deaths, 
+              covid_cases_2020, covid_cases_2021, covid_cases_2022))
 
-            # Extract data from the resource
-            city = resource["City"]
-            population = int(resource["Population"])
-            covid_cases = int(resource["CovidCases"])
-            covid_cases_2020 = int(resource["CovidCases2020"])
-            covid_cases_2021 = int(resource["CovidCases2021"])
-            covid_cases_2022 = int(resource["CovidCases2022"])
-            # Convert vaccination rate from percentage string to decimal
-            vaccination_rate = float(resource["VaccinationRate"].rstrip('%')) / 100
-            deaths = int(resource["Deaths"])
+    def push_json_data_in_db(self, json_path, db_name='data_for_web_application.db'):
+        # Connect to the SQLite database
+        connection = sqlite3.connect(db_name)
+        cursor = connection.cursor()
 
-            insert_data(cursor, city, population, covid_cases, covid_cases_2020, covid_cases_2021, covid_cases_2022, vaccination_rate, deaths)
+        # Create the table
+        self.create_table(cursor)
 
-    connection.commit()
-    connection.close()
+        # Read data from the JSON file
+        filename = pathlib.Path(json_path)
+        bundle = Bundle.parse_file(filename)
+        for entry in bundle.entry:
+            location = entry.resource.subject.reference
+            data_dict = {comp.code.coding[0].code: comp.valueQuantity.value
+                         for comp in entry.resource.component}
+
+            self.insert_data(cursor, location, data_dict)
+
+        # Commit the changes and close the connection
+        connection.commit()
+        connection.close()
 
 if __name__ == "__main__":
-    main()
+    json_in_db = JsonInDatabaseTransformer()
+    json_in_db.push_json_data_in_db('fhir_bundle.json')
+
