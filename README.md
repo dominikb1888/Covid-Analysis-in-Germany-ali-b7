@@ -34,7 +34,8 @@ The core functionality of the project revolves around providing a dynamic and co
    - Choose 'New codespace' to create a new development environment.
 
 2. **Automatic Setup**:
-   - Once open in GitHub Codespaces, the development container will automatically set up the environment for you.
+   - Once open in GitHub Codespaces, the development container will automatically set up the environment for you.  
+   - However, if that does not work then run `uvicorn main:app --host 127.0.0.1 --port 8000 --reload` in the terminal. 
 
 3. **Accessing the Application**:
    - Once the Codespace environment is ready and the application starts, go to the 'Ports' panel.
@@ -52,7 +53,14 @@ The core functionality of the project revolves around providing a dynamic and co
 
 3. **Starting the Application**:
    - Run `uvicorn main:app --host 127.0.0.1 --port 8000 --reload` in the terminal.
-   - The application will be available on `http://localhost:8080` or the specified port.
+   - The application will be available on `http://localhost:8000` or the specified port.
+
+
+## Testing with your own data
+1. Above the graph you can find the option to upload your test json file.  
+<img src="Images/upload.png" width="300" height="200" alt="upload function">  
+
+2. If you want to return to the original data then terminate the app in the terminal and restart it.
 
 
 ## Contact

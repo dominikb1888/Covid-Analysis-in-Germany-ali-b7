@@ -9,7 +9,7 @@ class JsonInDatabaseTransformer:
 
     def create_table(self, cursor):
         # Drop the table if it exists
-        cursor.execute('DROP TABLE IF EXISTS covid_data1;')
+        # cursor.execute('DROP TABLE IF EXISTS covid_data1;')
 
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS covid_data1(
@@ -35,8 +35,8 @@ class JsonInDatabaseTransformer:
         covid_cases_2022 = int(data['covid_cases_2022'])
 
         cursor.execute('''
-            INSERT INTO covid_data1 (city, population, vaccination_rate, covid_cases, deaths, 
-                                    covid_cases_2020, covid_cases_2021, covid_cases_2022)
+            INSERT OR IGNORE INTO covid_data1 (city, population, vaccination_rate, covid_cases, deaths, 
+                                              covid_cases_2020, covid_cases_2021, covid_cases_2022)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?);
         ''', (city, population, vaccination_rate, covid_cases, deaths, 
               covid_cases_2020, covid_cases_2021, covid_cases_2022))

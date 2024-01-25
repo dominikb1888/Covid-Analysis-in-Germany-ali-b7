@@ -59,7 +59,7 @@ const yAxisRight = svg.append("g")
    .attr("y", width + margin.right - 20) // Adjust this to move title left/right
    .attr("x", -height / 2 - margin.top)
    .text("Population")
-   .style("font-size", "17px")
+   .style("font-size", "14px")
    .style("font-weight", "bold") // Replace with your right Y-axis title
 
 let selectedCities = [];

@@ -56,6 +56,14 @@ p {
     font-size: larger;
     margin-top: 25px;
 }
+
+h1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: medium;
+}
+
+
 .highlighted-bar {
     fill: orange; /* Change the fill color to highlight the bar */
 }
@@ -71,3 +79,19 @@ margin-top: 20px; /* Optional: Adds some space outside the border */
 margin-left: 20px;
 border-radius: 5px; /* Optional: Rounds the corners of the border */
 }
+
+
+.centered-list {
+    padding: 0; /* Removes default padding */
+    display: flex; /* Enables flexbox */
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center; /* Centers items horizontally in the container */
+    text-align: center; /* Centers the text of list items */
+    font-size: large;
+}
+
+.centered-list li {
+    margin: 1px 0; /* Adds a little space between list items */
+}
+
+
