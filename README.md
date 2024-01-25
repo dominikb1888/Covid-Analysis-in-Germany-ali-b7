@@ -8,17 +8,28 @@ This project aims to conduct a comprehensive analysis of the impact of the Covid
 **Insights for each year**: Covid data visualization for covid cases throughout each year of the pandemic in the 40 most populated German cities.  
 <img src="Images/graph1.png" width="300" height="200" alt="Insights for each year">
 
+## Technologies Used
+
+This project leverages several key technologies and frameworks to provide a robust and interactive data visualization experience:
+
+- **Python**: The primary backend language, known for its readability and wide support in data processing and web development.
+- **FastAPI**: A modern, high-performance web framework for Python, used for creating efficient API endpoints.
+- **SQLite**: A lightweight database to store and manage the COVID-19 data in a structured format.
+- **D3.js**: A powerful JavaScript library for producing dynamic, interactive data visualizations in web browsers.
+- **HTML/CSS/JavaScript**: The core technologies of the web for structuring, styling, and adding interactivity to the web pages.
+- **JSON**: Used for data storage and transfer, particularly for uploading new datasets and exchanging data between the backend and frontend.
+
+
 
 ## Key User Groups: Public Health researchers
 
 ## Objective:
 The primary goal of this project is to empower public health researchers with a comprehensive tool for understanding and analyzing the spread and impact of COVID-19 in Germany. By providing access to regional and city-specific data, the tool aids in the development, adjustment, and assessment of effective public health policies and strategies. Additionally, by identifying trends and correlations, researchers can strategically plan and implement public health interventions.
 
-## Functionality:
-The core functionality of the project revolves around providing a dynamic and comparative analysis of COVID-19 data across various cities in Germany. This feature is crucial for identifying patterns, determining hotspots, and recognizing anomalies in the virus's transmission.
+## Functionality and Real-World Impact
 
-## Real-World Application: 
-**Research and Planning**: Researchers can leverage city-specific insights to investigate correlations between variables such as population density and virus spread. Such analysis is important for future urban planning and healthcare resource management.  
+The core functionality of this project lies in providing a dynamic and comparative analysis of COVID-19 data across various cities in Germany, which is pivotal for identifying patterns, determining hotspots, and recognizing anomalies in the virus's transmission. In a real-world context, this feature empowers researchers to leverage city-specific insights for investigating correlations between variables such as population density and virus spread. This kind of analysis is invaluable for future urban planning and healthcare resource management, helping to strategize more effectively against current and future public health challenges.
+  
 
 ## User Benefit:
 **Informed Decision Making**: The tool provides a user-friendly interface for accessing and interpreting complex data, leading to more informed and timely decision-making processes.  
@@ -45,15 +56,28 @@ The core functionality of the project revolves around providing a dynamic and co
 ### Local Setup
 
 1. **Clone the Repository**:
-   - Run `git clone https://github.com/ali-b7/Covid-Analysis-in-Germany.git` in the terminal.
-   - Navigate to the cloned directory.
+   - In the terminal, execute: `git clone https://github.com/ali-b7/Covid-Analysis-in-Germany.git`
+   - Navigate to the cloned directory: `cd Covid-Analysis-in-Germany`
 
-2. **Install Dependencies**:
-   - In the terminal, run `pip install -r requirements.txt`.
+2. **Set Up a Virtual Environment (Optional but Recommended)**:
+   - Create a virtual environment: `python -m venv env`
+   - Activate the environment:
+     - Windows: `env\Scripts\activate`
+     - macOS/Linux: `source env/bin/activate`
 
-3. **Starting the Application**:
-   - Run `uvicorn main:app --host 127.0.0.1 --port 8000 --reload` in the terminal.
-   - The application will be available on `http://localhost:8000` or the specified port.
+3. **Install Dependencies**:
+   - Ensure your virtual environment is activated.
+   - Install required packages: `pip install -r requirements.txt`
+
+4. **Starting the Application**:
+   - Start the FastAPI server: `uvicorn main:app --host 127.0.0.1 --port 8000 --reload`
+   - The application will be accessible at `http://localhost:8000`.
+
+
+### Troubleshooting Common Setup Issues
+
+- If you encounter any issues with package installation, try upgrading pip: `pip install --upgrade pip` and rerun the requirements installation.
+- Ensure that the ports specified (e.g., 8000) are not in use. If they are, either free up the port or specify a different port in the `uvicorn` command.
 
 
 ## Testing with your own data
