@@ -22,7 +22,7 @@ def get_db_connection():
 
 @app.get("/")
 def get_html():
-    return FileResponse("index.html")
+    return FileResponse("index7.html")
 
 
 @app.get("/data")

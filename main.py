@@ -23,7 +23,7 @@ def get_db_connection():
 
 @app.get("/")
 def get_html():
-    return FileResponse("city_timedata.html")
+    return FileResponse("index.html")
 
 
 @app.get("/data")
@@ -34,7 +34,7 @@ def read_items():
     return [dict(item) for item in items]
 
 
-@app.get("/data2")
+@app.get("/test")
 def read_items():
     conn = get_db_connection()
     items = conn.execute('SELECT city, covid_cases_2020, covid_cases_2021, covid_cases_2022  FROM covid_data1').fetchall()  # Replace 'your_table_name' with your actual table name
