@@ -16,14 +16,14 @@ app.add_middleware(
 )
 
 def get_db_connection():
-    conn = sqlite3.connect('data_for_web_application.db')  # Adjust the path to your database file if necessary
+    conn = sqlite3.connect('data_for_web_application.db') 
     conn.row_factory = sqlite3.Row
     return conn
 
 
 @app.get("/")
 def get_html():
-    return FileResponse("index.html")
+    return FileResponse("city_timedata.html")
 
 
 @app.get("/data")

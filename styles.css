@@ -1,0 +1,72 @@
+.bar {
+    fill: green;
+}
+.bar:hover {
+    fill: orange;
+}
+.chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.dropdown-container {
+text-align: center; /* Centers the content */
+margin-bottom: 20px; /* Spacing between the dropdown and the chart */
+}
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    z-index: 9999; /* Ensure the tooltip is above other elements */
+}
+.tooltip2 {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    z-index: 9999; /* Ensure the tooltip is above other elements */
+}
+.chart-container {
+display: grid;
+grid-template-columns: auto auto; /* Two columns: one for the chart, one for the comparison area */
+gap: 10px; /* Adjust the gap between the chart and the comparison area */
+justify-content: start; /* Aligns the grid to the start of the container (to the left) */
+align-items: start; /* Aligns items to the start vertically */
+}
+
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Adjust the gap as needed */
+    margin-bottom: 10px; /* Spacing below the controls */
+}
+p {
+    text-align: center;
+    font-family: sans-serif;
+    margin-bottom: 5px;
+    font-size: larger;
+    margin-top: 25px;
+}
+.highlighted-bar {
+    fill: orange; /* Change the fill color to highlight the bar */
+}
+.comparison-wrapper {
+    display: flex;
+    align-items: center; /* Aligns items vertically center */
+    gap: 10px; /* Space between the comparison area and the button */
+}
+#comparison {
+border: 2px solid #000000; /* Black border, 2px thick */
+padding: 10px; /* Adds some space inside the border */
+margin-top: 20px; /* Optional: Adds some space outside the border */
+border-radius: 5px; /* Optional: Rounds the corners of the border */
+}
