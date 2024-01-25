@@ -54,8 +54,6 @@ The core functionality of the project revolves around providing a dynamic and co
    - Run `uvicorn main:app --host 127.0.0.1 --port 8000 --reload` in the terminal.
    - The application will be available on `http://localhost:8080` or the specified port.
 
-## Notes
-This project is still a work in progress.
 
 ## Contact
 For support, feedback, or contributions, feel free to contact me:

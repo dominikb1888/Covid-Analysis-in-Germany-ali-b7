@@ -105,7 +105,9 @@ function update(selectedVar, sortAscending) {
                 .style("text-anchor", "end")
                 .attr("dx", "-.8em")
                 .attr("dy", ".15em")
-                .attr("transform", "rotate(-65)");
+                .attr("transform", "rotate(-65)")
+                .style("font-weight", "bold")
+                .style("font-size", "14px"); 
 
             // Set the domains for both y-axes
             y.domain([0, d3.max(data, d => d[selectedVar])]); // For COVID cases
