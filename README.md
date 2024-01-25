@@ -5,15 +5,9 @@ This project aims to conduct a comprehensive analysis of the impact of the Covid
 
 ## Features
 
-
-**City-Specific Insights**: Explore data for the 40 most populated cities in Germany, understanding the local impact of the pandemic.   
-<img src="Images/graph2.png" width="300" height="200" alt="City-Specific Insights">
-
 **Insights for each year**: Covid data visualization for covid cases throughout each year of the pandemic in the 40 most populated German cities.  
 <img src="Images/graph1.png" width="300" height="200" alt="Insights for each year">
 
- 
-  
 
 ## Key User Groups: Public Health researchers
 
@@ -21,11 +15,9 @@ This project aims to conduct a comprehensive analysis of the impact of the Covid
 The primary goal of this project is to empower public health researchers with a comprehensive tool for understanding and analyzing the spread and impact of COVID-19 in Germany. By providing access to regional and city-specific data, the tool aids in the development, adjustment, and assessment of effective public health policies and strategies. Additionally, by identifying trends and correlations, researchers can strategically plan and implement public health interventions.
 
 ## Functionality:
-**Data Comparison**: Enables users to efficiently compare COVID-19 data across different regions and cities within Germany. This comparative analysis is vital for identifying patterns, hotspots, and anomalies in virus transmission.  
-**Impact Assessment**: Assists in evaluating the effectiveness of health measures and interventions by analyzing data trends over time.  
+The core functionality of the project revolves around providing a dynamic and comparative analysis of COVID-19 data across various cities in Germany. This feature is crucial for identifying patterns, determining hotspots, and recognizing anomalies in the virus's transmission.
 
-## Real-World Application:
-**Resource Allocation for Policy Makers**: A health policy maker can utilize the interactive map feature to compare infection rates and death tolls across various states or cities. This information is crucial in identifying regions that require additional resources or adjustments in policy measures.  
+## Real-World Application: 
 **Research and Planning**: Researchers can leverage city-specific insights to investigate correlations between variables such as population density and virus spread. Such analysis is important for future urban planning and healthcare resource management.  
 
 ## User Benefit:
