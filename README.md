@@ -72,6 +72,7 @@ The core functionality of this project lies in providing a dynamic and comparati
 4. **Starting the Application**:
    - Start the FastAPI server: `uvicorn main:app --host 127.0.0.1 --port 8000 --reload`
    - The application will be accessible at `http://localhost:8000`.
+   - Uploading data works the same way as in running the applicaiton in a codespaces.
 
 
 ### Troubleshooting Common Setup Issues
@@ -87,12 +88,12 @@ The core functionality of this project lies in providing a dynamic and comparati
 2. If you want to return to the original data then terminate the app in the terminal and restart it.
 
 
+## Background Information
+- The visualisation is built with D3.js.
+- First, I wanted to put an actual map of germany as a heatmap into index.html; but it wasn't built with D3.js, so I dropped it. It was a clickable map of Germany, providing all the information from a federal state displayed by only one click on the desired region. It was supposed to give a first rough impression of the covid situation in Germany. This would have been an even easier way to access the desired information, since we want to serve the information to everyone.
+
+
 ## Contact
 For support, feedback, or contributions, feel free to contact me:
 
 - Email: ali.badran@stud.th-deg.de
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
