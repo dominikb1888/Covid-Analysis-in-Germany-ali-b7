@@ -20,20 +20,15 @@ This project leverages several key technologies and frameworks to provide a robu
 - **JSON**: Used for data storage and transfer, particularly for uploading new datasets and exchanging data between the backend and frontend.
 
 
+## Key User Groups: 
 
-## Key User Groups: Public Health researchers
-
-## Objective:
-The primary goal of this project is to empower public health researchers with a comprehensive tool for understanding and analyzing the spread and impact of COVID-19 in Germany. By providing access to regional and city-specific data, the tool aids in the development, adjustment, and assessment of effective public health policies and strategies. Additionally, by identifying trends and correlations, researchers can strategically plan and implement public health interventions.
+## Public Health researchers:
+Public Health Researchers: This tool equips researchers with detailed, city-specific COVID-19 data, aiding in analyzing trends, preparing public health strategies, and evaluating policy effectiveness. The comprehensive data and visualizations facilitate deeper insights into the pandemic's dynamics, essential for shaping future public health initiatives.
 
 ## Functionality and Real-World Impact
 
 The core functionality of this project lies in providing a dynamic and comparative analysis of COVID-19 data across various cities in Germany, which is pivotal for identifying patterns, determining hotspots, and recognizing anomalies in the virus's transmission. In a real-world context, this feature empowers researchers to leverage city-specific insights for investigating correlations between variables such as population density and virus spread. This kind of analysis is invaluable for future urban planning and healthcare resource management, helping to strategize more effectively against current and future public health challenges.
   
-
-## User Benefit:
-**Informed Decision Making**: The tool provides a user-friendly interface for accessing and interpreting complex data, leading to more informed and timely decision-making processes.  
-**Strategic Planning**: Public health researchers can strategically plan and implement public health interventions by identifying trends and correlations.  
 
 ## Installation and Setup Instructions
 
@@ -82,16 +77,31 @@ The core functionality of this project lies in providing a dynamic and comparati
 
 
 ## Testing with your own data
-1. Above the graph you can find the option to upload your test json file.  
+1. Above the graph you can find the option to upload your test json file or visit the route /docs.  
 <img src="Images/upload.png" width="300" height="200" alt="upload function">  
 
-2. If you want to return to the original data then terminate the app in the terminal and restart it.
+2.  After being redirected, click on the green "POST" link to show the route  /uploadjsondata .Click on  try it out and choose your file which must be based on the sample json data provided either in the repository or at the upload location of the examination.
+
+3. Click on execute and see if the upload worked (status 200) or if it was rejected because of format or wrong file type (status 500)
+
+4. Delete the /docs so that you only have the regular address of your codespace port
+see the uploaded data along with my original files in the visualisation.
+
+5. If you want to return to the original data then terminate the app in the terminal and restart it.
+
+## Contributing to the Project
+ Contributions are welcomed from the community! If you're interested in enhancing the capabilities of this tool or have innovative ideas for new features, here’s how you can contribute:
+
+1. Fork the Repository: Start by forking the repository to make your own version.
+2. Create a Pull Request: After making your changes, create a pull request. Please provide a clear description of what your changes achieve.
+3. Code Reviews: Your pull request will be reviewed. This is a space for discussion and improvements.
+4. Merge: Once approved, your contributions will be merged into the main project.
+For more detailed instructions, please refer to our contributing guidelines.
 
 
 ## Background Information
 - The visualisation is built with D3.js.
 - First, I wanted to put an actual map of germany as a heatmap into index.html; but it wasn't built with D3.js, so I dropped it. It was a clickable map of Germany, providing all the information from a federal state displayed by only one click on the desired region. It was supposed to give a first rough impression of the covid situation in Germany. This would have been an even easier way to access the desired information, since we want to serve the information to everyone.
-
 
 ## Contact
 For support, feedback, or contributions, feel free to contact me:
