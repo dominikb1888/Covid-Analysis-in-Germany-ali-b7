@@ -28,6 +28,17 @@ Public Health Researchers: This tool equips researchers with detailed, city-spec
 ## Functionality and Real-World Impact
 
 The core functionality of this project lies in providing a dynamic and comparative analysis of COVID-19 data across various cities in Germany, which is pivotal for identifying patterns, determining hotspots, and recognizing anomalies in the virus's transmission. In a real-world context, this feature empowers researchers to leverage city-specific insights for investigating correlations between variables such as population density and virus spread. This kind of analysis is invaluable for future urban planning and healthcare resource management, helping to strategize more effectively against current and future public health challenges.
+
+## Usage Scenarios and Examples
+**Scenario 1: Analyzing Yearly COVID-19 Trends in Major Cities**
+
+Researchers can select individual years (2020, 2021, 2022) to visualize the trend of COVID-19 cases in the most populated cities of Germany. This feature allows for a comparative analysis of how the pandemic evolved over the years.
+**Scenario 2: Evaluating the Impact of Population Density**
+
+Public health officials can use the tool to correlate population density with COVID-19 spread in different cities. This insight is crucial for resource allocation and planning for future healthcare emergencies.
+**Scenario 3: Assessing Vaccination Impact**
+
+By comparing the vaccination rates with the number of COVID-19 cases and deaths, healthcare policymakers can gauge the effectiveness of vaccination campaigns and strategize accordingly for future public health initiatives.
   
 
 ## Installation and Setup Instructions
@@ -96,12 +107,7 @@ see the uploaded data along with my original files in the visualisation.
 2. Create a Pull Request: After making your changes, create a pull request. Please provide a clear description of what your changes achieve.
 3. Code Reviews: Your pull request will be reviewed. This is a space for discussion and improvements.
 4. Merge: Once approved, your contributions will be merged into the main project.
-For more detailed instructions, please refer to our contributing guidelines.
 
-
-## Background Information
-- The visualisation is built with D3.js.
-- First, I wanted to put an actual map of germany as a heatmap into index.html; but it wasn't built with D3.js, so I dropped it. It was a clickable map of Germany, providing all the information from a federal state displayed by only one click on the desired region. It was supposed to give a first rough impression of the covid situation in Germany. This would have been an even easier way to access the desired information, since we want to serve the information to everyone.
 
 ## Contact
 For support, feedback, or contributions, feel free to contact me:

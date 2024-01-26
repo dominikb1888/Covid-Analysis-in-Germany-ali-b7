@@ -62,6 +62,7 @@ const yAxisRight = svg.append("g")
    .style("font-size", "14px")
    .style("font-weight", "bold") // Replace with your right Y-axis title
 
+
 let selectedCities = [];
 let currentSelectedYearVar = 'covid_cases_2020'; // Default year
 
@@ -116,6 +117,7 @@ function update(selectedVar, sortAscending) {
             // Update the axes
             yAxis.transition().duration(1000).call(d3.axisLeft(y));
             yAxisRight.transition().duration(1000).call(d3.axisRight(y1));
+            
 
             const bars = svg.selectAll(".bar")
                 .data(data);
