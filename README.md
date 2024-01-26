@@ -32,10 +32,12 @@ The core functionality of this project lies in providing a dynamic and comparati
 ## Usage Scenarios and Examples
 **Scenario 1: Analyzing Yearly COVID-19 Trends in Major Cities**
 
-Researchers can select individual years (2020, 2021, 2022) to visualize the trend of COVID-19 cases in the most populated cities of Germany. This feature allows for a comparative analysis of how the pandemic evolved over the years.
+Researchers can select individual years (2020, 2021, 2022) to visualize the trend of COVID-19 cases in the most populated cities of Germany. This feature allows for a comparative analysis of how the pandemic evolved over the years.  
+
 **Scenario 2: Evaluating the Impact of Population Density**
 
-Public health officials can use the tool to correlate population density with COVID-19 spread in different cities. This insight is crucial for resource allocation and planning for future healthcare emergencies.
+Public health officials can use the tool to correlate population density with COVID-19 spread in different cities. This insight is crucial for resource allocation and planning for future healthcare emergencies.  
+
 **Scenario 3: Assessing Vaccination Impact**
 
 By comparing the vaccination rates with the number of COVID-19 cases and deaths, healthcare policymakers can gauge the effectiveness of vaccination campaigns and strategize accordingly for future public health initiatives.
