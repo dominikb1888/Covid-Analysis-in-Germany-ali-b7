@@ -1,0 +1,262 @@
+{
+    "resourceType": "Bundle",
+    "type": "collection",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "city-health-data-0",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "public-health"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://example.org",
+                            "code": "public-health-metrics"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/Pfarrkirchen"
+                },
+                "component": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "population"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 13557,
+                            "unit": "people"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "vaccination-rate"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 0.6779999999999999,
+                            "unit": "ratio"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "covid-cases"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 1150345,
+                            "unit": "cases"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "deaths"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 350000,
+                            "unit": "deaths"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "covid_cases_2020"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 500000,
+                            "unit": "cases"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "covid_cases_2021"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 410500,
+                            "unit": "cases"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "covid_cases_2022"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 250000,
+                            "unit": "cases"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "city-health-data-38",
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "code": "public-health"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://example.org",
+                            "code": "public-health-metrics"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "Location/Rostock"
+                },
+                "component": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "population"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 209061,
+                            "unit": "people"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "vaccination-rate"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 0.46799999999999997,
+                            "unit": "ratio"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "covid-cases"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 31950,
+                            "unit": "cases"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "deaths"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 13567,
+                            "unit": "deaths"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "covid_cases_2020"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 20000,
+                            "unit": "cases"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "covid_cases_2021"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 11000,
+                            "unit": "cases"
+                        }
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://example.org",
+                                    "code": "covid_cases_2022"
+                                }
+                            ]
+                        },
+                        "valueQuantity": {
+                            "value": 8000,
+                            "unit": "cases"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
