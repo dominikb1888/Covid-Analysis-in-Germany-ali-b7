@@ -184,7 +184,7 @@ function updateComparisonArea() {
     const list = d3.select("#comparison-list");
     list.html("");
     selectedCities.forEach(city => {
-        list.append("li").html(`City: ${city.city}<br>COVID Cases: ${city.covid_cases_2020.toLocaleString()}<br>Deaths: ${city.deaths.toLocaleString()}`);
+        list.append("li").html(`City: ${city.city}<br>COVID Cases: ${city.covid_cases_2020.toLocaleString()}<br>Deaths: ${city.deaths.toLocaleString()}<br>Vaccination Rate: ${city.vaccination_rate}%`);
         // Apply the highlight class to the corresponding bars in the chart
         svg.selectAll(".bar")
             .filter(d => d.city === city.city)
